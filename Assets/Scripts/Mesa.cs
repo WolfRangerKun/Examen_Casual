@@ -97,7 +97,7 @@ public class Mesa : MonoBehaviour
 
     public void SpawnAcidoCarbonico()
     {
-        if (crearAcidoCarbonico >= 2)
+        if (crearAcidoCarbonico >= 4)
         {
             crearDioxido--;
             crearDioxido--;
