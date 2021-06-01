@@ -5,6 +5,7 @@ using UnityEngine;
 public class Mesa : MonoBehaviour
 {
     public int crearDioxido;
+    public int crearAcidoCarbonico;
     public List<GameObject> mesa;
     public GameObject panel;
     bool activedPanel = false;
@@ -61,13 +62,20 @@ public class Mesa : MonoBehaviour
             {
                 mesa.Remove(mesa[i]);
                 crearDioxido++;
+                crearAcidoCarbonico++;
                 return;
             }
             if (mesa[i].gameObject.name == "Carbono")
             {
                 mesa.Remove(mesa[i]);
                 crearDioxido++;
+                crearAcidoCarbonico++;
                 return;
+            }
+            if (mesa[i].gameObject.name == "Vacito")
+            {
+                mesa.Remove(mesa[i]);
+                crearAcidoCarbonico =+2;
             }
         }
 
