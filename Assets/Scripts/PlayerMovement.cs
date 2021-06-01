@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit2D hit3 = Physics2D.Raycast(rayCast3.position, rayCast.up, distanceRay, move);
         RaycastHit2D hit4 = Physics2D.Raycast(rayCast4.position, -rayCast.up, distanceRay, move);
         Vector2 axisDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        anim.SetInteger("Direction", (int)direction);
         if (axisDirection != Vector2.zero && targetPosition == transform.position)
         {
             if (Mathf.Abs(axisDirection.x) > Mathf.Abs(axisDirection.y))
