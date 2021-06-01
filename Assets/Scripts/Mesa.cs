@@ -72,7 +72,7 @@ public class Mesa : MonoBehaviour
                 crearAcidoCarbonico++;
                 return;
             }
-            if (mesa[i].gameObject.name == "Vacito")
+            if (mesa[i].gameObject.name == "Vaso")
             {
                 mesa.Remove(mesa[i]);
                 crearAcidoCarbonico =+2;
@@ -91,7 +91,17 @@ public class Mesa : MonoBehaviour
             crearDioxido--;
             crearDioxido--;
             Instantiate(moleculas[0], spawnMoleculas.transform.position, Quaternion.identity);
-            
+        }
+    }
+
+    public void SpawnAcidoCarbonico()
+    {
+        if (crearAcidoCarbonico >= 2)
+        {
+            crearDioxido--;
+            crearDioxido--;
+            crearAcidoCarbonico = -2;
+            Instantiate(moleculas[1], spawnMoleculas.transform.position, Quaternion.identity);
         }
     }
 

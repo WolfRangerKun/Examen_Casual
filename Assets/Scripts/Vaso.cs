@@ -24,6 +24,7 @@ public class Vaso : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.G))
             {
                 Inventario.intance.inventario.Add(gameObject);
+                gameObject.SetActive(false);
             }
         }
     }
