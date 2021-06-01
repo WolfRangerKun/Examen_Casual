@@ -698,7 +698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1049126337
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1503,6 +1503,7 @@ MonoBehaviour:
   spawnMoleculas: {fileID: 1702380546}
   moleculas:
   - {fileID: 6976326657946979701, guid: 7c2a9bbe9d618604abcc54ca9cd329a3, type: 3}
+  - {fileID: 6976326657946979701, guid: 5eceb7ec56aad1f499d93b6609fc1c2e, type: 3}
 --- !u!1 &1853880983
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,7 +2021,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049274496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.39, y: 3.35, z: 0}
+  m_LocalPosition: {x: 6.5, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 807444233}

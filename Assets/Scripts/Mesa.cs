@@ -75,7 +75,8 @@ public class Mesa : MonoBehaviour
             if (mesa[i].gameObject.name == "Vaso")
             {
                 mesa.Remove(mesa[i]);
-                crearAcidoCarbonico =+2;
+                crearAcidoCarbonico++;
+                crearAcidoCarbonico++;
             }
         }
 
@@ -100,7 +101,10 @@ public class Mesa : MonoBehaviour
         {
             crearDioxido--;
             crearDioxido--;
-            crearAcidoCarbonico = -2;
+            crearAcidoCarbonico--;
+            crearAcidoCarbonico--;
+            crearAcidoCarbonico--;
+            crearAcidoCarbonico--;
             Instantiate(moleculas[1], spawnMoleculas.transform.position, Quaternion.identity);
         }
     }
