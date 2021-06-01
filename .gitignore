@@ -42,3 +42,5 @@ Logs/shadercompiler-UnityShaderCompiler.exe0.log
 Packages/packages-lock.json
 Logs/AssetImportWorker0.log
 *.log
+*.asset
+UserSettings/EditorUserSettings.asset
