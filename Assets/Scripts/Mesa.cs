@@ -9,6 +9,7 @@ public class Mesa : MonoBehaviour
     public List<GameObject> mesa;
     public GameObject panel;
     bool activedPanel = false;
+    bool mesaActivada;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -20,18 +21,21 @@ public class Mesa : MonoBehaviour
                 mesa.Add(g);
                 return;
             }
-           
+            
         }
     }
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            //SpawnBotones
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                ActivePanel();
-            }
+            mesaActivada = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            mesaActivada = false;
         }
     }
     //private T GetChildComponentByName<T>(string name) where T : Mesa
@@ -47,6 +51,14 @@ public class Mesa : MonoBehaviour
     //}
     private void Update()
     {
+        if (mesaActivada)
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                ActivePanel();
+            }
+        }
+       
         if (activedPanel)
         {
             ShowPanel();
@@ -112,7 +124,7 @@ public class Mesa : MonoBehaviour
     void ActivePanel()
     {
         activedPanel = !activedPanel;
-        return;
+        //return;
     }
 
     void ShowPanel()
