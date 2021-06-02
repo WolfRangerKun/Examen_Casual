@@ -18,5 +18,10 @@ public class Inventario : MonoBehaviour
             inventario.Add(other.gameObject);
             other.gameObject.SetActive(false);
         }
+        if (other.CompareTag("Molecula"))
+        {
+            inventario.Add(other.gameObject);
+            other.gameObject.SetActive(false);
+        }
     }
 }
