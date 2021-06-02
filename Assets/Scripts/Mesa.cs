@@ -72,27 +72,36 @@ public class Mesa : MonoBehaviour
         {
             if (mesa[i].gameObject.name == "Oxigeno")
             {
-                mesa.Remove(mesa[i]);
                 crearDioxido++;
                 crearAcidoCarbonico++;
+                mesa.Remove(mesa[i]);
                 return;
             }
             if (mesa[i].gameObject.name == "Carbono")
             {
-                mesa.Remove(mesa[i]);
+
                 crearDioxido++;
                 crearAcidoCarbonico++;
+                mesa.Remove(mesa[i]);
                 return;
             }
             if (mesa[i].gameObject.name == "Vaso")
             {
+                crearAcidoCarbonico++;
+                crearAcidoCarbonico++;
                 mesa.Remove(mesa[i]);
-                crearAcidoCarbonico++;
-                crearAcidoCarbonico++;
+
             }
         }
 
-
+        //if (mesa[1].gameObject.name == "Oxigeno")
+        //{
+        //    crearDioxido++;
+        //    crearAcidoCarbonico++;
+        //    //mesa.Remove(mesa[i]);
+        //    Debug.Log("ORDEN");
+        //    return;
+        //}
     }
 
     public GameObject spawnMoleculas;
