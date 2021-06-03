@@ -68,37 +68,37 @@ public class Mesa : MonoBehaviour
             HidePanel();
         }
         //Atomos
-        for (int i = 0; i < mesa.Count; i++)
-        {
-            if (mesa[i].gameObject.name == "Oxigeno")
-            {
-                crearDioxido++;
-                crearAcidoCarbonico++;
-                mesa.Remove(mesa[i]);
-                return;
-            }
-            if (mesa[i].gameObject.name == "Carbono")
-            {
+        //for (int i = 0; i < mesa.Count; i++)
+        //{
+        //    if (mesa[i].gameObject.name == "Oxigeno")
+        //    {
+        //        crearDioxido++;
+        //        crearAcidoCarbonico++;
+        //        mesa.Remove(mesa[i]);
+        //        return;
+        //    }
+        //    if (mesa[i].gameObject.name == "Carbono")
+        //    {
 
-                crearDioxido++;
-                crearAcidoCarbonico++;
-                mesa.Remove(mesa[i]);
-                return;
-            }
-            if (mesa[i].gameObject.name == "Vaso")
-            {
-                crearAcidoCarbonico++;
-                crearAcidoCarbonico++;
-                mesa.Remove(mesa[i]);
+        //        crearDioxido++;
+        //        crearAcidoCarbonico++;
+        //        mesa.Remove(mesa[i]);
+        //        return;
+        //    }
+        //    if (mesa[i].gameObject.name == "Vaso")
+        //    {
+        //        crearAcidoCarbonico++;
+        //        crearAcidoCarbonico++;
+        //        mesa.Remove(mesa[i]);
 
-            }
-        }
+        //    }
+        //}
 
         //if (mesa[1].gameObject.name == "Oxigeno")
         //{
         //    crearDioxido++;
         //    crearAcidoCarbonico++;
-        //    //mesa.Remove(mesa[i]);
+        //    mesa.Remove(mesa[1]);
         //    Debug.Log("ORDEN");
         //    return;
         //}
@@ -108,28 +108,28 @@ public class Mesa : MonoBehaviour
     public List<GameObject> moleculas;
     public void SpawnDioxido()
     {
-        if(crearDioxido >= 2)
+        if (mesa[0].gameObject.name == "Carbono" && mesa[1].gameObject.name == "Oxigeno")
         {
-            crearDioxido--;
-            crearDioxido--;
             Instantiate(moleculas[0], spawnMoleculas.transform.position, Quaternion.identity);
+            mesa.Remove(mesa[0]);
+            mesa.Remove(mesa[0]);
         }
     }
 
     public void SpawnAcidoCarbonico()
     {
-        if (crearAcidoCarbonico >= 4)
+        if (mesa[0].gameObject.name == "Vaso" && mesa[1].gameObject.GetComponent<Molecula>().tipoMolecula == Molecula.TIPO_ATOMO.DIOXIDO)
         {
-            crearDioxido--;
-            crearDioxido--;
-            crearAcidoCarbonico--;
-            crearAcidoCarbonico--;
-            crearAcidoCarbonico--;
-            crearAcidoCarbonico--;
-            Instantiate(moleculas[1], spawnMoleculas.transform.position, Quaternion.identity);
+            if (mesa[0].gameObject.GetComponent<Vaso>().cantidadAgua == 2)
+            {
+                Instantiate(moleculas[1], spawnMoleculas.transform.position, Quaternion.identity);
+                mesa.Remove(mesa[0]);
+                mesa.Remove(mesa[0]);
+            }
         }
     }
 
+    
     void ActivePanel()
     {
         activedPanel = !activedPanel;
