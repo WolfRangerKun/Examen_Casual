@@ -8,15 +8,14 @@ public class Vaso : MonoBehaviour
     public List<GameObject> contenido;
     public int crearAmoxicilina;
     bool tomarVaso;
-    public bool isTotal;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Agua") && !isTotal)
+        if (other.CompareTag("Agua"))
         {
             cantidadAgua++;
             Destroy(other.gameObject);
         }
-        if (other.CompareTag("Atomo") && isTotal)
+        if (other.CompareTag("Atomo"))
         {
             contenido.Add(other.gameObject);
             other.gameObject.SetActive(false);
@@ -60,6 +59,10 @@ public class Vaso : MonoBehaviour
             }
         }
 
+        if (cantidadAgua >= 15)
+        {
+             gameObject.GetComponent<SpriteRenderer>().color= Color.blue;
+        }
     }
        
 }
