@@ -5,28 +5,40 @@ using UnityEngine;
 public class DispensadorAgua : MonoBehaviour
 {
     public GameObject agua, spawnAgua;
+    public bool aguaGO;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             //StartCoroutine(DispensarAgua());
-            Awa();
+            ActiveAgua();
         }
     }
-
-    private void OnTriggerExit2D(Collider2D other)
+    void ActiveAgua()
     {
-        if (other.CompareTag("Player"))
+        aguaGO = !aguaGO;
+
+        if (aguaGO)
         {
-            //StopCoroutine(DispensarAgua());
+            StartCoroutine(DispensarAgua());
         }
+        
+        return;
     }
+    //private void OnTriggerExit2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("Player"))
+    //    {
+    //        //StopCoroutine(DispensarAgua());
+    //    }
+    //}
 
     IEnumerator DispensarAgua()
     {
-        while (true)
+        while (aguaGO)
         {
             Instantiate(agua, spawnAgua.transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(1);
         }
     }
     private void Awa()

@@ -41,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Collider
+    uniqueID: 2481422455
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

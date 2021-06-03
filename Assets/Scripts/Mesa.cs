@@ -12,17 +12,17 @@ public class Mesa : MonoBehaviour
     bool mesaActivada;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
-        {
-            Inventario inventario = other.GetComponent<Inventario>();
-            foreach (GameObject g in inventario.inventario)
-            {
-                inventario.inventario.Remove(g);
-                mesa.Add(g);
-                return;
-            }
+        //if (other.CompareTag("Player"))
+        //{
+        //    Inventario inventario = other.GetComponent<Inventario>();
+        //    foreach (GameObject g in inventario.inventario)
+        //    {
+        //        inventario.inventario.Remove(g);
+        //        mesa.Add(g);
+        //        return;
+        //    }
             
-        }
+        //}
     }
     private void OnTriggerStay2D(Collider2D other)
     {
