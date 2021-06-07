@@ -8,7 +8,7 @@ public class Vaso : MonoBehaviour
     public int crearAmoxicilina;
     bool tomarVaso;
 
-    public bool nivel1;
+    public bool isNivel1, isNivel2, isNivel3, isNivel4;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Agua"))
@@ -16,7 +16,6 @@ public class Vaso : MonoBehaviour
             cantidadAgua++;
             Destroy(other.gameObject);
             ActualizarLista();
-
         }
         if (other.CompareTag("Atomo"))
         {
@@ -24,35 +23,12 @@ public class Vaso : MonoBehaviour
             other.gameObject.SetActive(false);
             ActualizarLista();
         }
-
-
     }
 
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        //if (other.CompareTag("Player"))
-        //{
-        //    tomarVaso = true;
-        //}
-    }
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        //if (other.CompareTag("Player"))
-        //{
-        //    tomarVaso = false;
-        //}
-    }
 
     private void Update()
     {
-        //if (tomarVaso)
-        //{
-        //    if (Input.GetKeyDown(KeyCode.G))
-        //    {
-        //        Inventario.intance.inventario.Add(gameObject);
-        //        gameObject.SetActive(false);
-        //    }
-        //}
+        
 
     }
 
@@ -63,60 +39,38 @@ public class Vaso : MonoBehaviour
         {
             gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
         }
-        if (nivel1)
+        if (isNivel1)
         {
-            if (contenido.Count == 3)
-            {
-                if (cantidadAgua >= 15)
-                {
-                    if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
-                    {
-                        contenido.Remove(contenido[0]);
-                        contenido.Remove(contenido[0]);
-                        contenido.Remove(contenido[0]);
-                        crearAmoxicilina = 100;
-                        Debug.Log("Tirate");
-                    }
-                    else
-                    {
-                        Debug.Log("Tefolta");
-                    }
-
-                }
-            }
-
-            //for (int i = 0; i < contenido.Count; i++)
-            //{
-            //    //if(contenido.Count == 3)
-            //    //{
-            //    //    if(cantidadAgua >= 15)
-            //        {
-            //            if (contenido[i].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
-            //            {
-            //                i = 0;
-            //                contenido.Remove(contenido[i]);
-            //                crearAmoxicilina = 100;
-            //                Debug.Log("Tirate");
-            //            }
-            //            if (contenido[i].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO)
-            //            {
-            //                i = 1;
-            //                contenido.Remove(contenido[i]);
-            //                crearAmoxicilina = 100;
-            //                Debug.Log("Rata");
-            //            }
-            //            if (contenido[i].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
-            //            {
-            //                i = 2;
-            //                contenido.Remove(contenido[i]);
-            //                crearAmoxicilina = 100;
-            //                Debug.Log("jaja");
-            //            }
-            //        }
-            //    }
-            //}
+            RevisarLista(ORDEN_PRODUCTO.PRODUCTO1);
         }
+        if (isNivel2)
+        {
+            RevisarLista(ORDEN_PRODUCTO.PRODUCTO2);
+        }
+        if (isNivel3)
+        {
+            RevisarLista(ORDEN_PRODUCTO.PRODUCTO3);
+        }
+        if (isNivel4)
+        {
+            RevisarLista(ORDEN_PRODUCTO.PRODUCTO4);
+        }
+
     }
+
+    //for (int i = 0; i < contenido.Count; i++)
+    //{
+    //    
+    //            if (contenido[i].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
+    //            {
+    //                contenido.Remove(contenido[i]);
+    //                crearAmoxicilina = 100;
+    //                Debug.Log("Tirate");
+    //            }
+    //            
+    //}
+
+
 
     public enum ORDEN_PRODUCTO
     {
@@ -126,12 +80,93 @@ public class Vaso : MonoBehaviour
         PRODUCTO4
     }
 
-    void RevisarLista(ORDEN_PRODUCTO oRDEN)
+    ORDEN_PRODUCTO oRDEN_PRODUCTO;
+    void RevisarLista(ORDEN_PRODUCTO orden)
     {
-        switch (oRDEN)
+        switch (orden)
         {
             case ORDEN_PRODUCTO.PRODUCTO1:
+                if (contenido.Count == 3)
+                {
+                    if (cantidadAgua >= 15)
+                    {
+                        if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
+                        {
+                            contenido.Remove(contenido[0]);
+                            contenido.Remove(contenido[0]);
+                            contenido.Remove(contenido[0]);
+                            crearAmoxicilina = 100;
+                            Debug.Log("Tirate");
+                        }
+                        else
+                        {
+                            Debug.Log("Tefolta");
+                        }
+                    }
+                }
+                break;
+            case ORDEN_PRODUCTO.PRODUCTO2:
+                if (contenido.Count == 3)
+                {
+                    if (cantidadAgua >= 15)
+                    {
+                        if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
+                        {
+                            contenido.Remove(contenido[0]);
+                            contenido.Remove(contenido[0]);
+                            contenido.Remove(contenido[0]);
+                            crearAmoxicilina = 100;
+                            Debug.Log("Tirate");
+                        }
+                        else
+                        {
+                            Debug.Log("Tefolta");
+                        }
 
+                    }
+                }
+                break;
+            case ORDEN_PRODUCTO.PRODUCTO3:
+                if (contenido.Count == 3)
+                {
+                    if (cantidadAgua >= 15)
+                    {
+                        if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
+                        {
+                            contenido.Remove(contenido[0]);
+                            contenido.Remove(contenido[0]);
+                            contenido.Remove(contenido[0]);
+                            crearAmoxicilina = 100;
+                            Debug.Log("Tirate");
+                        }
+                        else
+                        {
+                            Debug.Log("Tefolta");
+                        }
+
+                    }
+                }
+                break;
+            case ORDEN_PRODUCTO.PRODUCTO4:
+                if (contenido.Count == 3)
+                {
+                    if (cantidadAgua >= 15)
+                    {
+                        if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
+                        {
+                            contenido.Remove(contenido[0]);
+                            contenido.Remove(contenido[0]);
+                            contenido.Remove(contenido[0]);
+                            crearAmoxicilina = 100;
+                            Debug.Log("Tirate");
+                        }
+                        else
+                        {
+                            Debug.Log("Tefolta");
+                        }
+
+                    }
+                }
                 break;
         }
     }
