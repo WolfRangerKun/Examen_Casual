@@ -8,3 +8,13 @@ C# parse time         : 712ms
 candidates check time : 69ms
 console write time    : 8ms
 
+[api-updater (non-obsolete-error-filter)] 03-06-2021 19:18:10 : Starting D:/Fantasia/Magito/2020.3.0f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 790,0137ms
+moved types parse time: 117ms
+candidates parse time : 8ms
+C# parse time         : 707ms
+candidates check time : 102ms
+console write time    : 7ms
+

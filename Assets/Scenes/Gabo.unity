@@ -207,6 +207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2049274499}
+  stayPiso2: 0
+  off: []
 --- !u!61 &188958504
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -357,6 +359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agua: {fileID: 8605446413094297760, guid: 81e69a677275c214eb8f0e6d17c22f3a, type: 3}
   spawnAgua: {fileID: 1853880983}
+  aguaGO: 0
 --- !u!1 &218857608
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,6 +695,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2049274499}
   playerBox: {fileID: 2049274496}
+  segundoPiso: {fileID: 188958503}
+  off: []
   direccionCaida: 0
 --- !u!1 &697636020
 GameObject:
@@ -765,6 +770,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2049274499}
   playerBox: {fileID: 2049274496}
+  segundoPiso: {fileID: 188958503}
+  off: []
   direccionCaida: 1
 --- !u!1 &807444232
 GameObject:
@@ -1033,6 +1040,58 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1052202560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1052202561}
+  - component: {fileID: 1052202562}
+  m_Layer: 0
+  m_Name: Detector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1052202561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052202560}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2049274498}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1052202562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052202560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaed3482bd5a1754292d424d1276bc16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayCast: {fileID: 807444233}
+  rayCast2: {fileID: 1510160140}
+  rayCast3: {fileID: 1963032028}
+  rayCast4: {fileID: 1416594439}
+  distanceRay: 2
+  move:
+    serializedVersion: 2
+    m_Bits: 64
+  player: {fileID: 2049274499}
 --- !u!1 &1083995583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,6 +1447,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cantidadAgua: 0
+  contenido: []
+  crearAmoxicilina: 0
 --- !u!61 &1314874042
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1542,6 +1603,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2049274499}
   playerBox: {fileID: 2049274496}
+  segundoPiso: {fileID: 188958503}
+  off: []
   direccionCaida: 2
 --- !u!1 &1510160139
 GameObject:
@@ -2891,6 +2954,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2049274499}
   playerBox: {fileID: 2049274496}
+  segundoPiso: {fileID: 188958503}
+  off: []
   direccionCaida: 3
 --- !u!1 &2049274496
 GameObject:
@@ -2973,13 +3038,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049274496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.481, z: 0}
+  m_LocalPosition: {x: -5.5, y: 0.481, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 807444233}
   - {fileID: 1510160140}
   - {fileID: 1963032028}
   - {fileID: 1416594439}
+  - {fileID: 1052202561}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2996,6 +3062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
+  direction: 0
   obstacles:
     serializedVersion: 2
     m_Bits: 8

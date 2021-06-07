@@ -6,6 +6,8 @@ public class CaidaGeneral : MonoBehaviour
 {
     public PlayerMovement player;
     public GameObject playerBox;
+    public SegundoPiso segundoPiso;
+    public float pushDireccion = 1f;
     public enum DIRECCION
     {
         UP,
@@ -20,7 +22,10 @@ public class CaidaGeneral : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D other)
     {
-        MovementFall(other);
+        if (segundoPiso.stayPiso2)
+        {
+            MovementFall(other);
+        }
         if (other.CompareTag("Player"))
         {
             playerBox.GetComponent<BoxCollider2D>().enabled = false;
@@ -38,27 +43,27 @@ public class CaidaGeneral : MonoBehaviour
         switch (direccionCaida)
         {
             case DIRECCION.UP:
-                other.transform.position = new Vector2(other.transform.position.x, other.transform.position.y + 1);
-                player.targetPosition.y += 1f;
+                other.transform.position = new Vector2(other.transform.position.x, other.transform.position.y + pushDireccion);
+                player.targetPosition.y += pushDireccion;
                 break;
             case DIRECCION.DOWN:
-                other.transform.position = new Vector2(other.transform.position.x, other.transform.position.y - 1);
-                player.targetPosition.y -= 1f;
+                other.transform.position = new Vector2(other.transform.position.x, other.transform.position.y - pushDireccion);
+                player.targetPosition.y -= pushDireccion;
                 break;
             case DIRECCION.RIGHT:
-                other.transform.position = new Vector2(other.transform.position.x + 1, other.transform.position.y);
-                player.targetPosition.x += 1f;
+                other.transform.position = new Vector2(other.transform.position.x + pushDireccion, other.transform.position.y);
+                player.targetPosition.x += pushDireccion;
                 break;
             case DIRECCION.LEFT:
-                other.transform.position = new Vector2(other.transform.position.x - 1, other.transform.position.y);
-                player.targetPosition.x -= 1f;
+                other.transform.position = new Vector2(other.transform.position.x - pushDireccion, other.transform.position.y);
+                player.targetPosition.x -= pushDireccion;
                 break;
         }
     }
 
     IEnumerator Salir()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         player.enabled = true;
         playerBox.GetComponent<BoxCollider2D>().enabled = true;
     }
