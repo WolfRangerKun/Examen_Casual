@@ -8,6 +8,7 @@ public class Atomo : MonoBehaviour
     {
         CARBONO = 0,
         OXIGENO = 1,
+        MERCURIO =2
     }
     public TIPO_ATOMO tipoAtomo;
 
@@ -27,6 +28,9 @@ public class Atomo : MonoBehaviour
                 break;
             case TIPO_ATOMO.OXIGENO:
                 GetComponent<SpriteRenderer>().color = Color.blue;
+                break;
+            case TIPO_ATOMO.MERCURIO:
+                GetComponent<SpriteRenderer>().color = Color.red;
                 break;
         }
 
