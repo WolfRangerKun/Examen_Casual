@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public class Vaso : MonoBehaviour
     public int cantidadAgua = 0;
     public List<GameObject> contenido;
     public int crearAmoxicilina;
+    public int gradosCalor = 0;
     bool tomarVaso;
 
     public bool isNivel1, isNivel2, isNivel3, isNivel4;
@@ -23,12 +25,23 @@ public class Vaso : MonoBehaviour
             other.gameObject.SetActive(false);
             ActualizarLista();
         }
+        if (other.CompareTag("Fuego"))
+        {
+            StartCoroutine(ContadorFuego());
+        }
     }
 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Fuego"))
+        {
+            StopCoroutine(ContadorFuego());
+        }
+    }
 
     private void Update()
     {
-        
+
 
     }
 
@@ -56,6 +69,27 @@ public class Vaso : MonoBehaviour
             RevisarLista(ORDEN_PRODUCTO.PRODUCTO4);
         }
 
+    }
+
+    IEnumerator ContadorFuego()
+    {
+        while(gradosCalor <= 50)
+        {
+            yield return new WaitForSeconds(.5f);
+            gradosCalor++;
+        }
+
+        while (gradosCalor <= 100)
+        {
+            yield return new WaitForSeconds(.25f);
+            gradosCalor++;
+        }
+
+        while (gradosCalor <= 130)
+        {
+            yield return new WaitForSeconds(.125f);
+            gradosCalor++;
+        }
     }
 
     //for (int i = 0; i < contenido.Count; i++)
@@ -131,18 +165,22 @@ public class Vaso : MonoBehaviour
                 {
                     if (cantidadAgua >= 15)
                     {
-                        if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
+                        if (gradosCalor >= 120)
                         {
-                            contenido.Remove(contenido[0]);
-                            contenido.Remove(contenido[0]);
-                            contenido.Remove(contenido[0]);
-                            crearAmoxicilina = 100;
-                            Debug.Log("Tirate");
+                            if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
+                            {
+                                contenido.Remove(contenido[0]);
+                                contenido.Remove(contenido[0]);
+                                contenido.Remove(contenido[0]);
+                                crearAmoxicilina = 100;
+                                Debug.LogError("Tirate");
+                            }
+                            else
+                            {
+                                Debug.Log("Tefolta");
+                            }
                         }
-                        else
-                        {
-                            Debug.Log("Tefolta");
-                        }
+
 
                     }
                 }
