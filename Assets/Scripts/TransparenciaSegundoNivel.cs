@@ -4,38 +4,44 @@ using UnityEngine;
 
 public class TransparenciaSegundoNivel : MonoBehaviour
 {
+    public static TransparenciaSegundoNivel intanse;
     [Range(0, 1)]
     public float transparencia = 0, transicionSpeed = 1;
     public SpriteRenderer spriteRenderer;
     bool canButton = true;
     public List<GameObject> objectosArriba, objectosAbajo;
 
-    public enum Modo
+    public enum MODO
     {
         SHOW = 0,
         HIDE = 1,
         NOTHING = -1
     }
 
-    public Modo modo;
-
+    public MODO modo;
+    private void Awake()
+    {
+        intanse = this;
+    }
     private void Start()
     {
-        modo = Modo.NOTHING;
+        
+        modo = MODO.NOTHING;
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
-        if(modo.Equals(Modo.HIDE))
+        if(modo.Equals(MODO.HIDE))
         {
             if (transparencia <= 0)
-                modo = Modo.NOTHING;
+                modo = MODO.NOTHING;
 
-            transparencia -= Time.deltaTime * 2;
+            transparencia -= Time.deltaTime;
             spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, transparencia);
             foreach(GameObject g in objectosArriba)
             {
+                spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, transparencia);
                 g.SetActive(false);
             }
 
@@ -45,10 +51,10 @@ public class TransparenciaSegundoNivel : MonoBehaviour
             }
         }
 
-        if (modo.Equals(Modo.SHOW))
+        if (modo.Equals(MODO.SHOW))
         {
             if (transparencia >= 1)
-                modo = Modo.NOTHING;
+                modo = MODO.NOTHING;
 
             transparencia += Time.deltaTime / 2;
             spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, transparencia);
