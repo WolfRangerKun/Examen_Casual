@@ -49,7 +49,7 @@ public class PlayerMovement3D : MonoBehaviour
                         hit2.transform.position = new Vector3(hit2.transform.position.x + pushDistance, hit2.transform.position.y, hit2.transform.position.z);
                     }
                     if (!CheckCollision)
-                        targetPosition += new Vector3(distanceMovement, 0f, 0f);
+                        targetPosition += new Vector3(distanceMovement, transform.position.y, 0f);
                 }
                 else
                 {
@@ -59,7 +59,7 @@ public class PlayerMovement3D : MonoBehaviour
                         hit.transform.position = new Vector3(hit.transform.position.x - pushDistance, hit.transform.position.y, hit.transform.position.z);
                     }
                     if (!CheckCollision)
-                        targetPosition -= new Vector3(distanceMovement, 0f, 0f);
+                        targetPosition -= new Vector3(distanceMovement, transform.position.y, 0f);
                 }
             }
             else
@@ -72,7 +72,7 @@ public class PlayerMovement3D : MonoBehaviour
                         hit3.transform.position = new Vector3(hit3.transform.position.x, hit3.transform.position.y + pushDistance, hit3.transform.position.z);
                     }
                     if (!CheckCollision)
-                        targetPosition += new Vector3(0f,0f, distanceMovement);
+                        targetPosition += new Vector3(0f,transform.position.y, distanceMovement);
                 }
                 else
                 {
@@ -82,7 +82,7 @@ public class PlayerMovement3D : MonoBehaviour
                         hit4.transform.position = new Vector3(hit4.transform.position.x, hit4.transform.position.y - pushDistance, hit4.transform.position.z);
                     }
                     if (!CheckCollision)
-                        targetPosition -= new Vector3(0f, 0f, distanceMovement);
+                        targetPosition -= new Vector3(0f, transform.position.y, distanceMovement);
                 }
             }
         }
