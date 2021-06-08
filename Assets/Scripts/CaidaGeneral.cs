@@ -20,51 +20,49 @@ public class CaidaGeneral : MonoBehaviour
     {
         playerBox = GameObject.FindGameObjectWithTag("Player");
     }
-    //private void OnTriggerStay2D(Collider2D other)
-    //{
-    //    if (segundoPiso.stayPiso2)
-    //    {
-    //        MovementFall(other);
-    //    }
-    //    if (other.CompareTag("Player"))
-    //    {
-    //        playerBox.GetComponent<BoxCollider2D>().enabled = false;
-    //    }
-    //}
-    //private void OnTriggerExit2D(Collider2D other)
-    //{
-    //    if (other.CompareTag("Player"))
-    //    {
-    //        StartCoroutine(Salir());
-    //    }
-    //}
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        foreach (ContactPoint2D hitPos in collision.contacts)
+        if (segundoPiso.stayPiso2)
         {
-            //Debug.Log(hitPos.normal);
-
-            if (hitPos.normal.x < 0 && direccionCaida == DIRECCION.LEFT)
-            {
-                Debug.Log("hit" + hitPos.normal.x);
-                MovementFall(collision);
-            }
-            if (hitPos.normal.x > 0 && direccionCaida == DIRECCION.RIGHT)
-            {
-                Debug.Log("hit" + hitPos.normal.x);
-                MovementFall(collision);
-            }
-            if(hitPos.normal.y < 0 && direccionCaida == DIRECCION.DOWN)
-            {
-                MovementFall(collision);
-            }
-            if(hitPos.normal.y > 0 && direccionCaida == DIRECCION.UP)
-            {
-                MovementFall(collision);
-            }
+            MovementFall(other);
+        }
+        //if (other.CompareTag("Player"))
+        //{
+        //    playerBox.GetComponent<BoxCollider2D>().enabled = false;
+        //}
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            StartCoroutine(Salir());
         }
     }
-    public void MovementFall(Collision2D other)
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    foreach (ContactPoint2D hitPos in collision.contacts)
+    //    {
+    //        //Debug.Log(hitPos.normal);
+
+    //        if (hitPos.normal.x < 0 && direccionCaida == DIRECCION.LEFT)
+    //        {
+    //            collision.gameObject.transform.position = Vector3.zero;
+    //        }
+    //        if (hitPos.normal.x > 0 && direccionCaida == DIRECCION.RIGHT)
+    //        {
+    //            collision.gameObject.transform.position = Vector3.zero;
+    //        }
+    //        if (hitPos.normal.y < 0 && direccionCaida == DIRECCION.DOWN)
+    //        {
+    //            collision.gameObject.transform.position = Vector3.zero;
+    //        }
+    //        if (hitPos.normal.y > 0 && direccionCaida == DIRECCION.UP)
+    //        {
+    //            collision.gameObject.transform.position = Vector3.zero;
+    //        }
+    //    }
+    //}
+    public void MovementFall(Collider2D other)
     {
         switch (direccionCaida)
         {
@@ -90,7 +88,6 @@ public class CaidaGeneral : MonoBehaviour
     IEnumerator Salir()
     {
         yield return new WaitForSeconds(0.5f);
-        player.enabled = true;
         playerBox.GetComponent<BoxCollider2D>().enabled = true;
     }
 }
