@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
                     if (hit2.collider && direction == Direction.right)
                     {
                         hit2.transform.position = new Vector2(hit2.transform.position.x + pushDistance, hit2.transform.position.y);
+                        
                     }
                     if (!CheckCollision)
                         targetPosition += new Vector3(distanceMovement, 0f, 0f);
