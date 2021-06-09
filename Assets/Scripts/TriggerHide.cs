@@ -20,19 +20,37 @@ public class TriggerHide : MonoBehaviour
 
         if (other.CompareTag("Vaso"))
         {
-            if (isTriggerArriba)
+            for (int i = 0; i < Vaso.intance.contenido.Count; i++)
             {
-                CollisionEntrySecondFlor.intanse.vasoSprite.sortingOrder = 1;
+                if(Vaso.intance.contenido[i].gameObject.name != "Vaso" && isTriggerArriba)
+                {
+                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
+                }
             }
+           
         }
-        
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Vaso"))
+        {
+
+        }
+    }
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !isTriggerArriba)
         {
             TransparenciaSegundoNivel.intanse.modo = TransparenciaSegundoNivel.MODO.HIDE;
+        }
+
+        if (other.CompareTag("Vaso"))
+        {
+            if (isTriggerArriba)
+            {
+                other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
+            }
         }
     }
 }

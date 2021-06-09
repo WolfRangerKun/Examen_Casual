@@ -7,8 +7,8 @@ public class CollisionEntrySecondFlor : MonoBehaviour
     public static CollisionEntrySecondFlor intanse;
     public GameObject triggerAbajo;
     public GameObject triggerArriba;
-    public SpriteRenderer vasoSprite;
 
+    public bool isVaso;
     private void Awake()
     {
         intanse = this;
@@ -21,12 +21,18 @@ public class CollisionEntrySecondFlor : MonoBehaviour
             {
                 triggerAbajo.SetActive(false);
                 triggerArriba.SetActive(true);
-                //other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
             }
+        }
+    }
 
-            if (hitPos.normal.x < 0 && other.gameObject.CompareTag("Vaso"))
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (isVaso)
+        {
+            if (other.CompareTag("Vaso"))
             {
-                vasoSprite.sortingOrder = 2;
+                TransparenciaSegundoNivel.intanse.objectosArriba.Remove(other.gameObject);
+                other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
             }
         }
     }
