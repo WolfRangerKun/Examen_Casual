@@ -6,7 +6,7 @@ public class TransparenciaSegundoNivel : MonoBehaviour
 {
     public static TransparenciaSegundoNivel intanse;
     [Range(0, 1)]
-    public float transparencia = 0, transicionSpeed = 1;
+    public float transparencia = 0f, transicionSpeed = 1;
     public SpriteRenderer spriteRenderer;
     bool canButton = true;
     public List<GameObject> objectosArriba, objectosAbajo;
@@ -34,10 +34,11 @@ public class TransparenciaSegundoNivel : MonoBehaviour
     {
         if(modo.Equals(MODO.HIDE))
         {
-            if (transparencia <= 0)
+            if (transparencia <= 0.5)
                 modo = MODO.NOTHING;
 
-            transparencia -= Time.deltaTime;
+            //transparencia -= Time.deltaTime / 2;
+            transparencia = .4f;
             spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, transparencia);
             foreach(GameObject g in objectosArriba)
             {
@@ -48,6 +49,7 @@ public class TransparenciaSegundoNivel : MonoBehaviour
             foreach (GameObject g in objectosAbajo)
             {
                 g.SetActive(true);
+                spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, transparencia);
             }
         }
 
@@ -56,16 +58,19 @@ public class TransparenciaSegundoNivel : MonoBehaviour
             if (transparencia >= 1)
                 modo = MODO.NOTHING;
 
-            transparencia += Time.deltaTime / 2;
+            //transparencia += Time.deltaTime / 2;
+            transparencia = 1f;
             spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, transparencia);
             foreach (GameObject g in objectosAbajo)
             {
+                spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, transparencia);
                 g.SetActive(false);
             }
 
             foreach (GameObject g in objectosArriba)
             {
                 g.SetActive(true);
+                spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, transparencia);
             }
         }
     }

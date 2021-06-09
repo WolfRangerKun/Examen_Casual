@@ -7,8 +7,8 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     public bool gameRunning;
-    int tiempo = 120000;
-    //public TMP_Text txtTimer;
+    public int tiempo = 120000;
+    public TMP_Text txtTimer;
     public int pieceBridges;
     public GameObject wayOfBrigde;
 
@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        //txtTimer.text = "Timer " + tiempo;
+        txtTimer.text = "Timer " + tiempo;
         if (tiempo <= 0)
         {
             Debug.Log("Se acabo el Tiempo mano");
