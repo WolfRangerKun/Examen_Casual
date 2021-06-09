@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Vaso : MonoBehaviour
 {
+    public static Vaso intance;
     public int cantidadAgua = 0;
     public List<GameObject> contenido;
     public int crearAmoxicilina;
@@ -11,6 +12,11 @@ public class Vaso : MonoBehaviour
     bool tomarVaso;
 
     public bool isNivel1, isNivel2, isNivel3, isNivel4;
+
+    private void Awake()
+    {
+        intance = this;
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Agua"))
@@ -91,18 +97,6 @@ public class Vaso : MonoBehaviour
             gradosCalor++;
         }
     }
-
-    //for (int i = 0; i < contenido.Count; i++)
-    //{
-    //    
-    //            if (contenido[i].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
-    //            {
-    //                contenido.Remove(contenido[i]);
-    //                crearAmoxicilina = 100;
-    //                Debug.Log("Tirate");
-    //            }
-    //            
-    //}
 
 
 

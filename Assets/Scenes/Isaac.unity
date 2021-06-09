@@ -1088,7 +1088,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1733038072
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1394,7 +1394,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameRunning: 1
-  txtTimer: {fileID: 385782858}
+  pieceBridges: 0
+  wayOfBrigde: {fileID: 0}
 --- !u!1001 &243964125350154805
 PrefabInstance:
   m_ObjectHideFlags: 0

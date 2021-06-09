@@ -45,6 +45,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fondo
+    uniqueID: 719517235
+    locked: 0
   - name: Collider
     uniqueID: 2481422455
     locked: 0

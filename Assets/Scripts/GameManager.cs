@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     public bool gameRunning;
-    int tiempo = 30;
+    int tiempo = 120000;
     //public TMP_Text txtTimer;
     public int pieceBridges;
     public GameObject wayOfBrigde;
