@@ -17,6 +17,14 @@ public class TriggerHide : MonoBehaviour
                 CollisionEntrySecondFlor.intanse.triggerAbajo.SetActive(true);
             }
         }
+
+        if (other.CompareTag("Vaso"))
+        {
+            if (isTriggerArriba)
+            {
+                CollisionEntrySecondFlor.intanse.vasoSprite.sortingOrder = 1;
+            }
+        }
         
     }
 
