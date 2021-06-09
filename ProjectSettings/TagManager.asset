@@ -9,6 +9,8 @@ TagManager:
   - Molecula
   - Fuego
   - Bridges
+  - Vaso
+  - Sprite
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - Water
   - UI
   - Objects
-  - 
+  - UpSprite
   - 
   - 
   - 
