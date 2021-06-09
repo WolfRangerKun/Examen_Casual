@@ -187,7 +187,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 7477734459090765315}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -224,6 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
+  direction: 0
   obstacles:
     serializedVersion: 2
     m_Bits: 8
@@ -236,8 +237,9 @@ MonoBehaviour:
   rayCast3: {fileID: 7477734459935919303}
   rayCast4: {fileID: 7477734459061236418}
   distanceRay: 0.1
-  distanceRayCollision: 0
+  distanceRayCollision: 1
   distanceMovement: 1
+  pushDistance: 1
 --- !u!95 &7477734459090765316
 Animator:
   serializedVersion: 3

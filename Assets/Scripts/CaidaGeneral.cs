@@ -43,7 +43,6 @@ public class CaidaGeneral : MonoBehaviour
     //    foreach (ContactPoint2D hitPos in collision.contacts)
     //    {
     //        //Debug.Log(hitPos.normal);
-
     //        if (hitPos.normal.x < 0 && direccionCaida == DIRECCION.LEFT)
     //        {
     //            collision.gameObject.transform.position = Vector3.zero;

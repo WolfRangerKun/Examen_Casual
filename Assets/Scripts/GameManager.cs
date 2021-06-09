@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public bool gameRunning;
     int tiempo = 30;
-    public TMP_Text txtTimer;
+    //public TMP_Text txtTimer;
+    public int pieceBridges;
+    public GameObject wayOfBrigde;
 
     private void Start()
     {
@@ -19,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        txtTimer.text = "Timer " + tiempo;
+        //txtTimer.text = "Timer " + tiempo;
         if (tiempo <= 0)
         {
             Debug.Log("Se acabo el Tiempo mano");
@@ -27,6 +29,11 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             ChangedGameRunningState();
+        }
+
+        if (pieceBridges == 3)
+        {
+            wayOfBrigde.SetActive(true);
         }
     }
 

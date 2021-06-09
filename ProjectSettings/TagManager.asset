@@ -8,6 +8,7 @@ TagManager:
   - Atomo
   - Molecula
   - Fuego
+  - Bridges
   layers:
   - Default
   - TransparentFX
