@@ -9,8 +9,6 @@ public class GameManager : MonoBehaviour
     public bool gameRunning;
     int tiempo = 120000;
     //public TMP_Text txtTimer;
-    public int pieceBridges;
-    public GameObject wayOfBrigde;
 
     private void Start()
     {
@@ -29,11 +27,6 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             ChangedGameRunningState();
-        }
-
-        if (pieceBridges == 3)
-        {
-            wayOfBrigde.SetActive(true);
         }
     }
 
