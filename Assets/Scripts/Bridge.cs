@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bridge : MonoBehaviour
 {
-    public GameManager game;
+    public BridgeManager game;
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -15,7 +15,7 @@ public class Bridge : MonoBehaviour
             collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             game.pieceBridges++;
-            if(game.pieceBridges == 3)
+            if(game.pieceBridges == 1)
             {
                 collision.gameObject.layer = 0;
             }
