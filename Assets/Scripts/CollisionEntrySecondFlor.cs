@@ -25,15 +25,5 @@ public class CollisionEntrySecondFlor : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (isVaso)
-        {
-            if (other.CompareTag("Vaso"))
-            {
-                TransparenciaSegundoNivel.intanse.objectosArriba.Remove(other.gameObject);
-                other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
-            }
-        }
-    }
+    
 }
