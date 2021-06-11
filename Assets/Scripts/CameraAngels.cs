@@ -12,6 +12,7 @@ public class CameraAngels : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             cam.Priority = 99;
+            Debug.Log(" ME CAMBIE");        
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -19,6 +20,7 @@ public class CameraAngels : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             cam.Priority = 0;
+            Debug.Log("AHORA NO FUNCIONO");
         }
     }
 }

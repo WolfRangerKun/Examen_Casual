@@ -7,16 +7,18 @@ public class SegundoPiso : MonoBehaviour
     public PlayerMovement player;
     public bool stayPiso2;
     public List<GameObject> off;
+    public bool puente;
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            player.distanceRayCollision = 0.1f;
-            //off[0].GetComponent<EdgeCollider2D>().isTrigger = true;
-            //off[1].GetComponent<EdgeCollider2D>().isTrigger = true;
-            //off[2].GetComponent<EdgeCollider2D>().isTrigger = true;
-            //off[3].GetComponent<EdgeCollider2D>().isTrigger = true;
+            //player.distanceRayCollision = 0.1f;
+            off[0].layer = 0;
+            off[1].layer = 0;
+            off[2].layer = 0;
+            off[3].layer = 0;
             stayPiso2 = true;
+            if (puente) off[4].layer = 0;
         }
         
     }
@@ -25,13 +27,13 @@ public class SegundoPiso : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            player.distanceRayCollision = 1f;
-            //off[0].GetComponent<EdgeCollider2D>().isTrigger = false;
-            //off[1].GetComponent<EdgeCollider2D>().isTrigger = false;
-            //off[2].GetComponent<EdgeCollider2D>().isTrigger = false;
-            //off[3].GetComponent<EdgeCollider2D>().isTrigger = false;
+            //player.distanceRayCollision = 1f;
+            off[0].layer = 3;
+            off[1].layer = 3;
+            off[2].layer = 3;
+            off[3].layer = 3;
             stayPiso2 = false;
-
+            if (puente) off[4].layer = 3;
         }
         
     }
