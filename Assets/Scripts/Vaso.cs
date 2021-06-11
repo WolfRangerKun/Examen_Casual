@@ -13,6 +13,10 @@ public class Vaso : MonoBehaviour
 
     public bool isNivel1, isNivel2, isNivel3, isNivel4;
 
+
+    public List<Sprite> spritesContorno;
+    public List<Sprite> spriteElementoActual;
+
     private void Awake()
     {
         intance = this;
@@ -56,8 +60,13 @@ public class Vaso : MonoBehaviour
     {
         if (cantidadAgua >= 15)
         {
-            gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
+            GetComponent<SpriteRenderer>().sprite = spriteElementoActual[1];
         }
+        else
+        {
+            GetComponent<SpriteRenderer>().sprite = spriteElementoActual[0];
+        }
+
         if (isNivel1)
         {
             RevisarLista(ORDEN_PRODUCTO.PRODUCTO1);
@@ -79,7 +88,7 @@ public class Vaso : MonoBehaviour
 
     IEnumerator ContadorFuego()
     {
-        while(gradosCalor <= 50)
+        while (gradosCalor <= 50)
         {
             yield return new WaitForSeconds(.5f);
             gradosCalor++;
@@ -99,6 +108,12 @@ public class Vaso : MonoBehaviour
     }
 
 
+    public IEnumerator CambiarSpriteMovimiento(int x)
+    {
+        GetComponent<SpriteRenderer>().sprite = spritesContorno[x];
+        yield return new WaitForSeconds(.1f);
+        GetComponent<SpriteRenderer>().sprite = spriteElementoActual[x];
+    }
 
     public enum ORDEN_PRODUCTO
     {

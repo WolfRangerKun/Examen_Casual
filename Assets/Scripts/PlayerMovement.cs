@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public enum Direction
@@ -51,7 +49,13 @@ public class PlayerMovement : MonoBehaviour
                     if (hit2.collider && direction == Direction.right)
                     {
                         hit2.transform.position = new Vector2(hit2.transform.position.x + pushDistance, hit2.transform.position.y);
-                        hit2.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit2.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
+                        if (hit2.collider.gameObject.GetComponent<Atomo>())
+                            hit2.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit2.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
+                        if (hit2.collider.gameObject.GetComponent<Vaso>() && hit2.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
+                            hit2.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit2.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(1));
+                        else
+                            if(hit2.collider.gameObject.GetComponent<Vaso>())
+                            hit2.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit2.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
                     }
                     if (!CheckCollision)
                         targetPosition += new Vector3(distanceMovement, 0f, 0f);
@@ -62,7 +66,13 @@ public class PlayerMovement : MonoBehaviour
                     if (hit.collider && direction == Direction.left)
                     {
                         hit.transform.position = new Vector2(hit.transform.position.x - pushDistance, hit.transform.position.y);
-                        hit.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
+                        if (hit.collider.gameObject.GetComponent<Atomo>())
+                            hit.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
+                        if (hit.collider.gameObject.GetComponent<Vaso>() && hit.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
+                            hit.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(1));
+                        else
+                            if(hit.collider.gameObject.GetComponent<Vaso>())
+                            hit.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
                     }
                     if (!CheckCollision)
                         targetPosition -= new Vector3(distanceMovement, 0f, 0f);
@@ -76,7 +86,13 @@ public class PlayerMovement : MonoBehaviour
                     if (hit3.collider && direction == Direction.up)
                     {
                         hit3.transform.position = new Vector2(hit3.transform.position.x, hit3.transform.position.y + pushDistance);
-                        hit3.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit3.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
+                        if (hit3.collider.gameObject.GetComponent<Atomo>())
+                            hit3.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit3.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
+                        if (hit3.collider.gameObject.GetComponent<Vaso>() && hit3.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
+                            hit3.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit3.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(1));
+                        else
+                            if(hit3.collider.gameObject.GetComponent<Vaso>())
+                            hit3.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit3.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
                     }
                     if (!CheckCollision)
                         targetPosition += new Vector3(0f, distanceMovement, 0f);
@@ -87,7 +103,13 @@ public class PlayerMovement : MonoBehaviour
                     if (hit4.collider && direction == Direction.down)
                     {
                         hit4.transform.position = new Vector2(hit4.transform.position.x, hit4.transform.position.y - pushDistance);
-                        hit4.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit4.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
+                        if (hit4.collider.gameObject.GetComponent<Atomo>())
+                            hit4.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit4.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
+                        if (hit4.collider.gameObject.GetComponent<Vaso>() && hit4.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
+                            hit4.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit4.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(1));
+                        else
+                            if(hit4.collider.gameObject.GetComponent<Vaso>())
+                            hit4.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit4.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
                     }
                     if (!CheckCollision)
                         targetPosition -= new Vector3(0f, distanceMovement, 0f);
@@ -120,6 +142,6 @@ public class PlayerMovement : MonoBehaviour
             return rh.collider != null;
         }
 
-        
+
     }
 }

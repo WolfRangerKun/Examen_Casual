@@ -8,7 +8,6 @@ public class CollisionEntrySecondFlor : MonoBehaviour
     public GameObject triggerAbajo;
     public GameObject triggerArriba;
 
-    public bool isVaso;
     private void Awake()
     {
         intanse = this;

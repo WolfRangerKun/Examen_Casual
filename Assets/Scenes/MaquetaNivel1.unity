@@ -467,7 +467,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerAbajo: {fileID: 1971426232}
   triggerArriba: {fileID: 1504366239}
-  isVaso: 0
 --- !u!68 &239219517
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1508,6 +1507,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paArriba: 0
   paAsbajo: 1
+  entradaObjetoAbajo: 0
+  salidaObjetoAbajo: 0
 --- !u!61 &1055799568
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1692,6 +1693,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paArriba: 1
   paAsbajo: 0
+  entradaObjetoAbajo: 0
+  salidaObjetoAbajo: 0
 --- !u!1001 &1354556399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2373,6 +2376,12 @@ MonoBehaviour:
   isNivel2: 0
   isNivel3: 0
   isNivel4: 0
+  spritesContorno:
+  - {fileID: 21300000, guid: c96ffdeb3e674cc479a734228d736424, type: 3}
+  - {fileID: 21300000, guid: 419a3023b14a12c41b991ab200cc7d38, type: 3}
+  spriteElementoActual:
+  - {fileID: 21300000, guid: 3fb95adda6f472745acb53f3addee361, type: 3}
+  - {fileID: 21300000, guid: c2921654078754749af92b8b80de467c, type: 3}
 --- !u!61 &2018683893
 BoxCollider2D:
   m_ObjectHideFlags: 0
