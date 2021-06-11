@@ -741,10 +741,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameRunning: 1
-  tiempo: 120000
-  txtTimer: {fileID: 582331599}
-  pieceBridges: 0
-  wayOfBrigde: {fileID: 0}
 --- !u!4 &546657591
 Transform:
   m_ObjectHideFlags: 0
@@ -2443,8 +2439,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
-  m_Color: {r: 0.8018868, g: 0.7815863, b: 0.55602527, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3fb95adda6f472745acb53f3addee361, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2627,6 +2623,10 @@ PrefabInstance:
       value: Boton Fuego
       objectReference: {fileID: 0}
     - target: {fileID: 2433837496992371761, guid: 1443b5ffb2d8f2443b7e3ac21bff8f50, type: 3}
+      propertyPath: fuego
+      value: 
+      objectReference: {fileID: 1467686751}
+    - target: {fileID: 2433837496992371761, guid: 1443b5ffb2d8f2443b7e3ac21bff8f50, type: 3}
       propertyPath: spawnAgua
       value: 
       objectReference: {fileID: 1005266639}
@@ -2634,6 +2634,10 @@ PrefabInstance:
       propertyPath: buttonAgua
       value: 
       objectReference: {fileID: 5806945854069174917}
+    - target: {fileID: 2433837496992371761, guid: 1443b5ffb2d8f2443b7e3ac21bff8f50, type: 3}
+      propertyPath: isButtonFuego
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1443b5ffb2d8f2443b7e3ac21bff8f50, type: 3}
 --- !u!212 &2433837496992371760 stripped

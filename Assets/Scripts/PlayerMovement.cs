@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
                     if (hit2.collider && direction == Direction.right)
                     {
                         hit2.transform.position = new Vector2(hit2.transform.position.x + pushDistance, hit2.transform.position.y);
-                        
+                        hit2.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit2.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
                     }
                     if (!CheckCollision)
                         targetPosition += new Vector3(distanceMovement, 0f, 0f);
@@ -62,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
                     if (hit.collider && direction == Direction.left)
                     {
                         hit.transform.position = new Vector2(hit.transform.position.x - pushDistance, hit.transform.position.y);
+                        hit.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
                     }
                     if (!CheckCollision)
                         targetPosition -= new Vector3(distanceMovement, 0f, 0f);
@@ -75,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
                     if (hit3.collider && direction == Direction.up)
                     {
                         hit3.transform.position = new Vector2(hit3.transform.position.x, hit3.transform.position.y + pushDistance);
+                        hit3.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit3.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
                     }
                     if (!CheckCollision)
                         targetPosition += new Vector3(0f, distanceMovement, 0f);
@@ -85,6 +87,7 @@ public class PlayerMovement : MonoBehaviour
                     if (hit4.collider && direction == Direction.down)
                     {
                         hit4.transform.position = new Vector2(hit4.transform.position.x, hit4.transform.position.y - pushDistance);
+                        hit4.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit4.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
                     }
                     if (!CheckCollision)
                         targetPosition -= new Vector3(0f, distanceMovement, 0f);

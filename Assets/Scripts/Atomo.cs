@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Atomo : MonoBehaviour
 {
+    public static Atomo intance;
+    public Sprite spriteElementoOriginal;
+    public List<Sprite> spritesContorno;
     public enum TIPO_ATOMO
     {
         CARBONO = 0,
@@ -14,34 +17,46 @@ public class Atomo : MonoBehaviour
 
     private void Start()
     {
-        //tipoMolecula = (TIPO_MOLECULA)Random.Range(0, 3);
-        ActualizarColor();
+        intance = this;
     }
-    public void ActualizarColor()
+    public void ActualizarSprite()
     {
-        //GetComponent<SpriteRenderer>().color = Color.yellow;
 
+        //switch (tipoAtomo)
+        //{
+        //    case TIPO_ATOMO.CARBONO:
+        //        spriteCambiado = spritesContorno[0];
+        //        break;
+        //    case TIPO_ATOMO.OXIGENO:
+        //        spriteCambiado = spritesContorno[1];
+        //        break;
+        //    case TIPO_ATOMO.MERCURIO:
+        //        spriteCambiado = spritesContorno[2];
+        //        break;
+        //}
+    }
+
+    
+
+    public IEnumerator CambiarSpriteMovimiento()
+    {
         switch (tipoAtomo)
         {
             case TIPO_ATOMO.CARBONO:
-                GetComponent<SpriteRenderer>().color = Color.green;
+                GetComponent<SpriteRenderer>().sprite = spritesContorno[0];
+                yield return new WaitForSeconds(.1f);
+                GetComponent<SpriteRenderer>().sprite = spriteElementoOriginal;
                 break;
             case TIPO_ATOMO.OXIGENO:
-                GetComponent<SpriteRenderer>().color = Color.blue;
+                GetComponent<SpriteRenderer>().sprite = spritesContorno[1];
+                yield return new WaitForSeconds(.1f);
+                GetComponent<SpriteRenderer>().sprite = spriteElementoOriginal;
                 break;
             case TIPO_ATOMO.MERCURIO:
-                GetComponent<SpriteRenderer>().color = Color.red;
+                GetComponent<SpriteRenderer>().sprite = spritesContorno[2];
+                yield return new WaitForSeconds(.1f);
+                GetComponent<SpriteRenderer>().sprite = spriteElementoOriginal;
                 break;
-        }
-
-    }
-
-    private void Update()
-    {
-        if (Input.GetButtonDown("Jump"))
-        {
-            //tipoMolecula = TIPO_MOLECULA.MADERA;
-            ActualizarColor();
         }
     }
 }
