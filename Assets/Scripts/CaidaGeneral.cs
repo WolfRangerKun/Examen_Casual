@@ -5,7 +5,6 @@ using UnityEngine;
 public class CaidaGeneral : MonoBehaviour
 {
     public PlayerMovement player;
-    public GameObject playerBox;
     public SegundoPiso segundoPiso;
     public float pushDireccion = 1f;
     public enum DIRECCION
@@ -18,7 +17,7 @@ public class CaidaGeneral : MonoBehaviour
     public DIRECCION direccionCaida;
     private void Start()
     {
-        playerBox = GameObject.FindGameObjectWithTag("Player");
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -35,7 +34,7 @@ public class CaidaGeneral : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            StartCoroutine(Salir());
+            
         }
     }
     //private void OnCollisionEnter2D(Collision2D collision)
@@ -84,9 +83,4 @@ public class CaidaGeneral : MonoBehaviour
         }
     }
 
-    IEnumerator Salir()
-    {
-        yield return new WaitForSeconds(0.5f);
-        playerBox.GetComponent<BoxCollider2D>().enabled = true;
-    }
 }

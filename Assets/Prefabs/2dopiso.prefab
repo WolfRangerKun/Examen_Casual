@@ -302,8 +302,10 @@ MonoBehaviour:
   player: {fileID: 0}
   stayPiso2: 0
   off:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 8822321893546233012}
+  - {fileID: 8822321892390586972}
+  - {fileID: 8822321891433352300}
+  - {fileID: 8822321893183808660}
 --- !u!1 &8822321893183808660
 GameObject:
   m_ObjectHideFlags: 0
