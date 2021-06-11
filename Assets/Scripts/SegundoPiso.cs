@@ -12,10 +12,10 @@ public class SegundoPiso : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             player.distanceRayCollision = 0.1f;
-            off[0].GetComponent<EdgeCollider2D>().isTrigger = true;
-            off[1].GetComponent<EdgeCollider2D>().isTrigger = true;
-            off[2].GetComponent<EdgeCollider2D>().isTrigger = true;
-            off[3].GetComponent<EdgeCollider2D>().isTrigger = true;
+            //off[0].GetComponent<EdgeCollider2D>().isTrigger = true;
+            //off[1].GetComponent<EdgeCollider2D>().isTrigger = true;
+            //off[2].GetComponent<EdgeCollider2D>().isTrigger = true;
+            //off[3].GetComponent<EdgeCollider2D>().isTrigger = true;
             stayPiso2 = true;
         }
         
@@ -26,10 +26,10 @@ public class SegundoPiso : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             player.distanceRayCollision = 1f;
-            off[0].GetComponent<EdgeCollider2D>().isTrigger = false;
-            off[1].GetComponent<EdgeCollider2D>().isTrigger = false;
-            off[2].GetComponent<EdgeCollider2D>().isTrigger = false;
-            off[3].GetComponent<EdgeCollider2D>().isTrigger = false;
+            //off[0].GetComponent<EdgeCollider2D>().isTrigger = false;
+            //off[1].GetComponent<EdgeCollider2D>().isTrigger = false;
+            //off[2].GetComponent<EdgeCollider2D>().isTrigger = false;
+            //off[3].GetComponent<EdgeCollider2D>().isTrigger = false;
             stayPiso2 = false;
 
         }
