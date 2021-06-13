@@ -10,6 +10,7 @@ public class TransparenciaSegundoNivel : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     bool canButton = true;
     public List<GameObject> objectosArriba, objectosAbajo;
+    public int maxVaso = 0;
 
     public enum MODO
     {
@@ -32,7 +33,27 @@ public class TransparenciaSegundoNivel : MonoBehaviour
 
     private void Update()
     {
-        if(modo.Equals(MODO.HIDE))
+        for (int i = 0; i < objectosAbajo.Count; i++)
+        {
+            if ((objectosAbajo[i].gameObject.name == "Vaso"))
+            {
+                maxVaso = 1;
+            }
+        }
+
+        for (int i = 0; i < objectosArriba.Count; i++)
+        {
+            if ((objectosAbajo[i].gameObject.name == "Vaso"))
+            {
+                maxVaso = 1;
+            }
+        }
+
+        //foreach (GameObject g in objectosAbajo)
+        //{
+        //}
+
+        if (modo.Equals(MODO.HIDE))
         {
             if (transparencia <= 0.5)
                 modo = MODO.NOTHING;
