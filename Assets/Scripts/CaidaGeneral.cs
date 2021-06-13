@@ -15,10 +15,6 @@ public class CaidaGeneral : MonoBehaviour
         RIGHT
     }
     public DIRECCION direccionCaida;
-    private void Start()
-    {
-
-    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (segundoPiso.stayPiso2)
