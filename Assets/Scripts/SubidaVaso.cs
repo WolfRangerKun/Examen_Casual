@@ -39,6 +39,7 @@ public class SubidaVaso : MonoBehaviour
             if ((other.CompareTag("Vaso") || other.CompareTag("Atomo")))
             {
                 TransparenciaSegundoNivel.intanse.objectosAbajo.Add(other.gameObject);
+                other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
             }
         }
 
@@ -47,6 +48,7 @@ public class SubidaVaso : MonoBehaviour
             if ((other.CompareTag("Vaso") || other.CompareTag("Atomo")))
             {
                 TransparenciaSegundoNivel.intanse.objectosAbajo.Remove(other.gameObject);
+                other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
             }
         }
 
