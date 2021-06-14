@@ -1987,7 +1987,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -2172,6 +2172,9 @@ MonoBehaviour:
   objectosAbajo:
   - {fileID: 1718054523}
   maxVaso: 0
+  maxOxigeno: 0
+  maxMercurio: 0
+  maxCarbono: 0
   modo: 0
 --- !u!1 &957653483
 GameObject:
@@ -5997,19 +6000,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8185425193819317398, guid: 5d0571de724bd4540bc662b8609e1311, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8185425193819317418, guid: 5d0571de724bd4540bc662b8609e1311, type: 3}
       propertyPath: m_RootOrder
       value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8185425193819317418, guid: 5d0571de724bd4540bc662b8609e1311, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4416
+      objectReference: {fileID: 0}
+    - target: {fileID: 8185425193819317418, guid: 5d0571de724bd4540bc662b8609e1311, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.56
+      value: -5.496
       objectReference: {fileID: 0}
     - target: {fileID: 8185425193819317418, guid: 5d0571de724bd4540bc662b8609e1311, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.09
+      value: 5.391
       objectReference: {fileID: 0}
     - target: {fileID: 8185425193819317418, guid: 5d0571de724bd4540bc662b8609e1311, type: 3}
       propertyPath: m_LocalPosition.z

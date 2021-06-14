@@ -11,6 +11,9 @@ public class TransparenciaSegundoNivel : MonoBehaviour
     bool canButton = true;
     public List<GameObject> objectosArriba, objectosAbajo;
     public int maxVaso = 0;
+    public int maxOxigeno = 0;
+    public int maxMercurio = 0;
+    public int maxCarbono = 0;
 
     public enum MODO
     {
@@ -39,6 +42,18 @@ public class TransparenciaSegundoNivel : MonoBehaviour
             {
                 maxVaso = 1;
             }
+            if ((objectosAbajo[i].gameObject.name == "Oxigeno"))
+            {
+                maxOxigeno = 1;
+            }
+            if ((objectosAbajo[i].gameObject.name == "Mercurio"))
+            {
+                maxMercurio = 1;
+            }
+            if ((objectosAbajo[i].gameObject.name == "Carbono"))
+            {
+                maxCarbono = 1;
+            }
         }
 
         for (int i = 0; i < objectosArriba.Count; i++)
@@ -46,6 +61,18 @@ public class TransparenciaSegundoNivel : MonoBehaviour
             if ((objectosAbajo[i].gameObject.name == "Vaso"))
             {
                 maxVaso = 1;
+            }
+            if ((objectosAbajo[i].gameObject.name == "Oxigeno"))
+            {
+                maxOxigeno = 1;
+            }
+            if ((objectosAbajo[i].gameObject.name == "Mercurio"))
+            {
+                maxMercurio = 1;
+            }
+            if ((objectosAbajo[i].gameObject.name == "Carbono"))
+            {
+                maxCarbono = 1;
             }
         }
 
