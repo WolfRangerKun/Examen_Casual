@@ -791,7 +791,7 @@ GameObject:
   - component: {fileID: 517191513}
   - component: {fileID: 517191515}
   - component: {fileID: 517191514}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,8 +824,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81922c55ab32be0469c0bd9b259510da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  segundoPiso: {fileID: 0}
+  player: {fileID: 741174757}
+  segundoPiso: {fileID: 565175785}
   pushDireccion: 0
   direccionCaida: 2
 --- !u!68 &517191515
@@ -1002,9 +1002,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50efd5e968a6797429fe99a9ddb06bf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 741174757}
   stayPiso2: 0
-  off: []
+  off:
+  - {fileID: 1187036391}
+  - {fileID: 1780409501}
+  - {fileID: 517191512}
+  - {fileID: 1529951934}
   puente: 0
 --- !u!1 &646205596
 GameObject:
@@ -1155,6 +1159,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3258676706473642220, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
   m_PrefabInstance: {fileID: 666231274}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &741174757 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7477734459090765317, guid: a5bf24ed5401970418d7bbcb73995629, type: 3}
+  m_PrefabInstance: {fileID: 1155558342}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4c91e786d19e9641a6b53bec13b5df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &778868890
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,7 +1470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7477734459090765322, guid: a5bf24ed5401970418d7bbcb73995629, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 7477734459090765322, guid: a5bf24ed5401970418d7bbcb73995629, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1502,7 +1517,7 @@ GameObject:
   - component: {fileID: 1187036392}
   - component: {fileID: 1187036394}
   - component: {fileID: 1187036393}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1535,8 +1550,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81922c55ab32be0469c0bd9b259510da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  segundoPiso: {fileID: 0}
+  player: {fileID: 741174757}
+  segundoPiso: {fileID: 565175785}
   pushDireccion: 0
   direccionCaida: 0
 --- !u!68 &1187036394
@@ -1880,7 +1895,7 @@ GameObject:
   - component: {fileID: 1529951935}
   - component: {fileID: 1529951937}
   - component: {fileID: 1529951936}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1913,8 +1928,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81922c55ab32be0469c0bd9b259510da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  segundoPiso: {fileID: 0}
+  player: {fileID: 741174757}
+  segundoPiso: {fileID: 565175785}
   pushDireccion: 0
   direccionCaida: 3
 --- !u!68 &1529951937
@@ -2242,7 +2257,7 @@ GameObject:
   - component: {fileID: 1780409502}
   - component: {fileID: 1780409504}
   - component: {fileID: 1780409503}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2275,8 +2290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81922c55ab32be0469c0bd9b259510da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  segundoPiso: {fileID: 0}
+  player: {fileID: 741174757}
+  segundoPiso: {fileID: 565175785}
   pushDireccion: 0
   direccionCaida: 1
 --- !u!68 &1780409504
