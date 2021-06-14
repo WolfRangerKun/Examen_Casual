@@ -4,7 +4,7 @@ public class SubidaVaso : MonoBehaviour
 {
     public bool paArriba, paAsbajo, entradaObjetoAbajo, salidaObjetoAbajo, cosaPlayer;
     private void OnTriggerEnter2D(Collider2D other)
-    {
+    {//aca
         if (paArriba)
         {
             if (other.CompareTag("Vaso"))
@@ -17,8 +17,24 @@ public class SubidaVaso : MonoBehaviour
             }
             if (other.CompareTag("Atomo"))
             {
-                other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
-                TransparenciaSegundoNivel.intanse.objectosArriba.Add(other.gameObject);
+                if (other.name == "Oxigeno" && TransparenciaSegundoNivel.intanse.maxOxigeno < 1)
+                {
+                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
+                    TransparenciaSegundoNivel.intanse.objectosArriba.Add(other.gameObject);
+                }
+
+                if (other.name == "Mercurio" && TransparenciaSegundoNivel.intanse.maxMercurio < 1)
+                {
+                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
+                    TransparenciaSegundoNivel.intanse.objectosArriba.Add(other.gameObject);
+                }
+
+                if (other.name == "Carbono" && TransparenciaSegundoNivel.intanse.maxCarbono < 1)
+                {
+                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
+                    TransparenciaSegundoNivel.intanse.objectosArriba.Add(other.gameObject);
+                }
+
             }
         }
 
@@ -36,11 +52,29 @@ public class SubidaVaso : MonoBehaviour
             }
             if (other.CompareTag("Atomo"))
             {
-                TransparenciaSegundoNivel.intanse.objectosArriba.Remove(other.gameObject);
-                other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                if (other.name == "Oxigeno")
+                {
+                    TransparenciaSegundoNivel.intanse.objectosArriba.Remove(other.gameObject);
+                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                    TransparenciaSegundoNivel.intanse.maxOxigeno = 0;
+                }
+
+                if (other.name == "Mercurio")
+                {
+                    TransparenciaSegundoNivel.intanse.objectosArriba.Remove(other.gameObject);
+                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                    TransparenciaSegundoNivel.intanse.maxMercurio = 0;
+                }
+
+                if (other.name == "Carbono")
+                {
+                    TransparenciaSegundoNivel.intanse.objectosArriba.Remove(other.gameObject);
+                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                    TransparenciaSegundoNivel.intanse.maxCarbono = 0;
+                }
             }
         }
-
+        //y aca
         if (entradaObjetoAbajo)
         {
             if (other.CompareTag("Vaso"))
@@ -54,8 +88,24 @@ public class SubidaVaso : MonoBehaviour
 
             if (other.CompareTag("Atomo"))
             {
-                TransparenciaSegundoNivel.intanse.objectosAbajo.Add(other.gameObject);
-                other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                if (other.name == "Oxigeno" && TransparenciaSegundoNivel.intanse.maxOxigeno < 1)
+                {
+                    TransparenciaSegundoNivel.intanse.objectosAbajo.Add(other.gameObject);
+                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                }
+
+                if (other.name == "Mercurio" && TransparenciaSegundoNivel.intanse.maxMercurio < 1)
+                {
+                    TransparenciaSegundoNivel.intanse.objectosAbajo.Add(other.gameObject);
+                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                }
+
+                if (other.name == "Carbono" && TransparenciaSegundoNivel.intanse.maxCarbono < 1)
+                {
+                    TransparenciaSegundoNivel.intanse.objectosAbajo.Add(other.gameObject);
+                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                }
+                
             }
         }
 
@@ -73,14 +123,33 @@ public class SubidaVaso : MonoBehaviour
 
             if (other.CompareTag("Atomo"))
             {
-                TransparenciaSegundoNivel.intanse.objectosAbajo.Remove(other.gameObject);
-                other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                if (other.name == "Oxigeno")
+                {
+                    TransparenciaSegundoNivel.intanse.objectosAbajo.Remove(other.gameObject);
+                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                    TransparenciaSegundoNivel.intanse.maxOxigeno = 0;
+                }
+
+                if (other.name == "Mercurio")
+                {
+                    TransparenciaSegundoNivel.intanse.objectosAbajo.Remove(other.gameObject);
+                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                    TransparenciaSegundoNivel.intanse.maxMercurio = 0;
+                }
+
+                if (other.name == "Carbono")
+                {
+                    TransparenciaSegundoNivel.intanse.objectosAbajo.Remove(other.gameObject);
+                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                    TransparenciaSegundoNivel.intanse.maxCarbono = 0;
+                }
+
+                
             }
         }
 
         if (other.CompareTag("Player") && cosaPlayer)
         {
-            Debug.Log("porno");
             foreach (GameObject g in TransparenciaSegundoNivel.intanse.objectosArriba)
             {
                 g.SetActive(false);
@@ -96,7 +165,6 @@ public class SubidaVaso : MonoBehaviour
     {
         if (other.CompareTag("Player") && cosaPlayer)
         {
-            Debug.Log("porno");
             foreach (GameObject g in TransparenciaSegundoNivel.intanse.objectosArriba)
             {
                 g.SetActive(true);
