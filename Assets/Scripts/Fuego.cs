@@ -6,7 +6,6 @@ public class Fuego : MonoBehaviour
 {
     public PlayerMovement player;
     public float pushDireccion = 1f;
-
     private void Start()
     {
         player = FindObjectOfType<PlayerMovement>();
@@ -28,9 +27,6 @@ public class Fuego : MonoBehaviour
             StartCoroutine(DanoVisual(other));
         }
     }
-
-   
-
     void EmpujarDano(DIRECCION direccioncaida)
     {
         direccioncaida = direccionCaida;
