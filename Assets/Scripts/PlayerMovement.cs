@@ -9,6 +9,7 @@ public enum Direction
 }
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement instace;
     Animator anim;
     public Vector3 targetPosition;
     public Direction direction;
@@ -20,6 +21,12 @@ public class PlayerMovement : MonoBehaviour
     public float distanceRayCollision;
     public float distanceMovement = 1f;
     public int pushDistance = 1;
+    public bool canMove = true;
+
+    private void Awake()
+    {
+        instace = this;
+    }
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -29,94 +36,98 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Debug.DrawRay(rayCast2.position, rayCast.right * distanceRay);
-        Debug.DrawRay(rayCast.position, -rayCast.right * distanceRay);
-        Debug.DrawRay(rayCast3.position, rayCast.up * distanceRay);
-        Debug.DrawRay(rayCast4.position, -rayCast.up * distanceRay);
-        RaycastHit2D hit = Physics2D.Raycast(rayCast.position, -rayCast.right, distanceRay, move);
-        RaycastHit2D hit2 = Physics2D.Raycast(rayCast2.position, rayCast.right, distanceRay, move);
-        RaycastHit2D hit3 = Physics2D.Raycast(rayCast3.position, rayCast.up, distanceRay, move);
-        RaycastHit2D hit4 = Physics2D.Raycast(rayCast4.position, -rayCast.up, distanceRay, move);
-        Vector2 axisDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        anim.SetInteger("Direction", (int)direction);
-        if (axisDirection != Vector2.zero && targetPosition == transform.position)
+        if (canMove)
         {
-            if (Mathf.Abs(axisDirection.x) > Mathf.Abs(axisDirection.y))
+            Debug.DrawRay(rayCast2.position, rayCast.right * distanceRay);
+            Debug.DrawRay(rayCast.position, -rayCast.right * distanceRay);
+            Debug.DrawRay(rayCast3.position, rayCast.up * distanceRay);
+            Debug.DrawRay(rayCast4.position, -rayCast.up * distanceRay);
+            RaycastHit2D hit = Physics2D.Raycast(rayCast.position, -rayCast.right, distanceRay, move);
+            RaycastHit2D hit2 = Physics2D.Raycast(rayCast2.position, rayCast.right, distanceRay, move);
+            RaycastHit2D hit3 = Physics2D.Raycast(rayCast3.position, rayCast.up, distanceRay, move);
+            RaycastHit2D hit4 = Physics2D.Raycast(rayCast4.position, -rayCast.up, distanceRay, move);
+            Vector2 axisDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            anim.SetInteger("Direction", (int)direction);
+            if (axisDirection != Vector2.zero && targetPosition == transform.position)
             {
-                if (axisDirection.x > 0)
+                if (Mathf.Abs(axisDirection.x) > Mathf.Abs(axisDirection.y))
                 {
-                    direction = Direction.right;
-                    if (hit2.collider && direction == Direction.right)
+                    if (axisDirection.x > 0)
                     {
-                        hit2.transform.position = new Vector2(hit2.transform.position.x + pushDistance, hit2.transform.position.y);
-                        if (hit2.collider.gameObject.GetComponent<Atomo>())
-                            hit2.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit2.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
-                        if (hit2.collider.gameObject.GetComponent<Vaso>() && hit2.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
-                            hit2.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit2.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(1));
-                        else
-                            if(hit2.collider.gameObject.GetComponent<Vaso>())
-                            hit2.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit2.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
+                        direction = Direction.right;
+                        if (hit2.collider && direction == Direction.right)
+                        {
+                            hit2.transform.position = new Vector2(hit2.transform.position.x + pushDistance, hit2.transform.position.y);
+                            if (hit2.collider.gameObject.GetComponent<Atomo>())
+                                hit2.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit2.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
+                            if (hit2.collider.gameObject.GetComponent<Vaso>() && hit2.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
+                                hit2.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit2.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(1));
+                            else
+                                if (hit2.collider.gameObject.GetComponent<Vaso>())
+                                hit2.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit2.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
+                        }
+                        if (!CheckCollision)
+                            targetPosition += new Vector3(distanceMovement, 0f, 0f);
                     }
-                    if (!CheckCollision)
-                        targetPosition += new Vector3(distanceMovement, 0f, 0f);
+                    else
+                    {
+                        direction = Direction.left;
+                        if (hit.collider && direction == Direction.left)
+                        {
+                            hit.transform.position = new Vector2(hit.transform.position.x - pushDistance, hit.transform.position.y);
+                            if (hit.collider.gameObject.GetComponent<Atomo>())
+                                hit.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
+                            if (hit.collider.gameObject.GetComponent<Vaso>() && hit.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
+                                hit.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(1));
+                            else
+                                if (hit.collider.gameObject.GetComponent<Vaso>())
+                                hit.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
+                        }
+                        if (!CheckCollision)
+                            targetPosition -= new Vector3(distanceMovement, 0f, 0f);
+                    }
                 }
                 else
                 {
-                    direction = Direction.left;
-                    if (hit.collider && direction == Direction.left)
+                    if (axisDirection.y > 0)
                     {
-                        hit.transform.position = new Vector2(hit.transform.position.x - pushDistance, hit.transform.position.y);
-                        if (hit.collider.gameObject.GetComponent<Atomo>())
-                            hit.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
-                        if (hit.collider.gameObject.GetComponent<Vaso>() && hit.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
-                            hit.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(1));
-                        else
-                            if(hit.collider.gameObject.GetComponent<Vaso>())
-                            hit.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
+                        direction = Direction.up;
+                        if (hit3.collider && direction == Direction.up)
+                        {
+                            hit3.transform.position = new Vector2(hit3.transform.position.x, hit3.transform.position.y + pushDistance);
+                            if (hit3.collider.gameObject.GetComponent<Atomo>())
+                                hit3.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit3.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
+                            if (hit3.collider.gameObject.GetComponent<Vaso>() && hit3.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
+                                hit3.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit3.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(1));
+                            else
+                                if (hit3.collider.gameObject.GetComponent<Vaso>())
+                                hit3.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit3.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
+                        }
+                        if (!CheckCollision)
+                            targetPosition += new Vector3(0f, distanceMovement, 0f);
                     }
-                    if (!CheckCollision)
-                        targetPosition -= new Vector3(distanceMovement, 0f, 0f);
+                    else
+                    {
+                        direction = Direction.down;
+                        if (hit4.collider && direction == Direction.down)
+                        {
+                            hit4.transform.position = new Vector2(hit4.transform.position.x, hit4.transform.position.y - pushDistance);
+                            if (hit4.collider.gameObject.GetComponent<Atomo>())
+                                hit4.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit4.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
+                            if (hit4.collider.gameObject.GetComponent<Vaso>() && hit4.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
+                                hit4.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit4.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(1));
+                            else
+                                if (hit4.collider.gameObject.GetComponent<Vaso>())
+                                hit4.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit4.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
+                        }
+                        if (!CheckCollision)
+                            targetPosition -= new Vector3(0f, distanceMovement, 0f);
+                    }
                 }
             }
-            else
-            {
-                if (axisDirection.y > 0)
-                {
-                    direction = Direction.up;
-                    if (hit3.collider && direction == Direction.up)
-                    {
-                        hit3.transform.position = new Vector2(hit3.transform.position.x, hit3.transform.position.y + pushDistance);
-                        if (hit3.collider.gameObject.GetComponent<Atomo>())
-                            hit3.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit3.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
-                        if (hit3.collider.gameObject.GetComponent<Vaso>() && hit3.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
-                            hit3.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit3.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(1));
-                        else
-                            if(hit3.collider.gameObject.GetComponent<Vaso>())
-                            hit3.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit3.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
-                    }
-                    if (!CheckCollision)
-                        targetPosition += new Vector3(0f, distanceMovement, 0f);
-                }
-                else
-                {
-                    direction = Direction.down;
-                    if (hit4.collider && direction == Direction.down)
-                    {
-                        hit4.transform.position = new Vector2(hit4.transform.position.x, hit4.transform.position.y - pushDistance);
-                        if (hit4.collider.gameObject.GetComponent<Atomo>())
-                            hit4.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit4.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
-                        if (hit4.collider.gameObject.GetComponent<Vaso>() && hit4.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
-                            hit4.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit4.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(1));
-                        else
-                            if(hit4.collider.gameObject.GetComponent<Vaso>())
-                            hit4.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit4.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
-                    }
-                    if (!CheckCollision)
-                        targetPosition -= new Vector3(0f, distanceMovement, 0f);
-                }
-            }
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
         }
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+        
     }
 
     public bool CheckCollision

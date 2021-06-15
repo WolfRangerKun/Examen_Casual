@@ -57,9 +57,11 @@ public class Fuego : MonoBehaviour
 
     IEnumerator DanoVisual(Collider2D other)
     {
+        PlayerMovement.instace.canMove = false;
         other.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(.1f);
         other.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        PlayerMovement.instace.canMove = true;
     }
     //public void MovementFall(Collider2D other, DIRECCION dire)
     //{
