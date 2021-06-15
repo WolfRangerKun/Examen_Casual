@@ -14,6 +14,10 @@ public class TransparenciaSegundoNivel : MonoBehaviour
     public int maxOxigeno = 0;
     public int maxMercurio = 0;
     public int maxCarbono = 0;
+    public int maxBrige1 = 0;
+    public int maxBrige2 = 0;
+    public int maxBrige3 = 0;
+
 
     public enum MODO
     {
@@ -32,6 +36,10 @@ public class TransparenciaSegundoNivel : MonoBehaviour
         
         modo = MODO.NOTHING;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        foreach (GameObject g in objectosAbajo)
+        {
+            g.SetActive(false);
+        }
     }
 
     private void Update()
@@ -54,6 +62,18 @@ public class TransparenciaSegundoNivel : MonoBehaviour
             {
                 maxCarbono = 1;
             }
+            if ((objectosAbajo[i].gameObject.name == "Bridge"))
+            {
+                maxBrige1 = 1;
+            }
+            if ((objectosAbajo[i].gameObject.name == "Bridge (1)"))
+            {
+                maxBrige2 = 1;
+            }
+            if ((objectosAbajo[i].gameObject.name == "Bridge (2)"))
+            {
+                maxBrige3 = 1;
+            }
         }
 
         for (int i = 0; i < objectosArriba.Count; i++)
@@ -75,6 +95,8 @@ public class TransparenciaSegundoNivel : MonoBehaviour
                 maxCarbono = 1;
             }
         }
+
+
 
         //foreach (GameObject g in objectosAbajo)
         //{
