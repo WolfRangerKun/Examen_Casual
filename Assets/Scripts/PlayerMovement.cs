@@ -66,6 +66,10 @@ public class PlayerMovement : MonoBehaviour
                             else
                                 if (hit2.collider.gameObject.GetComponent<Vaso>())
                                 hit2.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit2.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
+                            if (hit2.collider.gameObject.GetComponent<OnCollisionChangeSprite>())
+                            {
+                                hit2.collider.gameObject.GetComponent<OnCollisionChangeSprite>().StartCoroutine(hit2.collider.gameObject.GetComponent<OnCollisionChangeSprite>().CambiarSpriteVaso(0));
+                            }
                         }
                         if (!CheckCollision)
                             targetPosition += new Vector3(distanceMovement, 0f, 0f);
@@ -83,6 +87,10 @@ public class PlayerMovement : MonoBehaviour
                             else
                                 if (hit.collider.gameObject.GetComponent<Vaso>())
                                 hit.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
+                            if (hit.collider.gameObject.GetComponent<OnCollisionChangeSprite>())
+                            {
+                                hit.collider.gameObject.GetComponent<OnCollisionChangeSprite>().StartCoroutine(hit.collider.gameObject.GetComponent<OnCollisionChangeSprite>().CambiarSpriteVaso(0));
+                            }
                         }
                         if (!CheckCollision)
                             targetPosition -= new Vector3(distanceMovement, 0f, 0f);
@@ -103,6 +111,10 @@ public class PlayerMovement : MonoBehaviour
                             else
                                 if (hit3.collider.gameObject.GetComponent<Vaso>())
                                 hit3.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit3.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
+                            if (hit3.collider.gameObject.GetComponent<OnCollisionChangeSprite>())
+                            {
+                                hit3.collider.gameObject.GetComponent<OnCollisionChangeSprite>().StartCoroutine(hit3.collider.gameObject.GetComponent<OnCollisionChangeSprite>().CambiarSpriteVaso(0));
+                            }
                         }
                         if (!CheckCollision)
                             targetPosition += new Vector3(0f, distanceMovement, 0f);
@@ -120,6 +132,10 @@ public class PlayerMovement : MonoBehaviour
                             else
                                 if (hit4.collider.gameObject.GetComponent<Vaso>())
                                 hit4.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit4.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
+                            if (hit4.collider.gameObject.GetComponent<OnCollisionChangeSprite>())
+                            {
+                                hit4.collider.gameObject.GetComponent<OnCollisionChangeSprite>().StartCoroutine(hit4.collider.gameObject.GetComponent<OnCollisionChangeSprite>().CambiarSpriteVaso(0));
+                            }
                         }
                         if (!CheckCollision)
                             targetPosition -= new Vector3(0f, distanceMovement, 0f);

@@ -20,6 +20,7 @@ public class CollisionEntrySecondFlor : MonoBehaviour
             {
                 triggerAbajo.SetActive(false);
                 triggerArriba.SetActive(true);
+                other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 4;
             }
         }
     }
@@ -30,6 +31,7 @@ public class CollisionEntrySecondFlor : MonoBehaviour
         {
             triggerAbajo.SetActive(false);
             triggerArriba.SetActive(true);
+            other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 4;
         }
     }
 }
