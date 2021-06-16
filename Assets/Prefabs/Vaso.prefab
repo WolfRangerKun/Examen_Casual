@@ -224,11 +224,11 @@ MonoBehaviour:
   isNivel3: 0
   isNivel4: 0
   spritesContorno:
-  - {fileID: 21300000, guid: c96ffdeb3e674cc479a734228d736424, type: 3}
-  - {fileID: 21300000, guid: 419a3023b14a12c41b991ab200cc7d38, type: 3}
-  spriteElementoActual:
   - {fileID: 21300000, guid: 3fb95adda6f472745acb53f3addee361, type: 3}
   - {fileID: 21300000, guid: c2921654078754749af92b8b80de467c, type: 3}
+  spriteElementoActual:
+  - {fileID: 21300000, guid: c96ffdeb3e674cc479a734228d736424, type: 3}
+  - {fileID: 21300000, guid: 419a3023b14a12c41b991ab200cc7d38, type: 3}
 --- !u!212 &3736492269032828252
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -269,7 +269,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3fb95adda6f472745acb53f3addee361, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c96ffdeb3e674cc479a734228d736424, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
