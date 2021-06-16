@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
                         direction = Direction.left;
                         if (hit.collider && direction == Direction.left)
                         {
-                            if (hit.collider.gameObject.GetComponent<Objeto>() &&  obj.inWall == false) hit.transform.position = new Vector2(hit.transform.position.x - pushDistance, hit.transform.position.y);
+                            if (hit.collider.gameObject.GetComponent<Objeto>() && obj.inWall == false) hit.transform.position = new Vector2(hit.transform.position.x - pushDistance, hit.transform.position.y);
                             if (hit.collider.gameObject.GetComponent<Atomo>())
                                 hit.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
                             if (hit.collider.gameObject.GetComponent<Vaso>() && hit.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
