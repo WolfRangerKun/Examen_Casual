@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,7 +32,7 @@ public class TransparenciaSegundoNivel : MonoBehaviour
     }
     private void Start()
     {
-        
+
         modo = MODO.NOTHING;
         spriteRenderer = GetComponent<SpriteRenderer>();
         foreach (GameObject g in objectosAbajo)
@@ -46,56 +45,66 @@ public class TransparenciaSegundoNivel : MonoBehaviour
     {
         for (int i = 0; i < objectosAbajo.Count; i++)
         {
-            if ((objectosAbajo[i].gameObject.name == "Vaso"))
+            if (objectosAbajo[i].gameObject.name == "Vaso")
             {
                 maxVaso = 1;
             }
-            if ((objectosAbajo[i].gameObject.name == "Oxigeno"))
+            if (objectosAbajo[i].gameObject.name == "Oxigeno")
             {
                 maxOxigeno = 1;
             }
-            if ((objectosAbajo[i].gameObject.name == "Mercurio"))
+            if (objectosAbajo[i].gameObject.name == "Mercurio")
             {
                 maxMercurio = 1;
             }
-            if ((objectosAbajo[i].gameObject.name == "Carbono"))
+            if (objectosAbajo[i].gameObject.name == "Carbono")
             {
                 maxCarbono = 1;
             }
-            if ((objectosAbajo[i].gameObject.name == "Bridge"))
+            if (objectosAbajo[i].gameObject.name == "Bridge")
             {
                 maxBrige1 = 1;
             }
-            if ((objectosAbajo[i].gameObject.name == "Bridge (1)"))
+            if (objectosAbajo[i].gameObject.name == "Bridge (1)")
             {
                 maxBrige2 = 1;
             }
-            if ((objectosAbajo[i].gameObject.name == "Bridge (2)"))
+            if (objectosAbajo[i].gameObject.name == "Bridge (2)")
             {
                 maxBrige3 = 1;
             }
         }
-
         for (int i = 0; i < objectosArriba.Count; i++)
         {
-            if ((objectosAbajo[i].gameObject.name == "Vaso"))
+            if (objectosArriba[i].gameObject.name == "Vaso")
             {
                 maxVaso = 1;
             }
-            if ((objectosAbajo[i].gameObject.name == "Oxigeno"))
+            if (objectosArriba[i].gameObject.name == "Oxigeno")
             {
                 maxOxigeno = 1;
             }
-            if ((objectosAbajo[i].gameObject.name == "Mercurio"))
+            if (objectosArriba[i].gameObject.name == "Mercurio")
             {
                 maxMercurio = 1;
             }
-            if ((objectosAbajo[i].gameObject.name == "Carbono"))
+            if (objectosArriba[i].gameObject.name == "Carbono")
             {
                 maxCarbono = 1;
             }
+            if (objectosArriba[i].gameObject.name == "Bridge")
+            {
+                maxBrige1 = 1;
+            }
+            if (objectosArriba[i].gameObject.name == "Bridge (1)")
+            {
+                maxBrige2 = 1;
+            }
+            if (objectosArriba[i].gameObject.name == "Bridge (2)")
+            {
+                maxBrige3 = 1;
+            }
         }
-
 
 
         //foreach (GameObject g in objectosAbajo)
@@ -110,7 +119,7 @@ public class TransparenciaSegundoNivel : MonoBehaviour
             //transparencia -= Time.deltaTime / 2;
             transparencia = .4f;
             spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, transparencia);
-            foreach(GameObject g in objectosArriba)
+            foreach (GameObject g in objectosArriba)
             {
                 spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, transparencia);
                 g.SetActive(false);
@@ -122,7 +131,6 @@ public class TransparenciaSegundoNivel : MonoBehaviour
                 spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, transparencia);
             }
         }
-
         if (modo.Equals(MODO.SHOW))
         {
             if (transparencia >= 1)
