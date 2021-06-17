@@ -286,7 +286,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 67501cca0051fd044931587b66328d12, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 694168a6e24f6d945b2ca81884df2ae6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -335,11 +335,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada3890c96531e4459fffd5a5c93f094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteElementoOriginal: {fileID: 21300000, guid: 67501cca0051fd044931587b66328d12, type: 3}
+  spriteElementoOriginal: {fileID: 21300000, guid: 694168a6e24f6d945b2ca81884df2ae6, type: 3}
   spritesContorno:
-  - {fileID: 21300000, guid: 58c2ef547d8cf324bb5b77627cc28f2a, type: 3}
-  - {fileID: 21300000, guid: dbbdf3728d2d81c449f1454df4d8bbca, type: 3}
-  - {fileID: 21300000, guid: 694168a6e24f6d945b2ca81884df2ae6, type: 3}
+  - {fileID: 21300000, guid: f7d6c7a0cec743b4682d7ae03f0d0ace, type: 3}
+  - {fileID: 21300000, guid: 58604ea1b559a3443bcb2bfc973c6eb9, type: 3}
+  - {fileID: 21300000, guid: 67501cca0051fd044931587b66328d12, type: 3}
   tipoAtomo: 2
 --- !u!50 &5192414602773323997
 Rigidbody2D:

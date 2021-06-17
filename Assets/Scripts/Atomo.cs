@@ -36,7 +36,6 @@ public class Atomo : MonoBehaviour
         //}
     }
 
-    
 
     public IEnumerator CambiarSpriteMovimiento()
     {
