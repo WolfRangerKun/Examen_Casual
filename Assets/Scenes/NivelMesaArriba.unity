@@ -5102,6 +5102,18 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8713552236133585674, guid: c89de3f8adae0cd4f917a3fd980a638f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.52456576
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713552236133585674, guid: c89de3f8adae0cd4f917a3fd980a638f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.52456576
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713552236133585674, guid: c89de3f8adae0cd4f917a3fd980a638f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.52456576
+      objectReference: {fileID: 0}
+    - target: {fileID: 8713552236133585674, guid: c89de3f8adae0cd4f917a3fd980a638f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.507
       objectReference: {fileID: 0}
@@ -5653,6 +5665,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4273881624430753373, guid: cffdfe4b83f672c48b9e2da02f31ff40, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273881624430753375, guid: cffdfe4b83f672c48b9e2da02f31ff40, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273881624657281680, guid: cffdfe4b83f672c48b9e2da02f31ff40, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273881624657281694, guid: cffdfe4b83f672c48b9e2da02f31ff40, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273881624799003436, guid: cffdfe4b83f672c48b9e2da02f31ff40, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273881624799003438, guid: cffdfe4b83f672c48b9e2da02f31ff40, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4273881625653127258, guid: cffdfe4b83f672c48b9e2da02f31ff40, type: 3}
       propertyPath: m_Name
       value: Estante
