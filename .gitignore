@@ -47,3 +47,11 @@ UserSettings/EditorUserSettings.asset
 UserSettings/EditorUserSettings.asset
 UserSettings/EditorUserSettings.asset
 UserSettings/EditorUserSettings.asset
+*.meta
+Assets/Sprites/Tiles/mesa celeste.asset.meta
+Assets/Sprites/Tiles/mesa grisácea.asset.meta
+Assets/Sprites/Tiles/mesaborde.asset.meta
+Assets/Sprites/Tiles/mesaborde3.asset.meta
+Assets/Sprites/Tiles/Muro/muros 1.asset.meta
+Assets/Sprites/Tiles/piso 1.asset.meta
+*.meta

@@ -8,6 +8,12 @@ public class SegundoPiso : MonoBehaviour
     public bool stayPiso2;
     public List<GameObject> off;
     public bool puente;
+
+    public void Start()
+    {
+        player = FindObjectOfType<PlayerMovement>();
+
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -20,6 +26,7 @@ public class SegundoPiso : MonoBehaviour
             stayPiso2 = true;
             if (puente) off[4].layer = 0;
         }
+
         
     }
 
@@ -35,6 +42,7 @@ public class SegundoPiso : MonoBehaviour
             stayPiso2 = false;
             if (puente) off[4].layer = 3;
         }
-        
+
+
     }
 }
