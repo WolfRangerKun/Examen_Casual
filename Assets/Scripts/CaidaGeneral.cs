@@ -15,6 +15,12 @@ public class CaidaGeneral : MonoBehaviour
         RIGHT
     }
     public DIRECCION direccionCaida;
+
+    public void Start()
+    {
+        player = FindObjectOfType<PlayerMovement>();
+        segundoPiso = FindObjectOfType<SegundoPiso>();
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (segundoPiso.stayPiso2)
@@ -33,29 +39,7 @@ public class CaidaGeneral : MonoBehaviour
             
         }
     }
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    foreach (ContactPoint2D hitPos in collision.contacts)
-    //    {
-    //        //Debug.Log(hitPos.normal);
-    //        if (hitPos.normal.x < 0 && direccionCaida == DIRECCION.LEFT)
-    //        {
-    //            collision.gameObject.transform.position = Vector3.zero;
-    //        }
-    //        if (hitPos.normal.x > 0 && direccionCaida == DIRECCION.RIGHT)
-    //        {
-    //            collision.gameObject.transform.position = Vector3.zero;
-    //        }
-    //        if (hitPos.normal.y < 0 && direccionCaida == DIRECCION.DOWN)
-    //        {
-    //            collision.gameObject.transform.position = Vector3.zero;
-    //        }
-    //        if (hitPos.normal.y > 0 && direccionCaida == DIRECCION.UP)
-    //        {
-    //            collision.gameObject.transform.position = Vector3.zero;
-    //        }
-    //    }
-    //}
+
     public void MovementFall(Collider2D other)
     {
         switch (direccionCaida)

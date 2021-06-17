@@ -271,12 +271,14 @@ MonoBehaviour:
   - {fileID: 1249682168}
   - {fileID: 672833116}
   - {fileID: 2006263690}
+  limits: []
   active1: 0
   active2: 0
   active3: 0
   active4: 0
   active5: 0
   active6: 0
+  sinPuente: 1
 --- !u!1 &163039346
 GameObject:
   m_ObjectHideFlags: 0
@@ -15289,6 +15291,9 @@ MonoBehaviour:
   maxOxigeno: 0
   maxMercurio: 0
   maxCarbono: 0
+  maxBrige1: 0
+  maxBrige2: 0
+  maxBrige3: 0
   modo: 0
 --- !u!1 &2031550225
 GameObject:

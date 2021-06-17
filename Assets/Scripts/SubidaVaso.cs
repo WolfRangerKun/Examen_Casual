@@ -169,19 +169,19 @@ public class SubidaVaso : MonoBehaviour
                 if (other.name == "Bridge")
                 {
                     TransparenciaSegundoNivel.intanse.objectosAbajo.Remove(other.gameObject);
-                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                    //other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
                     TransparenciaSegundoNivel.intanse.maxBrige1 = 0;
                 }
                 if (other.name == "Bridge (1)")
                 {
                     TransparenciaSegundoNivel.intanse.objectosAbajo.Remove(other.gameObject);
-                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                    //other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
                     TransparenciaSegundoNivel.intanse.maxBrige2 = 0;
                 }
                 if (other.name == "Bridge (2)")
                 {
                     TransparenciaSegundoNivel.intanse.objectosAbajo.Remove(other.gameObject);
-                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                    //other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
                     TransparenciaSegundoNivel.intanse.maxBrige3 = 0;
                 }
             }
