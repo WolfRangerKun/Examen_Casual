@@ -27,17 +27,11 @@ public class CaidaGeneral : MonoBehaviour
         {
             MovementFall(other);
         }
-        //if (other.CompareTag("Player"))
-        //{
-        //    playerBox.GetComponent<BoxCollider2D>().enabled = false;
-        //}
-    }
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Atomo"))
         {
-            
+            Debug.Log(" ME TOY BUGEANDO CTM PERO EN EL LIMITE");
         }
+
     }
 
     public void MovementFall(Collider2D other)

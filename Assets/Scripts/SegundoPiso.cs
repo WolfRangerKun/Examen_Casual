@@ -26,6 +26,7 @@ public class SegundoPiso : MonoBehaviour
             stayPiso2 = true;
             if (puente) off[4].layer = 0;
         }
+
         
     }
 
@@ -41,6 +42,7 @@ public class SegundoPiso : MonoBehaviour
             stayPiso2 = false;
             if (puente) off[4].layer = 3;
         }
-        
+
+
     }
 }
