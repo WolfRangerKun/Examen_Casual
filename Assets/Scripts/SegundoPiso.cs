@@ -7,7 +7,7 @@ public class SegundoPiso : MonoBehaviour
     public PlayerMovement player;
     public bool stayPiso2;
     public List<GameObject> off;
-    public bool puente;
+    public bool puente,  segundoPisoObjeto;
 
     public void Start()
     {
@@ -16,7 +16,7 @@ public class SegundoPiso : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && collision.CompareTag("Objeto"))
         {
             //player.distanceRayCollision = 0.1f;
             off[0].layer = 0;
@@ -32,7 +32,7 @@ public class SegundoPiso : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && collision.CompareTag("Objeto"))
         {
             //player.distanceRayCollision = 1f;
             off[0].layer = 3;
