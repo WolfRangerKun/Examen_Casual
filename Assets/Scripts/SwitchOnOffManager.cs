@@ -16,6 +16,7 @@ public class SwitchOnOffManager : MonoBehaviour
     public GameObject fuego;
     public SpriteRenderer buttonFuego;
     public List<Sprite> spriteBotonFuego;
+    public GameObject mechero;
 
     private void Start()
     {
@@ -37,6 +38,7 @@ public class SwitchOnOffManager : MonoBehaviour
             }
 
         }
+       
     }
     void ActiveAgua()
     {
@@ -61,11 +63,13 @@ public class SwitchOnOffManager : MonoBehaviour
 
         if (fuegoGO)
         {
+            mechero.GetComponent<Animator>().SetBool("On", true);
             fuego.SetActive(true);
             buttonFuego.sprite = spriteBotonFuego[1];
         }
         else
         {
+            mechero.GetComponent<Animator>().SetBool("On", false);
             fuego.SetActive(false);
             buttonFuego.sprite = spriteBotonFuego[0];
         }

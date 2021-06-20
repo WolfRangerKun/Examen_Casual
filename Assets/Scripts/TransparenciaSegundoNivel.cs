@@ -123,6 +123,7 @@ public class TransparenciaSegundoNivel : MonoBehaviour
             {
                 spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, transparencia);
                 g.SetActive(false);
+                   
             }
 
             foreach (GameObject g in objectosAbajo)
@@ -143,6 +144,14 @@ public class TransparenciaSegundoNivel : MonoBehaviour
             {
                 spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, transparencia);
                 g.SetActive(false);
+                for (int i = 0; i < objectosAbajo.Count; i++)
+                {
+                    if (g.name == "Fuego")
+                    {
+                        Debug.Log("Fuego activavo");
+                    }
+                }
+               
             }
 
             foreach (GameObject g in objectosArriba)
