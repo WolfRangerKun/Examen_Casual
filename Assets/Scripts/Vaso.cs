@@ -88,7 +88,7 @@ public class Vaso : MonoBehaviour
                 {
                     if (TransparenciaSegundoNivel.intanse.objectosAbajo[i].gameObject.name == "Carbono")
                     {
-                        TransparenciaSegundoNivel.intanse.objectosAbajo.Remove(gameObject);
+                        TransparenciaSegundoNivel.intanse.objectosAbajo.Remove(TransparenciaSegundoNivel.intanse.objectosAbajo[i].gameObject);
                         TransparenciaSegundoNivel.intanse.maxCarbono = 0;
                     }
 
