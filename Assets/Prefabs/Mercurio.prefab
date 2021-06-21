@@ -392,6 +392,7 @@ MonoBehaviour:
   - {fileID: 8156322492349525401}
   - {fileID: 480870192599054803}
   - {fileID: 197140084142093575}
+  primerPiso: 1
 --- !u!1 &8156322492349525401
 GameObject:
   m_ObjectHideFlags: 0
