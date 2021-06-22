@@ -6,10 +6,16 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
+    public static GameManager instance;
     public bool gameRunning;
     int tiempo = 120000;
+    public bool botonWin, botonLose, boton;
     //public TMP_Text txtTimer;
 
+    private void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
         StartCoroutine(Tiempo());
