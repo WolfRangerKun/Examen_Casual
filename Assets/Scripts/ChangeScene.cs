@@ -24,12 +24,12 @@ public class ChangeScene : MonoBehaviour
     }
     public void CargarNivel(int NumeroDeEscena)
     {
-        click.Play();
+        //click.Play();
         StartCoroutine(CargarAsync(NumeroDeEscena));
     }
     public void MainMenu(int NumeroDeEscena)
     {
-        click.Play();
+        //click.Play();
         StartCoroutine(CargarAsync(NumeroDeEscena));
     }
 
@@ -61,7 +61,7 @@ public class ChangeScene : MonoBehaviour
         //
         //SetactiveFalse
         //
-        musicaNivel.volume = .05f;
+        //musicaNivel.volume = .05f;
         fondoPantallaDeCarga.SetActive(true);
 
         while (!Operation.isDone)
