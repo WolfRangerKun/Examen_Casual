@@ -6,12 +6,18 @@ using UnityEngine.UI;
 
 public class ChangeScene : MonoBehaviour
 {
+    public static ChangeScene intance;
     public int NumeroDeEscena;
     public AudioSource click;
 
     public GameObject fondoPantallaDeCarga;
     public Slider Slider;
     public AudioSource musicaNivel;
+
+    private void Awake()
+    {
+        intance = this;
+    }
     private void Start()
     {
        
