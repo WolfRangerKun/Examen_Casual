@@ -20,6 +20,7 @@ public class Bridge : MonoBehaviour
             if (bridge == 4) game.active4 = true;
             if (bridge == 5) game.active5 = true;
             if (bridge == 6) game.active6 = true;
+            collision.gameObject.GetComponentInChildren<SpriteRenderer>().sortingOrder = 2;
             collision.gameObject.layer = 0;
             gameObject.SetActive(false);
         }
