@@ -285,23 +285,24 @@ public class Vaso : MonoBehaviour
                 }
                 break;
             case ORDEN_PRODUCTO.PRODUCTO4:
-                if (contenido.Count == 3)
+                if (contenido.Count == 1)
                 {
                     if (cantidadAgua >= 15)
                     {
-                        if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
-                        {
-                            contenido.Remove(contenido[0]);
-                            contenido.Remove(contenido[0]);
-                            contenido.Remove(contenido[0]);
-                            crearAmoxicilina = 100;
-                            Debug.Log("Tirate");
-                        }
-                        else
-                        {
-                            Debug.Log("Tefolta");
-                        }
-
+                        //if (gradosCalor >= 120)
+                        //{
+                            if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
+                            {
+                                contenido.Remove(contenido[0]);
+                                crearAmoxicilina = 100;
+                                Debug.Log("Tirate");
+                            }
+                            else
+                            {
+                                Debug.Log("Tefolta");
+                            }
+                        //}
+                        
                     }
                 }
                 break;
