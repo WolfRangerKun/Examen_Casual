@@ -32,81 +32,102 @@ public class Vaso : MonoBehaviour
             Destroy(other.gameObject);
             ActualizarLista();
         }
-        
 
-        if (other.CompareTag("Atomo"))
+
+        //if (other.CompareTag("Atomo"))
+        //{
+        if (other.name == "Oxigeno" && maxOxigeno < 1 && other.CompareTag("Atomo"))
         {
-            if (other.name == "Oxigeno" && maxOxigeno < 1)
+            for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosAbajo.Count; i++)
             {
-                for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosAbajo.Count; i++)
+                if (TransparenciaSegundoNivel.intanse.objectosAbajo[i].gameObject.name == "Oxigeno")
                 {
-                    if (TransparenciaSegundoNivel.intanse.objectosAbajo[i].gameObject.name == "Oxigeno")
-                    {
-                        TransparenciaSegundoNivel.intanse.objectosAbajo.Remove(gameObject);
-                        TransparenciaSegundoNivel.intanse.maxOxigeno = 0;
-                    }
+                    TransparenciaSegundoNivel.intanse.objectosAbajo.Remove(gameObject);
+                    TransparenciaSegundoNivel.intanse.maxOxigeno = 0;
                 }
-                for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosArriba.Count; i++)
-                {
-                    if (TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.name == "Oxigeno")
-                    {
-                        TransparenciaSegundoNivel.intanse.objectosArriba.Remove(gameObject);
-                        TransparenciaSegundoNivel.intanse.maxOxigeno = 0;
-                    }
-                }
-                contenido.Add(other.gameObject);
-                other.gameObject.SetActive(false);
-                ActualizarLista();
             }
-
-            if (other.name == "Mercurio" && maxMercurio < 1)
+            for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosArriba.Count; i++)
             {
-                for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosAbajo.Count; i++)
+                if (TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.name == "Oxigeno")
                 {
-                    if (TransparenciaSegundoNivel.intanse.objectosAbajo[i].gameObject.name == "Mercurio")
-                    {
-                        TransparenciaSegundoNivel.intanse.objectosAbajo.Remove(gameObject);
-                        TransparenciaSegundoNivel.intanse.maxMercurio = 0;
-                    }
+                    TransparenciaSegundoNivel.intanse.objectosArriba.Remove(gameObject);
+                    TransparenciaSegundoNivel.intanse.maxOxigeno = 0;
                 }
-                for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosArriba.Count; i++)
-                {
-                    if (TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.name == "Mercurio")
-                    {
-                        TransparenciaSegundoNivel.intanse.objectosArriba.Remove(gameObject);
-                        TransparenciaSegundoNivel.intanse.maxMercurio = 0;
-                    }
-                }
-                contenido.Add(other.gameObject);
-                other.gameObject.SetActive(false);
-                ActualizarLista();
             }
-
-            if (other.name == "Carbono" && maxCarbono < 1)
+            for (int i = 0; i < contenido.Count; i++)
             {
-                for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosAbajo.Count; i++)
+                if (contenido[i].gameObject.name == "Oxigeno")
                 {
-                    if (TransparenciaSegundoNivel.intanse.objectosAbajo[i].gameObject.name == "Carbono")
-                    {
-                        TransparenciaSegundoNivel.intanse.objectosAbajo.Remove(TransparenciaSegundoNivel.intanse.objectosAbajo[i].gameObject);
-                        TransparenciaSegundoNivel.intanse.maxCarbono = 0;
-                    }
-
+                    return;
                 }
-                for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosArriba.Count; i++)
-                {
-                    if (TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.name == "Carbono")
-                    {
-                        TransparenciaSegundoNivel.intanse.objectosArriba.Remove(gameObject);
-                        TransparenciaSegundoNivel.intanse.maxCarbono = 0;
-                    }
-                }
-                contenido.Add(other.gameObject);
-                other.gameObject.SetActive(false);
-                ActualizarLista();
             }
-            
+            contenido.Add(other.gameObject);
+            other.gameObject.SetActive(false);
+            ActualizarLista();
         }
+
+        if (other.name == "Mercurio" && maxMercurio < 1 && other.CompareTag("Atomo"))
+        {
+            for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosAbajo.Count; i++)
+            {
+                if (TransparenciaSegundoNivel.intanse.objectosAbajo[i].gameObject.name == "Mercurio")
+                {
+                    TransparenciaSegundoNivel.intanse.objectosAbajo.Remove(gameObject);
+                    TransparenciaSegundoNivel.intanse.maxMercurio = 0;
+                }
+            }
+            for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosArriba.Count; i++)
+            {
+                if (TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.name == "Mercurio")
+                {
+                    TransparenciaSegundoNivel.intanse.objectosArriba.Remove(gameObject);
+                    TransparenciaSegundoNivel.intanse.maxMercurio = 0;
+                }
+            }
+            for (int i = 0; i < contenido.Count; i++)
+            {
+                if (contenido[i].gameObject.name == "Mercurio")
+                {
+                    return;
+                }
+            }
+            contenido.Add(other.gameObject);
+            other.gameObject.SetActive(false);
+            ActualizarLista();
+        }
+
+        if (other.name == "Carbono" && maxCarbono < 1 && other.CompareTag("Atomo"))
+        {
+            for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosAbajo.Count; i++)
+            {
+                if (TransparenciaSegundoNivel.intanse.objectosAbajo[i].gameObject.name == "Carbono")
+                {
+                    TransparenciaSegundoNivel.intanse.objectosAbajo.Remove(TransparenciaSegundoNivel.intanse.objectosAbajo[i].gameObject);
+                    TransparenciaSegundoNivel.intanse.maxCarbono = 0;
+                }
+
+            }
+            for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosArriba.Count; i++)
+            {
+                if (TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.name == "Carbono")
+                {
+                    TransparenciaSegundoNivel.intanse.objectosArriba.Remove(gameObject);
+                    TransparenciaSegundoNivel.intanse.maxCarbono = 0;
+                }
+            }
+            for (int i = 0; i < contenido.Count; i++)
+            {
+                if (contenido[i].gameObject.name == "Carbono")
+                {
+                    return;
+                }
+            }
+            contenido.Add(other.gameObject);
+            other.gameObject.SetActive(false);
+            ActualizarLista();
+        }
+
+        //}
         if (other.CompareTag("Fuego"))
         {
             StartCoroutine(ContadorFuego());
@@ -125,7 +146,7 @@ public class Vaso : MonoBehaviour
     {
         for (int i = 0; i < contenido.Count; i++)
         {
-            
+
             if (contenido[i].gameObject.name == "Oxigeno")
             {
                 maxOxigeno = 1;
@@ -138,7 +159,7 @@ public class Vaso : MonoBehaviour
             {
                 maxCarbono = 1;
             }
-           
+
         }
 
     }
@@ -291,18 +312,18 @@ public class Vaso : MonoBehaviour
                     {
                         //if (gradosCalor >= 120)
                         //{
-                            if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
-                            {
-                                contenido.Remove(contenido[0]);
-                                crearAmoxicilina = 100;
-                                Debug.Log("Tirate");
-                            }
-                            else
-                            {
-                                Debug.Log("Tefolta");
-                            }
+                        if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
+                        {
+                            contenido.Remove(contenido[0]);
+                            crearAmoxicilina = 100;
+                            Debug.Log("Tirate");
+                        }
+                        else
+                        {
+                            Debug.Log("Tefolta");
+                        }
                         //}
-                        
+
                     }
                 }
                 break;

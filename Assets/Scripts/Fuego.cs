@@ -25,6 +25,8 @@ public class Fuego : MonoBehaviour
             EmpujarDano(direccionCaida);
             StartCoroutine(DanoVisual(other));
         }
+        else
+            return;
     }
     void EmpujarDano(DIRECCION direccioncaida)
     {
