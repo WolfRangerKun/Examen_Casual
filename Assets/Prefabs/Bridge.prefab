@@ -407,7 +407,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 7625785519842750494}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -448,7 +448,6 @@ MonoBehaviour:
   - {fileID: 4805542149258404020}
   - {fileID: 6390158036858619241}
   - {fileID: 272941454809266655}
-  primerPiso: 1
 --- !u!61 &5931289257235614506
 BoxCollider2D:
   m_ObjectHideFlags: 0

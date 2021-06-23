@@ -12742,8 +12742,9 @@ MonoBehaviour:
   - {fileID: 690526871}
   - {fileID: 690526871}
   - {fileID: 690526871}
+  libro: []
   puente: 0
-  obj: {fileID: 0}
+  libroRojo: 0
 --- !u!1 &1267048463
 GameObject:
   m_ObjectHideFlags: 0
@@ -13208,14 +13209,14 @@ RectTransform:
   m_GameObject: {fileID: 1321212808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.552056, y: 2.552056, z: 2.552056}
+  m_LocalScale: {x: 1.7098776, y: 1.7098776, z: 1.7098776}
   m_Children: []
   m_Father: {fileID: 166323796}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -160}
+  m_AnchoredPosition: {x: 0, y: -66}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1321212810
@@ -13634,8 +13635,9 @@ MonoBehaviour:
   - {fileID: 826608754}
   - {fileID: 826608754}
   - {fileID: 826608754}
+  libro: []
   puente: 0
-  obj: {fileID: 0}
+  libroRojo: 0
 --- !u!1 &1462031272
 GameObject:
   m_ObjectHideFlags: 0
@@ -14908,8 +14910,9 @@ MonoBehaviour:
   - {fileID: 1814881174}
   - {fileID: 1814881174}
   - {fileID: 1814881174}
+  libro: []
   puente: 0
-  obj: {fileID: 0}
+  libroRojo: 0
 --- !u!1 &1690380085
 GameObject:
   m_ObjectHideFlags: 0
@@ -17082,8 +17085,9 @@ MonoBehaviour:
   - {fileID: 2031550225}
   - {fileID: 1107867937}
   - {fileID: 710824409}
+  libro: []
   puente: 0
-  obj: {fileID: 0}
+  libroRojo: 0
 --- !u!61 &2127226327
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17554,8 +17558,9 @@ MonoBehaviour:
   - {fileID: 8822321891828041546}
   - {fileID: 8822321893308034994}
   - {fileID: 1860198800}
+  libro: []
   puente: 1
-  obj: {fileID: 0}
+  libroRojo: 0
 --- !u!4 &8822321892025326526
 Transform:
   m_ObjectHideFlags: 0
@@ -17722,8 +17727,9 @@ MonoBehaviour:
   - {fileID: 8822321893552283178}
   - {fileID: 8822321891802035922}
   - {fileID: 1043442246}
+  libro: []
   puente: 1
-  obj: {fileID: 0}
+  libroRojo: 0
 --- !u!4 &8822321892549952222
 Transform:
   m_ObjectHideFlags: 0
