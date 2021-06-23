@@ -22,7 +22,6 @@ public class PlayerMovement : MonoBehaviour
     public float distanceMovement = 1f;
     public int pushDistance = 1;
     public bool canMove = true;
-    Objeto obj;
     private void Awake()
     {
         instace = this;
@@ -32,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         targetPosition = transform.position;
         direction = Direction.down;
-        obj = FindObjectOfType<Objeto>();
     }
 
     void Update()
@@ -58,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
                         direction = Direction.right;
                         if (hit2.collider && direction == Direction.right)
                         {
-                            if(hit2.collider.gameObject.GetComponent<Objeto>() && obj.inWall2 == false) hit2.transform.position = new Vector2(hit2.transform.position.x + pushDistance, hit2.transform.position.y);
+                            if(hit2.collider.gameObject.GetComponent<Objeto>() && hit2.collider.gameObject.GetComponent<Objeto>().inWall2 == false) hit2.transform.position = new Vector2(hit2.transform.position.x + pushDistance, hit2.transform.position.y);
                             if(hit2.collider.gameObject.GetComponent<Atomo>())
                                 hit2.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit2.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
                             if(hit2.collider.gameObject.GetComponent<Vaso>() && hit2.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
@@ -79,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
                         direction = Direction.left;
                         if (hit.collider && direction == Direction.left)
                         {
-                            if (hit.collider.gameObject.GetComponent<Objeto>() && obj.inWall == false) hit.transform.position = new Vector2(hit.transform.position.x - pushDistance, hit.transform.position.y);
+                            if (hit.collider.gameObject.GetComponent<Objeto>() && hit.collider.gameObject.GetComponent<Objeto>().inWall == false) hit.transform.position = new Vector2(hit.transform.position.x - pushDistance, hit.transform.position.y);
                             if (hit.collider.gameObject.GetComponent<Atomo>())
                                 hit.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
                             if (hit.collider.gameObject.GetComponent<Vaso>() && hit.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
@@ -103,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
                         direction = Direction.up;
                         if (hit3.collider && direction == Direction.up)
                         {
-                            if (hit3.collider.gameObject.GetComponent<Objeto>() && obj.inWall3 == false) hit3.transform.position = new Vector2(hit3.transform.position.x, hit3.transform.position.y + pushDistance);
+                            if (hit3.collider.gameObject.GetComponent<Objeto>() && hit3.collider.gameObject.GetComponent<Objeto>().inWall3 == false) hit3.transform.position = new Vector2(hit3.transform.position.x, hit3.transform.position.y + pushDistance);
                             if (hit3.collider.gameObject.GetComponent<Atomo>())
                                 hit3.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit3.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
                             if (hit3.collider.gameObject.GetComponent<Vaso>() && hit3.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
@@ -124,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
                         direction = Direction.down;
                         if (hit4.collider && direction == Direction.down)
                         {
-                            if (hit4.collider.gameObject.GetComponent<Objeto>() && obj.inWall4 == false) hit4.transform.position = new Vector2(hit4.transform.position.x, hit4.transform.position.y - pushDistance);
+                            if (hit4.collider.gameObject.GetComponent<Objeto>() && hit4.collider.gameObject.GetComponent<Objeto>().inWall4 == false) hit4.transform.position = new Vector2(hit4.transform.position.x, hit4.transform.position.y - pushDistance);
                             if (hit4.collider.gameObject.GetComponent<Atomo>())
                                 hit4.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit4.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
                             if (hit4.collider.gameObject.GetComponent<Vaso>() && hit4.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)

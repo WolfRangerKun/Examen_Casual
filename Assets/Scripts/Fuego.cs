@@ -58,27 +58,5 @@ public class Fuego : MonoBehaviour
         other.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
         PlayerMovement.instace.canMove = true;
     }
-    //public void MovementFall(Collider2D other, DIRECCION dire)
-    //{
-    //    dire = direccionCaida;
-    //    switch (dire)
-    //    {
-    //        case DIRECCION.UP:
-    //            other.transform.position = new Vector2(other.transform.position.x, other.transform.position.y + pushDireccion);
-    //            player.targetPosition.y += pushDireccion;
-    //            break;
-    //        case DIRECCION.DOWN:
-    //            other.transform.position = new Vector2(other.transform.position.x, other.transform.position.y - pushDireccion);
-    //            player.targetPosition.y -= pushDireccion;
-    //            break;
-    //        case DIRECCION.RIGHT:
-    //            other.transform.position = new Vector2(other.transform.position.x + pushDireccion, other.transform.position.y);
-    //            player.targetPosition.x += pushDireccion;
-    //            break;
-    //        case DIRECCION.LEFT:
-    //            other.transform.position = new Vector2(other.transform.position.x - pushDireccion, other.transform.position.y);
-    //            player.targetPosition.x -= pushDireccion;
-    //            break;
-    //    }
-    //}
+
 }
