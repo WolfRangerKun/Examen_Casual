@@ -294,10 +294,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carbono
       objectReference: {fileID: 0}
-    - target: {fileID: 243964124344860018, guid: 0370b3efb1e563d45bc2fcbe3dfda479, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 243964124344860028, guid: 0370b3efb1e563d45bc2fcbe3dfda479, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -340,18 +336,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 243964124344860028, guid: 0370b3efb1e563d45bc2fcbe3dfda479, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4607353406746562411, guid: 0370b3efb1e563d45bc2fcbe3dfda479, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4607353406746562411, guid: 0370b3efb1e563d45bc2fcbe3dfda479, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7795247558644641294, guid: 0370b3efb1e563d45bc2fcbe3dfda479, type: 3}
-      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4892,14 +4876,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8713552236133585684, guid: c89de3f8adae0cd4f917a3fd980a638f, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8713552236133585686, guid: c89de3f8adae0cd4f917a3fd980a638f, type: 3}
-      propertyPath: m_UseFullKinematicContacts
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8713552236133585687, guid: c89de3f8adae0cd4f917a3fd980a638f, type: 3}
       propertyPath: m_Name
       value: Oxigeno
@@ -5823,10 +5799,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5192414602773323999, guid: 9bda648e10b4ae64e9decaa5a789c90a, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bda648e10b4ae64e9decaa5a789c90a, type: 3}
 --- !u!1 &1932126579
@@ -6485,29 +6457,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 515884866648672724, guid: 1d1a29818c2493044b533b2615266653, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 515884866648672724, guid: 1d1a29818c2493044b533b2615266653, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 1238921294028787302, guid: 1d1a29818c2493044b533b2615266653, type: 3}
-      propertyPath: m_Size.x
-      value: 0.9685135
-      objectReference: {fileID: 0}
-    - target: {fileID: 1238921294028787302, guid: 1d1a29818c2493044b533b2615266653, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.004067421
-      objectReference: {fileID: 0}
     - target: {fileID: 3736492269032828249, guid: 1d1a29818c2493044b533b2615266653, type: 3}
       propertyPath: m_Name
       value: Vaso
-      objectReference: {fileID: 0}
-    - target: {fileID: 3736492269032828252, guid: 1d1a29818c2493044b533b2615266653, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3736492269032828253, guid: 1d1a29818c2493044b533b2615266653, type: 3}
       propertyPath: m_RootOrder
