@@ -9,7 +9,6 @@ public class Fuego : MonoBehaviour
     private void Start()
     {
         player = FindObjectOfType<PlayerMovement>();
-        
     }
     public enum DIRECCION
     {
