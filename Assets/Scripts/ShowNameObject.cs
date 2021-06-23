@@ -19,6 +19,8 @@ public class ShowNameObject : MonoBehaviour
             thisNameObj.gameObject.SetActive(true);
             thisObj.GetComponent<SpriteRenderer>().color = Color.gray;
         }
+        else
+            return;
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -28,5 +30,7 @@ public class ShowNameObject : MonoBehaviour
             thisNameObj.gameObject.SetActive(false);
             thisObj.GetComponent<SpriteRenderer>().color = Color.white;
         }
+        else
+            return;
     }
 }

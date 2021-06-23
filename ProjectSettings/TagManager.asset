@@ -11,6 +11,7 @@ TagManager:
   - Bridges
   - Vaso
   - Sprite
+  - ShowName
   layers:
   - Default
   - TransparentFX
