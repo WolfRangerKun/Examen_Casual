@@ -7,30 +7,29 @@ public class SegundoPiso : MonoBehaviour
     public PlayerMovement player;
     public bool stayPiso2;
     public List<GameObject> off;
-    public bool puente;
-    public Objeto obj;
+    public List<GameObject> libro;
+    public bool puente, libroRojo;
 
     public void Start()
     {
         player = FindObjectOfType<PlayerMovement>();
-        obj = FindObjectOfType<Objeto>();
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            //player.distanceRayCollision = 0.1f;
             off[0].layer = 0;
             off[1].layer = 0;
             off[2].layer = 0;
             off[3].layer = 0;
             stayPiso2 = true;
             if (puente) off[4].layer = 0;
-        }
-        if (collision.gameObject.layer == 6 && collision.CompareTag("Atomo") || collision.CompareTag("Vaso") || collision.CompareTag("Bridges"))
-        {
-            obj.primerPiso = false;
-            obj.enabled = false;
+            if (libroRojo)
+            {
+                libro[0].SetActive(false);
+                libro[1].SetActive(true);
+                libro[2].SetActive(true);
+            }
         }
     }
 
@@ -38,20 +37,18 @@ public class SegundoPiso : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            //player.distanceRayCollision = 1f;
             off[0].layer = 3;
             off[1].layer = 3;
             off[2].layer = 3;
             off[3].layer = 3;
             stayPiso2 = false;
             if (puente) off[4].layer = 3;
+            if (libroRojo)
+            {
+                libro[0].SetActive(true);
+                libro[1].SetActive(false);
+                libro[2].SetActive(false);
+            }
         }
-        if (collision.gameObject.layer == 6 && collision.CompareTag("Atomo") || collision.CompareTag("Vaso") || collision.CompareTag("Bridges"))
-        {
-            obj.primerPiso = true;
-            obj.enabled = true;
-        }
-
-
     }
 }
