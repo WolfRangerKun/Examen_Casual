@@ -8,9 +8,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public static GameManager instance;
     public bool gameRunning;
-    int tiempo = 120000;
+    int tiempo = 120;
     public bool botonWin, botonLose, boton;
-    //public TMP_Text txtTimer;
+    public TMP_Text txtTimer;
+    public GameObject screenPause;
 
     private void Awake()
     {
@@ -30,7 +31,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Se acabo el Tiempo mano");
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             ChangedGameRunningState();
         }
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
     {
         while (tiempo > 0)
         {
+            txtTimer.text = "Tiempo: " + tiempo.ToString();
             yield return new WaitForSeconds(1);
             tiempo--;
         }
@@ -52,7 +54,7 @@ public class GameManager : MonoBehaviour
         if (gameRunning)
         {
             Time.timeScale = 1f;
-
+            screenPause.SetActive(false);
             AudioSource[] audios = FindObjectsOfType<AudioSource>();
             foreach (AudioSource a in audios)
             {
@@ -62,7 +64,7 @@ public class GameManager : MonoBehaviour
         else
         {
             Time.timeScale = 0f;
-
+            screenPause.SetActive(true);
             AudioSource[] audios = FindObjectsOfType<AudioSource>();
             foreach (AudioSource a in audios)
             {

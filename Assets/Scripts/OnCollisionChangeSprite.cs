@@ -8,10 +8,7 @@ public class OnCollisionChangeSprite : MonoBehaviour
     public Sprite spriteVasoOriginal;
     public SpriteRenderer renderVaso;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
 
     public IEnumerator CambiarSpriteVaso(int x)
     {
