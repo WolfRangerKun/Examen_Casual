@@ -189,11 +189,11 @@ public class SubidaVaso : MonoBehaviour
 
         if (other.CompareTag("Player") && cosaPlayer)
         {
-            Debug.Log("Oli");
             foreach (GameObject g in TransparenciaSegundoNivel.intanse.objectosArriba)
             {
                 g.SetActive(false);
             }
+
             foreach (GameObject g in TransparenciaSegundoNivel.intanse.objectosAbajo)
             {
                 g.SetActive(true);
@@ -205,7 +205,7 @@ public class SubidaVaso : MonoBehaviour
     {
         if (other.CompareTag("Player") && cosaPlayer)
         {
-            Debug.Log("Chao");
+
             foreach (GameObject g in TransparenciaSegundoNivel.intanse.objectosArriba)
             {
                 g.SetActive(true);
@@ -213,6 +213,28 @@ public class SubidaVaso : MonoBehaviour
             foreach (GameObject g in TransparenciaSegundoNivel.intanse.objectosAbajo)
             {
                 g.SetActive(false);
+            }
+
+            if (SwitchOnOffManager.intance.fuegoGO == false)
+            {
+                for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosArriba.Count; i++)
+                {
+                    if (TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.name == "Fuego")
+                    {
+                        Debug.Log("Funciono2");
+                        TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.SetActive(false);
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosArriba.Count; i++)
+                {
+                    if (TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.name == "Fuego")
+                    {
+                        TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.SetActive(true);
+                    }
+                }
             }
         }
     }
