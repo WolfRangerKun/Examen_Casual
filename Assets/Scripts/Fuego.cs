@@ -6,6 +6,7 @@ public class Fuego : MonoBehaviour
 {
     public PlayerMovement player;
     public float pushDireccion = 1f;
+    public bool isFuego;
     private void Start()
     {
         player = FindObjectOfType<PlayerMovement>();
@@ -22,13 +23,45 @@ public class Fuego : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            EmpujarDano(direccionCaida);
-            StartCoroutine(DanoVisual(other));
+            if (!isFuego)
+            {
+                Empujar(direccionCaida);
+            }
+            else
+            {
+                EmpujarDano(direccionCaida);
+                StartCoroutine(DanoVisual(other));
+            }
+           
         }
         else
             return;
     }
     void EmpujarDano(DIRECCION direccioncaida)
+    {
+        direccioncaida = direccionCaida;
+        switch (direccioncaida)
+        {
+            case DIRECCION.UP:
+                player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y + pushDireccion);
+                player.targetPosition.y += pushDireccion;
+                break;
+            case DIRECCION.DOWN:
+                player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y - pushDireccion);
+                player.targetPosition.y -= pushDireccion;
+                break;
+            case DIRECCION.RIGHT:
+                player.transform.position = new Vector2(player.transform.position.x + pushDireccion, player.transform.position.y);
+                player.targetPosition.x += pushDireccion;
+                break;
+            case DIRECCION.LEFT:
+                player.transform.position = new Vector2(player.transform.position.x - pushDireccion, player.transform.position.y);
+                player.targetPosition.x -= pushDireccion;
+                break;
+        }
+    }
+
+    void Empujar(DIRECCION direccioncaida)
     {
         direccioncaida = direccionCaida;
         switch (direccioncaida)
