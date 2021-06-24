@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SwitchOnOffManager : MonoBehaviour
 {
+    public static SwitchOnOffManager intance;
     // Agua
     public bool isButtonAgua;
     public GameObject agua, spawnAgua;
@@ -12,12 +13,16 @@ public class SwitchOnOffManager : MonoBehaviour
     public List<Sprite> spriteBotonAgua;
     //Fuego
     public bool isButtonFuego;
-    bool fuegoGO;
+    public bool fuegoGO;
     public GameObject fuego;
     public SpriteRenderer buttonFuego;
     public List<Sprite> spriteBotonFuego;
     public GameObject mechero;
 
+    private void Awake()
+    {
+        intance = this;
+    }
     private void Start()
     {
         buttonAgua.sprite = spriteBotonAgua[0];
