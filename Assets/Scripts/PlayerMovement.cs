@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum Direction
 {
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public float distanceMovement = 1f;
     public int pushDistance = 1;
     public bool canMove = true;
+    public int life = 2;
     private void Awake()
     {
         instace = this;
