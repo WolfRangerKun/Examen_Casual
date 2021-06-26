@@ -32,7 +32,6 @@ public class Fuego : MonoBehaviour
                 EmpujarDano(direccionCaida);
                 StartCoroutine(DanoVisual(other));
             }
-           
         }
         else
             return;
@@ -64,23 +63,20 @@ public class Fuego : MonoBehaviour
     void Empujar(DIRECCION direccioncaida)
     {
         direccioncaida = direccionCaida;
+        var zero = player.transform.position += Vector3.zero;
         switch (direccioncaida)
         {
             case DIRECCION.UP:
-                player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y + pushDireccion);
-                player.targetPosition.y += pushDireccion;
+                StartCoroutine(ChoqueUp());
                 break;
             case DIRECCION.DOWN:
-                player.transform.position = new Vector2(player.transform.position.x, player.transform.position.y - pushDireccion);
-                player.targetPosition.y -= pushDireccion;
+                StartCoroutine(ChoqueDown());
                 break;
             case DIRECCION.RIGHT:
-                player.transform.position = new Vector2(player.transform.position.x + pushDireccion, player.transform.position.y);
-                player.targetPosition.x += pushDireccion;
+                StartCoroutine(ChoqueRight());
                 break;
             case DIRECCION.LEFT:
-                player.transform.position = new Vector2(player.transform.position.x - pushDireccion, player.transform.position.y);
-                player.targetPosition.x -= pushDireccion;
+                StartCoroutine(ChoqueLeft());
                 break;
         }
     }
@@ -94,4 +90,35 @@ public class Fuego : MonoBehaviour
         PlayerMovement.instace.canMove = true;
     }
 
+    IEnumerator ChoqueUp()
+    {
+        player.distanceMovement = 0;
+        player.targetPosition.y += pushDireccion;
+        yield return new WaitForSeconds(.2f);
+        player.distanceMovement = 1;
+    }
+
+    IEnumerator ChoqueDown()
+    {
+        player.distanceMovement = 0;
+        player.targetPosition.y -= pushDireccion;
+        yield return new WaitForSeconds(.2f);
+        player.distanceMovement = 1;
+    }
+
+    IEnumerator ChoqueLeft()
+    {
+        player.distanceMovement = 0;
+        player.targetPosition.x -= pushDireccion;
+        yield return new WaitForSeconds(.2f);
+        player.distanceMovement = 1;
+    }
+
+    IEnumerator ChoqueRight()
+    {
+        player.distanceMovement = 0;
+        player.targetPosition.x += pushDireccion;
+        yield return new WaitForSeconds(.2f);
+        player.distanceMovement = 1;
+    }
 }
