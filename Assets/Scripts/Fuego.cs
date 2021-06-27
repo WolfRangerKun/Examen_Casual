@@ -7,7 +7,7 @@ public class Fuego : MonoBehaviour
     public PlayerMovement player;
     public float pushDireccion = 1f;
     public bool isFuego;
-    private void Start()
+    private void Awake()
     {
         player = FindObjectOfType<PlayerMovement>();
     }

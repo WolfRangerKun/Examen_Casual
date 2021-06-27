@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Objeto : MonoBehaviour
 {
+    public PlayerMovement player;
     public float distanceRayCollision = 1f;
     public LayerMask obstacules;
     public Transform rayCast, rayCast2, rayCast3, rayCast4;
@@ -11,6 +12,10 @@ public class Objeto : MonoBehaviour
     public bool inWall, inWall2, inWall3, inWall4;
     public List<GameObject> contacts;
 
+    private void Awake()
+    {
+        player = FindObjectOfType<PlayerMovement>();
+    }
     void Update()
     {
         Debug.DrawRay(rayCast2.position, rayCast.right * distanceRay);
@@ -31,6 +36,7 @@ public class Objeto : MonoBehaviour
         {
             inWall = false;
             contacts[0].SetActive(false);
+            player.canMove = true;
         }
         if (hit2.collider)
         {
@@ -41,6 +47,7 @@ public class Objeto : MonoBehaviour
         {
             inWall2 = false;
             contacts[1].SetActive(false);
+            player.canMove = true;
         }
         if (hit3.collider)
         {
@@ -51,6 +58,7 @@ public class Objeto : MonoBehaviour
         {
             inWall3 = false;
             contacts[2].SetActive(false);
+            player.canMove = true;
         }
         if (hit4.collider)
         {
@@ -61,6 +69,7 @@ public class Objeto : MonoBehaviour
         {
             inWall4 = false;
             contacts[3].SetActive(false);
+            player.canMove = true;
         }
     }
 }

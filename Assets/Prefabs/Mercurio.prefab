@@ -68,6 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   pushDireccion: 1
+  isFuego: 0
   direccionCaida: 0
 --- !u!1 &480870192599054803
 GameObject:
@@ -137,6 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   pushDireccion: 1
+  isFuego: 0
   direccionCaida: 1
 --- !u!1 &956785587414184498
 GameObject:
@@ -475,6 +477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   pushDireccion: 1
+  isFuego: 0
   direccionCaida: 3
 --- !u!1 &5192414602773323986
 GameObject:
@@ -644,6 +647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8320ce61b6c07c942955a580d5e963c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   distanceRayCollision: 1
   obstacules:
     serializedVersion: 2
@@ -662,7 +666,6 @@ MonoBehaviour:
   - {fileID: 8156322492349525401}
   - {fileID: 480870192599054803}
   - {fileID: 197140084142093575}
-  primerPiso: 1
 --- !u!1 &8156322492349525401
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,4 +734,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   pushDireccion: 1
+  isFuego: 0
   direccionCaida: 2
