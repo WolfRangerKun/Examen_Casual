@@ -160,7 +160,6 @@ public class TransparenciaSegundoNivel : MonoBehaviour
                 {
                     if(objectosArriba[i].gameObject.name == "Fuego")
                     {
-                        Debug.Log("Funciono");
                         objectosArriba[i].gameObject.SetActive(false);
                     }
                 }

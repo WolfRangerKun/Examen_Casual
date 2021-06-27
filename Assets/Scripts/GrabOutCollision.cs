@@ -9,6 +9,7 @@ public class GrabOutCollision : MonoBehaviour
     public TMP_Text grabText;
     public bool collisionUp, collisionDown, collisionLeft, collisionRight;
     public GameObject thisObject;
+    bool colUp, colDown, colLeft, colRight;
     bool canGrab;
     private void Awake()
     {
@@ -21,6 +22,14 @@ public class GrabOutCollision : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             grabText.gameObject.SetActive(true);
+            if (collisionUp)
+                colUp = true;
+            if (collisionDown)
+                colDown = true;
+            if (collisionLeft)
+                colLeft = true;
+            if (collisionRight)
+                colRight = true;
         }
         else
             return;
@@ -31,6 +40,10 @@ public class GrabOutCollision : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             grabText.gameObject.SetActive(false);
+            colRight = false;
+            colUp = false;
+            colLeft = false;
+            colDown = false;
         }
         else
             return;
@@ -38,22 +51,22 @@ public class GrabOutCollision : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && collisionUp)
+        if (Input.GetKeyDown(KeyCode.E) && collisionUp && colUp)
         {
             StartCoroutine(ColUp());
         }
-
-        if (Input.GetKeyDown(KeyCode.E) && collisionDown)
+        
+        if (Input.GetKeyDown(KeyCode.E) && collisionDown && colDown)
         {
             StartCoroutine(ColDown());
         }
-
-        if (Input.GetKeyDown(KeyCode.E) && collisionLeft)
+        
+        if (Input.GetKeyDown(KeyCode.E) && collisionLeft && colLeft)
         {
             StartCoroutine(ColLeft());
         }
-
-        if (Input.GetKeyDown(KeyCode.E) && collisionRight)
+        
+        if (Input.GetKeyDown(KeyCode.E) && collisionRight && colRight)
         {
             StartCoroutine(ColRight());
         }
