@@ -521,13 +521,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 435837094}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 381f3989d9989ba40ae8eae6884bd178, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a1aaa6cafa86b349a605e22f3004994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escena: 1
+  escena: 2
   colores:
   - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 0.8773585, g: 0.0041384934, b: 0.68256336, a: 1}
+  - {r: 0.6062656, g: 0.6389518, b: 0.9811321, a: 0.6}
   botonImage: {fileID: 0}
   seleccionado: 0
   botonRei: 0
@@ -676,13 +676,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 518166437}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 381f3989d9989ba40ae8eae6884bd178, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a1aaa6cafa86b349a605e22f3004994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escena: 2
+  escena: 1
   colores:
   - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 0.8773585, g: 0.0041384934, b: 0.68256336, a: 1}
+  - {r: 0.6062656, g: 0.6389518, b: 0.9811321, a: 0.6}
   botonImage: {fileID: 0}
   seleccionado: 0
   botonRei: 0
@@ -1493,13 +1493,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1946229285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 381f3989d9989ba40ae8eae6884bd178, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a1aaa6cafa86b349a605e22f3004994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   escena: 0
   colores:
   - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 0.8773585, g: 0.0041384934, b: 0.68256336, a: 1}
+  - {r: 0.6062656, g: 0.6389518, b: 0.9811321, a: 0.6}
   botonImage: {fileID: 0}
   seleccionado: 0
   botonRei: 0
@@ -1694,7 +1694,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2082426385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea016b5b8ae20dd45a79ab004d7f9abe, type: 3}
+  m_Script: {fileID: 11500000, guid: e5162201969e0534ea1a7a6a65a28cf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   botones:

@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
     int tiempo = 120;
     public bool botonWin, botonLose, boton;
     public TMP_Text txtTimer;
-    public GameObject screenPause;
-
+    public GameObject screenPause, screenDead, screenWin;
+    bool canPause = true;
     private void Awake()
     {
         instance = this;
@@ -26,12 +26,18 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        //txtTimer.text = "Timer " + tiempo;
         if (tiempo <= 0)
         {
-            Debug.Log("Se acabo el Tiempo mano");
+            AudioSource[] audios = FindObjectsOfType<AudioSource>();
+            foreach (AudioSource a in audios)
+            {
+                a.volume = .5f;
+            }
+            canPause = false;
+            botonLose = true;
+            screenDead.SetActive(true);
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && canPause)
         {
             ChangedGameRunningState();
         }
@@ -55,6 +61,7 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 1f;
             screenPause.SetActive(false);
+            boton = false;
             AudioSource[] audios = FindObjectsOfType<AudioSource>();
             foreach (AudioSource a in audios)
             {
@@ -65,6 +72,7 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 0f;
             screenPause.SetActive(true);
+            boton = true;
             AudioSource[] audios = FindObjectsOfType<AudioSource>();
             foreach (AudioSource a in audios)
             {
@@ -76,5 +84,18 @@ public class GameManager : MonoBehaviour
     public bool IsGameRunning()
     {
         return gameRunning;
+    }
+    IEnumerator WINNING()
+    {
+        canPause = false;
+        Debug.Log("oli");
+        botonWin = true;
+        screenWin.SetActive(true);
+        AudioSource[] audios = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource a in audios)
+        {
+            a.volume = .5f;
+        }
+        yield return new WaitForSeconds(.1f);
     }
 }

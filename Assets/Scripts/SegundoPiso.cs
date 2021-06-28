@@ -30,6 +30,8 @@ public class SegundoPiso : MonoBehaviour
                 libro[1].SetActive(true);
                 libro[2].SetActive(true);
             }
+
+            collision.GetComponent<SpriteRenderer>().sortingOrder = 2;
         }
     }
 
@@ -49,6 +51,8 @@ public class SegundoPiso : MonoBehaviour
                 libro[1].SetActive(false);
                 libro[2].SetActive(false);
             }
+            collision.GetComponent<SpriteRenderer>().sortingOrder = 0;
         }
+       
     }
 }

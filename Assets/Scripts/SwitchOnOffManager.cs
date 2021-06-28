@@ -25,8 +25,14 @@ public class SwitchOnOffManager : MonoBehaviour
     }
     private void Start()
     {
-        buttonAgua.sprite = spriteBotonAgua[0];
-        buttonFuego.sprite = spriteBotonFuego[0];
+        if (isButtonAgua)
+        {
+            buttonAgua.sprite = spriteBotonAgua[0];
+        }
+        if (isButtonFuego)
+        {
+            buttonFuego.sprite = spriteBotonFuego[0];
+        }
 
     }
     private void OnTriggerEnter2D(Collider2D other)

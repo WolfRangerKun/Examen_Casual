@@ -1,62 +1,101 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using DG.Tweening;
+using System.Collections;
+using UnityEngine;
 
 public class SubidaAniamcion : MonoBehaviour
 {
+    public GameObject goUpText;
     public float pushDireccion = 1f;
+    PlayerMovement player;
     GameObject playerObj;
-    Vector3 player;
     Vector3 upPosition;
     Vector3 leftPosition;
     Vector3 rightPosition;
     Vector3 rotation;
+    bool canGoUp;
+    public bool isSubidaIzq, isSubidaDer;
+    private void Awake()
+    {
+        player = FindObjectOfType<PlayerMovement>();
+        playerObj = GameObject.FindGameObjectWithTag("Player");
 
-    private void OnTriggerEnter2D(Collider2D other)
+    }
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            StartCoroutine(AnimacionSubida(other));
+            canGoUp = true;
+            goUpText.SetActive(true);
         }
     }
 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            canGoUp = false;
+            goUpText.SetActive(false);
+        }
+    }
     private void Start()
     {
-       
+        
+        rotation = playerObj.transform.position;
     }
     private void Update()
     {
-        player = GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<PlayerMovement>().targetPosition;
-        playerObj = GameObject.FindGameObjectWithTag("Player");
-        upPosition = player + new Vector3(0, 1, 0);
-        leftPosition = player + new Vector3(-1f, 0, 0);
-        rightPosition = player + new Vector3(1f, 0, 0);
-        rotation = playerObj.transform.position;
+        if (Input.GetKeyDown(KeyCode.Q) && canGoUp)
+        {
+            StartCoroutine(AnimacionSubida());
+            canGoUp = false;
+            goUpText.SetActive(false);
+        }
     }
 
-    IEnumerator AnimacionSubida(Collider2D other)
+    IEnumerator AnimacionSubida()
     {
-        
-        if (other.CompareTag("Player"))
+        if (isSubidaDer)
         {
+            player.canMove = false;
             GetComponent<BoxCollider2D>().isTrigger = false;
-            Debug.Log("oli");
-            other.gameObject.transform.DOMove(rightPosition, .1f);
-            other.gameObject.GetComponent<PlayerMovement>().targetPosition += new Vector3(1f, 0, 0);
-            yield return new WaitForSeconds(.5f);
-            other.gameObject.transform.DORotate((rotation + new Vector3(0, 0, -90)), 1);
-            other.gameObject.transform.DOMove(upPosition, 1);
-            other.gameObject.GetComponent<PlayerMovement>().targetPosition += new Vector3(0, 1, 0);
-            yield return new WaitForSeconds(.5f);
-            other.gameObject.transform.DOMove(leftPosition, .5f);
-            other.gameObject.transform.DORotate((rotation + new Vector3(0, 0, 0)), 1f);
-            other.gameObject.GetComponent<PlayerMovement>().targetPosition += new Vector3(-1f, 0, 0);
-            yield return new WaitForSeconds(.1f);
-            GetComponent<BoxCollider2D>().isTrigger = false;
-            //other.gameObject.transform.DOMove(leftPosition, 1);
-            //other.gameObject.GetComponent<PlayerMovement>().targetPosition += new Vector3(1, 0, 0);
+            Debug.Log("paarriba");
+
+            player.gameObject.transform.DORotate((playerObj.transform.position + new Vector3(0, 0, -90)), 1);
+            player.gameObject.transform.DOMove(player.targetPosition + new Vector3(0, 1, 0), 1);
+            yield return new WaitForSeconds(1f);
+            player.targetPosition += new Vector3(0, player.distanceMovement, 0);
+
+            Debug.Log("PaIzq");
+            player.gameObject.transform.DORotate((playerObj.transform.position + new Vector3(0, 0, 0)), 1f);
+            player.gameObject.transform.DOMove(player.targetPosition - new Vector3(1, 0, 0), 1f);
+            yield return new WaitForSeconds(1f);
+            player.targetPosition -= new Vector3(player.distanceMovement, 0, 0);
+            GetComponent<BoxCollider2D>().isTrigger = true;
+            player.canMove = true;
             Debug.Log("chao");
+
+        }
+
+        if (isSubidaIzq)
+        {
+            player.canMove = false;
+            GetComponent<BoxCollider2D>().isTrigger = false;
+            Debug.Log("paarriba");
+
+            player.gameObject.transform.DORotate((playerObj.transform.position + new Vector3(0, 0, 90)), 1);
+            player.gameObject.transform.DOMove(player.targetPosition + new Vector3(0, 1, 0), 1);
+            yield return new WaitForSeconds(1f);
+            player.targetPosition += new Vector3(0, player.distanceMovement, 0);
+
+            Debug.Log("PaIzq");
+            player.gameObject.transform.DORotate((playerObj.transform.position + new Vector3(0, 0, 0)), 1f);
+            player.gameObject.transform.DOMove(player.targetPosition + new Vector3(1, 0, 0), 1f);
+            yield return new WaitForSeconds(1f);
+            player.targetPosition += new Vector3(player.distanceMovement, 0, 0);
+            GetComponent<BoxCollider2D>().isTrigger = true;
+            player.canMove = true;
+            Debug.Log("chao");
+
         }
     }
 }

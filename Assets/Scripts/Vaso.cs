@@ -249,7 +249,7 @@ public class Vaso : MonoBehaviour
                             contenido.Remove(contenido[0]);
                             crearAmoxicilina = 100;
                             Debug.Log("Tirate");
-                            // poner que el vaso se pueda tomar  y  desplegar lose
+                            // poner que el vaso se pueda tomar  y  desplegar winning del gameManager
                         }
                         else
                         {
