@@ -16,6 +16,7 @@ public class TransparenciaSegundoNivel : MonoBehaviour
     public int maxBrige1 = 0;
     public int maxBrige2 = 0;
     public int maxBrige3 = 0;
+    public bool fireInScene;
 
 
     public enum MODO
@@ -153,28 +154,31 @@ public class TransparenciaSegundoNivel : MonoBehaviour
                 g.SetActive(true);
                 spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, transparencia);
             }
-
-            if (SwitchOnOffManager.intance.fuegoGO == false)
+            if (fireInScene)
             {
-                for (int i = 0; i < objectosArriba.Count; i++)
+                if (SwitchOnOffManager.intance.fuegoGO == false)
                 {
-                    if(objectosArriba[i].gameObject.name == "Fuego")
+                    for (int i = 0; i < objectosArriba.Count; i++)
                     {
-                        objectosArriba[i].gameObject.SetActive(false);
+                        if (objectosArriba[i].gameObject.name == "Fuego")
+                        {
+                            objectosArriba[i].gameObject.SetActive(false);
+                        }
                     }
                 }
-            }
-            else
-            {
-                for (int i = 0; i < objectosArriba.Count; i++)
+                else
                 {
-                    if (objectosArriba[i].gameObject.name == "Fuego")
+                    for (int i = 0; i < objectosArriba.Count; i++)
                     {
-                        objectosArriba[i].gameObject.SetActive(true);
+                        if (objectosArriba[i].gameObject.name == "Fuego")
+                        {
+                            objectosArriba[i].gameObject.SetActive(true);
+                        }
                     }
                 }
             }
         }
+           
     }
 
     public void Activate()
