@@ -8180,6 +8180,7 @@ MonoBehaviour:
   isTriggerArriba: 1
   entrada: {fileID: 0}
   salida: {fileID: 0}
+  existeCollissionEntrySecondFlor: 1
 --- !u!61 &707262164
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14482,6 +14483,7 @@ MonoBehaviour:
   isTriggerArriba: 0
   entrada: {fileID: 753103616}
   salida: {fileID: 1371280126}
+  existeCollissionEntrySecondFlor: 0
 --- !u!61 &1615553701
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16478,6 +16480,7 @@ MonoBehaviour:
   isTriggerArriba: 0
   entrada: {fileID: 0}
   salida: {fileID: 0}
+  existeCollissionEntrySecondFlor: 0
 --- !u!1 &2061769763
 GameObject:
   m_ObjectHideFlags: 0

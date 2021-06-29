@@ -7,6 +7,7 @@ public class TriggerHide : MonoBehaviour
     public static TriggerHide intance;
     public bool isTriggerArriba;
     public GameObject entrada, salida;
+    public bool existeCollissionEntrySecondFlor;
 
     private void Awake()
     {
@@ -19,8 +20,11 @@ public class TriggerHide : MonoBehaviour
             TransparenciaSegundoNivel.intanse.modo = TransparenciaSegundoNivel.MODO.SHOW;
             if (isTriggerArriba)
             {
-                CollisionEntrySecondFlor.intanse.triggerArriba.SetActive(false);
-                CollisionEntrySecondFlor.intanse.triggerAbajo.SetActive(true);
+                if (existeCollissionEntrySecondFlor)
+                {
+                    CollisionEntrySecondFlor.intanse.triggerArriba.SetActive(false);
+                    CollisionEntrySecondFlor.intanse.triggerAbajo.SetActive(true);
+                }
             }
 
             if (!isTriggerArriba)

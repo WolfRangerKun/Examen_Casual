@@ -5528,7 +5528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1aaa6cafa86b349a605e22f3004994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escena: 0
+  escena: 3
   colores:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.60784316, g: 0.6392157, b: 0.98039216, a: 0.6}
@@ -6044,6 +6044,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3736492269032828253, guid: 1d1a29818c2493044b533b2615266653, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736492269032828254, guid: 1d1a29818c2493044b533b2615266653, type: 3}
+      propertyPath: haytransparencia
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

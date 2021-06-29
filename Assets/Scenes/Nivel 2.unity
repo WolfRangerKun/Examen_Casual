@@ -2398,6 +2398,7 @@ MonoBehaviour:
   isTriggerArriba: 0
   entrada: {fileID: 1269089226}
   salida: {fileID: 1572594687}
+  existeCollissionEntrySecondFlor: 0
 --- !u!61 &481064595
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6180,6 +6181,7 @@ MonoBehaviour:
   isTriggerArriba: 1
   entrada: {fileID: 0}
   salida: {fileID: 0}
+  existeCollissionEntrySecondFlor: 0
 --- !u!61 &1333066022
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6877,6 +6879,7 @@ MonoBehaviour:
   isTriggerArriba: 1
   entrada: {fileID: 0}
   salida: {fileID: 0}
+  existeCollissionEntrySecondFlor: 1
 --- !u!61 &1524053938
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9261,6 +9264,7 @@ MonoBehaviour:
   isTriggerArriba: 0
   entrada: {fileID: 52959868}
   salida: {fileID: 1264934977}
+  existeCollissionEntrySecondFlor: 0
 --- !u!61 &1956983343
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10279,7 +10283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1aaa6cafa86b349a605e22f3004994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escena: 0
+  escena: 5
   colores:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0.60784316, g: 0.6392157, b: 0.98039216, a: 0.6}
