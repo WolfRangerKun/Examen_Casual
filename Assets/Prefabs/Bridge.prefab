@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6215361482573477511}
   - component: {fileID: 5268797575350952711}
   - component: {fileID: 2095614738413525099}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272941454809266655}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.45800018, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4647, z: 0}
   m_LocalScale: {x: 0.66999996, y: 0.76, z: 1}
   m_Children:
   - {fileID: 8023090471055871122}
@@ -80,7 +80,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1252718438668063300}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GrabStuff Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 268320203851127446}
   - component: {fileID: 1705714573967062210}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4456304654835020779}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GrabStuffs Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 8400003270019921962}
   - component: {fileID: 3418907362243704283}
   - component: {fileID: 6630157909359990719}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GrabCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 9149392893105599712}
   - component: {fileID: 1809882755075054877}
   - component: {fileID: 8824472682018145660}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -714,7 +714,7 @@ GameObject:
   - component: {fileID: 7538215416885969155}
   - component: {fileID: 1697155385659448077}
   - component: {fileID: 5959930728749120167}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GrabCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -791,7 +791,7 @@ GameObject:
   - component: {fileID: 2434677518510832946}
   - component: {fileID: 9095280362418536831}
   - component: {fileID: 1305123863075883617}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -862,7 +862,7 @@ GameObject:
   - component: {fileID: 8089628511039687014}
   - component: {fileID: 1033138838721942882}
   - component: {fileID: 2029171352615224770}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -933,7 +933,7 @@ GameObject:
   - component: {fileID: 2248535745562324408}
   - component: {fileID: 2770497638439834933}
   - component: {fileID: 6517113292440238489}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GrabCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1008,7 +1008,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8997699057384376648}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GrabStuffs Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1042,7 +1042,7 @@ GameObject:
   - component: {fileID: 8377804523655324621}
   - component: {fileID: 9076494119455731890}
   - component: {fileID: 2286143657154684730}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GrabCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1117,7 +1117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8023090471055871122}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GrabStuffs Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1212,11 +1212,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8320ce61b6c07c942955a580d5e963c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisGameObjects: {fileID: 7625785519842750494}
   player: {fileID: 0}
   distanceRayCollision: 1
   obstacules:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   rayCast: {fileID: 2434677518510832946}
   rayCast2: {fileID: 9149392893105599712}
   rayCast3: {fileID: 6215361482573477511}
@@ -1244,7 +1245,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.003312111, y: -0.0050668716}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1255,7 +1256,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.90063727, y: 0.9015436}
   m_EdgeRadius: 0
 --- !u!114 &4450447981001704117
 MonoBehaviour:

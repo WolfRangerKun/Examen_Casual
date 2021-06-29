@@ -337,11 +337,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8320ce61b6c07c942955a580d5e963c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisGameObjects: {fileID: 243964124344860017}
   player: {fileID: 0}
   distanceRayCollision: 1
   obstacules:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 72
   rayCast: {fileID: 2331264715318563044}
   rayCast2: {fileID: 5357168515372518833}
   rayCast3: {fileID: 5702444805469416309}
@@ -534,7 +535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3655220337734145047}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GrabStuffs Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,7 +567,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 251503168579699526}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GrabStuffs Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,7 +601,7 @@ GameObject:
   - component: {fileID: 8597816521283408191}
   - component: {fileID: 28069200059711910}
   - component: {fileID: 1242621203259181719}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GrabCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -846,7 +847,7 @@ GameObject:
   - component: {fileID: 5299695807827878955}
   - component: {fileID: 5578004667092031035}
   - component: {fileID: 6498820757279608858}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GrabCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -923,7 +924,7 @@ GameObject:
   - component: {fileID: 5357168515372518833}
   - component: {fileID: 5551761799467707290}
   - component: {fileID: 2876077589083927069}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -994,7 +995,7 @@ GameObject:
   - component: {fileID: 7294420574424869069}
   - component: {fileID: 7412520284848336262}
   - component: {fileID: 3940057964681564303}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1065,7 +1066,7 @@ GameObject:
   - component: {fileID: 5702444805469416309}
   - component: {fileID: 7113229547523366087}
   - component: {fileID: 6322722065235560121}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1236,7 +1237,7 @@ GameObject:
   - component: {fileID: 2331264715318563044}
   - component: {fileID: 4874329096153824815}
   - component: {fileID: 2645487668679404870}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1476,7 +1477,7 @@ GameObject:
   - component: {fileID: 3952751914850702658}
   - component: {fileID: 6360101783474388540}
   - component: {fileID: 1305220513513833952}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GrabCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1551,7 +1552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6851940479822555373}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GrabStuffs Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1583,7 +1584,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3113613358939182438}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GrabStuff Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1786,7 +1787,7 @@ GameObject:
   - component: {fileID: 7798362258506763044}
   - component: {fileID: 7730490636447428587}
   - component: {fileID: 159968252821040079}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: GrabCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
