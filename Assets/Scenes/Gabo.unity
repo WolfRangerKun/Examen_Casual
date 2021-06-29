@@ -712,10 +712,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Oxigeno (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8713552236133585687, guid: c89de3f8adae0cd4f917a3fd980a638f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c89de3f8adae0cd4f917a3fd980a638f, type: 3}
 --- !u!1 &519420028
@@ -812,10 +808,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mercurio
       objectReference: {fileID: 0}
-    - target: {fileID: 5192414602773323986, guid: 9bda648e10b4ae64e9decaa5a789c90a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5192414602773323993, guid: 9bda648e10b4ae64e9decaa5a789c90a, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -859,22 +851,6 @@ PrefabInstance:
     - target: {fileID: 5192414602773323993, guid: 9bda648e10b4ae64e9decaa5a789c90a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5236675819895636127, guid: 9bda648e10b4ae64e9decaa5a789c90a, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8665102451561482859, guid: 9bda648e10b4ae64e9decaa5a789c90a, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8808485184395920149, guid: 9bda648e10b4ae64e9decaa5a789c90a, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9119261552927217658, guid: 9bda648e10b4ae64e9decaa5a789c90a, type: 3}
-      propertyPath: player
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bda648e10b4ae64e9decaa5a789c90a, type: 3}
@@ -1147,10 +1123,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bridge
       objectReference: {fileID: 0}
-    - target: {fileID: 7625785519842750494, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
 --- !u!1 &1026209415
@@ -1334,10 +1306,6 @@ PrefabInstance:
     - target: {fileID: 243964124344860017, guid: 0370b3efb1e563d45bc2fcbe3dfda479, type: 3}
       propertyPath: m_Name
       value: Carbono (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 243964124344860017, guid: 0370b3efb1e563d45bc2fcbe3dfda479, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 243964124344860028, guid: 0370b3efb1e563d45bc2fcbe3dfda479, type: 3}
       propertyPath: m_RootOrder
@@ -3106,21 +3074,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1898934353887815898, guid: 1d1a29818c2493044b533b2615266653, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3633910749519413821, guid: 1d1a29818c2493044b533b2615266653, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3736492269032828249, guid: 1d1a29818c2493044b533b2615266653, type: 3}
       propertyPath: m_Name
       value: Vaso (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3736492269032828249, guid: 1d1a29818c2493044b533b2615266653, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3736492269032828253, guid: 1d1a29818c2493044b533b2615266653, type: 3}
       propertyPath: m_RootOrder
@@ -3166,22 +3122,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5008154550318408865, guid: 1d1a29818c2493044b533b2615266653, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5712845137584396542, guid: 1d1a29818c2493044b533b2615266653, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6135034750804807514, guid: 1d1a29818c2493044b533b2615266653, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1611729621}
-    - target: {fileID: 6157581694228014810, guid: 1d1a29818c2493044b533b2615266653, type: 3}
-      propertyPath: primerPiso
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7548122533608649469, guid: 1d1a29818c2493044b533b2615266653, type: 3}
       propertyPath: player
       value: 
