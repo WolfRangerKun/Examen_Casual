@@ -32,7 +32,10 @@ public class ChangeScene : MonoBehaviour
         //click.Play();
         StartCoroutine(CargarAsync(NumeroDeEscena));
     }
-
+    private void Update()
+    {
+        Cursor.visible = false;
+    }
 
 
 

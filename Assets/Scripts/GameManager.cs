@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        Cursor.visible = false;
         if (tiempo <= 0)
         {
             AudioSource[] audios = FindObjectsOfType<AudioSource>();
