@@ -26,15 +26,15 @@ ExportedObj/
 *.VC.db
 
 # Unity3D generated meta files
-*.pidb.meta
-*.pdb.meta
+
+
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 
-# Builds
-*.apk
-*.unitypackage
+
+
+
 Logs/AssetImportWorker0-prev.log
 Logs/AssetImportWorker0.log
 Logs/shadercompiler-AssetImportWorker0.log
@@ -42,16 +42,7 @@ Logs/shadercompiler-UnityShaderCompiler.exe0.log
 Packages/packages-lock.json
 Logs/AssetImportWorker0.log
 *.log
-*.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-*.meta
-Assets/Sprites/Tiles/mesa celeste.asset.meta
-Assets/Sprites/Tiles/mesa grisácea.asset.meta
-Assets/Sprites/Tiles/mesaborde.asset.meta
-Assets/Sprites/Tiles/mesaborde3.asset.meta
-Assets/Sprites/Tiles/Muro/muros 1.asset.meta
-Assets/Sprites/Tiles/piso 1.asset.meta
-*.meta
+
+
+
+
