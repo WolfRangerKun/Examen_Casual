@@ -214,25 +214,27 @@ public class SubidaVaso : MonoBehaviour
             {
                 g.SetActive(false);
             }
-
-            if (SwitchOnOffManager.intance.fuegoGO == false)
+            if (TransparenciaSegundoNivel.intanse.fireInScene)
             {
-                for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosArriba.Count; i++)
+                if (SwitchOnOffManager.intance.fuegoGO == false)
                 {
-                    if (TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.name == "Fuego")
+                    for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosArriba.Count; i++)
                     {
-                        Debug.Log("Funciono2");
-                        TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.SetActive(false);
+                        if (TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.name == "Fuego")
+                        {
+                            Debug.Log("Funciono2");
+                            TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.SetActive(false);
+                        }
                     }
                 }
-            }
-            else
-            {
-                for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosArriba.Count; i++)
+                else
                 {
-                    if (TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.name == "Fuego")
+                    for (int i = 0; i < TransparenciaSegundoNivel.intanse.objectosArriba.Count; i++)
                     {
-                        TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.SetActive(true);
+                        if (TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.name == "Fuego")
+                        {
+                            TransparenciaSegundoNivel.intanse.objectosArriba[i].gameObject.SetActive(true);
+                        }
                     }
                 }
             }
