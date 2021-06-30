@@ -1324,6 +1324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 0}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 0
@@ -2368,6 +2369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 0}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 0
@@ -3891,6 +3893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 0}
   paArriba: 0
   paAsbajo: 1
   entradaObjetoAbajo: 0
@@ -13305,6 +13308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780a6d26994832a45875c8828834fd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 0}
   isTriggerArriba: 1
   entrada: {fileID: 0}
   salida: {fileID: 0}
@@ -13986,6 +13990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 0}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 0
@@ -21118,6 +21123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 0}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 0
@@ -26073,6 +26079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780a6d26994832a45875c8828834fd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 0}
   isTriggerArriba: 0
   entrada: {fileID: 753103616}
   salida: {fileID: 1371280126}
@@ -27040,6 +27047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 0}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 1
@@ -27291,6 +27299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 0}
   paArriba: 0
   paAsbajo: 1
   entradaObjetoAbajo: 0
@@ -27878,6 +27887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 0}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 1
@@ -28614,6 +28624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780a6d26994832a45875c8828834fd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 0}
   isTriggerArriba: 0
   entrada: {fileID: 0}
   salida: {fileID: 0}
