@@ -14672,6 +14672,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2004230254221800330, guid: e7c4601949b22624a93ca4c990351c2a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2004230254751125466, guid: e7c4601949b22624a93ca4c990351c2a, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -14719,6 +14723,14 @@ PrefabInstance:
     - target: {fileID: 2004230254751125467, guid: e7c4601949b22624a93ca4c990351c2a, type: 3}
       propertyPath: m_Name
       value: Grifo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2004230254955347060, guid: e7c4601949b22624a93ca4c990351c2a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2004230255261849712, guid: e7c4601949b22624a93ca4c990351c2a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7c4601949b22624a93ca4c990351c2a, type: 3}
