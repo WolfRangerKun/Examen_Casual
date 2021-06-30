@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class TriggerHide : MonoBehaviour
 {
+    public TransparenciaSegundoNivel thisTransparencia;
     public static TriggerHide intance;
     public bool isTriggerArriba;
     public GameObject entrada, salida;
@@ -17,7 +18,8 @@ public class TriggerHide : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            TransparenciaSegundoNivel.intanse.modo = TransparenciaSegundoNivel.MODO.SHOW;
+            /* TransparenciaSegundoNivel.intanse*/
+            thisTransparencia.modo = TransparenciaSegundoNivel.MODO.SHOW;
             if (isTriggerArriba)
             {
                 if (existeCollissionEntrySecondFlor)
@@ -39,7 +41,8 @@ public class TriggerHide : MonoBehaviour
     {
         if (other.CompareTag("Player") && !isTriggerArriba)
         {
-            TransparenciaSegundoNivel.intanse.modo = TransparenciaSegundoNivel.MODO.HIDE;
+            /*TransparenciaSegundoNivel.intanse*/
+            thisTransparencia.modo = TransparenciaSegundoNivel.MODO.HIDE;
             StartCoroutine(TiempoSetActivesEntry());
         }
     }

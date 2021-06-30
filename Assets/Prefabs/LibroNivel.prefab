@@ -73,6 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 1931086839}
   paArriba: 0
   paAsbajo: 1
   entradaObjetoAbajo: 0
@@ -175,7 +176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &929451044
 Transform:
   m_ObjectHideFlags: 0
@@ -228,6 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 1931086839}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 0
@@ -357,6 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 1931086839}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 0
@@ -485,6 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780a6d26994832a45875c8828834fd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 1931086839}
   isTriggerArriba: 1
   entrada: {fileID: 0}
   salida: {fileID: 0}
@@ -560,6 +564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 1931086839}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 1
@@ -719,6 +724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780a6d26994832a45875c8828834fd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 1931086839}
   isTriggerArriba: 0
   entrada: {fileID: 1086185833}
   salida: {fileID: 929451043}
