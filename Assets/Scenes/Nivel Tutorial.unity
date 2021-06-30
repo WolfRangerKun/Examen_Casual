@@ -14482,11 +14482,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6196256894257221836, guid: 68eec70a728d38d48b9c33a0c2278237, type: 3}
       propertyPath: m_SortingLayer
-      value: 0
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196256894257221836, guid: 68eec70a728d38d48b9c33a0c2278237, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6196256894257221836, guid: 68eec70a728d38d48b9c33a0c2278237, type: 3}
       propertyPath: m_SortingLayerID
-      value: 0
+      value: 719517235
       objectReference: {fileID: 0}
     - target: {fileID: 6196256894257221836, guid: 68eec70a728d38d48b9c33a0c2278237, type: 3}
       propertyPath: m_ChunkCullingBounds.x
