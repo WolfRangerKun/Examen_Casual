@@ -25,13 +25,9 @@ public class CaidaGeneral : MonoBehaviour
     {
         if (segundoPiso.stayPiso2)
         {
+            if(other.CompareTag("Player") || other.CompareTag("Atomo") || other.CompareTag("Vaso") || other.CompareTag("Bridges"))
             MovementFall(other);
         }
-        if (other.CompareTag("Atomo"))
-        {
-            Debug.Log(" ME TOY BUGEANDO CTM PERO EN EL LIMITE");
-        }
-
     }
 
     public void MovementFall(Collider2D other)
