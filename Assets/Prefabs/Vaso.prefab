@@ -1407,7 +1407,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0000500679, y: -0.008365333}
+  m_Offset: {x: -0.0019433498, y: -0.008769035}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1418,7 +1418,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9148011, y: 0.8962089}
+  m_Size: {x: 0.92425203, y: 0.92183685}
   m_EdgeRadius: 0
 --- !u!114 &3736492269032828254
 MonoBehaviour:
@@ -1436,6 +1436,7 @@ MonoBehaviour:
   contenido: []
   crearAmoxicilina: 0
   gradosCalor: 0
+  haytransparencia: 1
   isNivel1: 1
   isNivel2: 0
   isNivel3: 0
@@ -1510,7 +1511,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 3736492269032828249}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -1533,7 +1534,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8320ce61b6c07c942955a580d5e963c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisGameObjects: {fileID: 3736492269032828249}
   player: {fileID: 0}
   distanceRayCollision: 1
   obstacules:
