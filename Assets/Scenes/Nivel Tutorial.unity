@@ -4421,8 +4421,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goUpText: {fileID: 1932220270}
   pushDireccion: 1
-  isSubidaIzq: 1
-  isSubidaDer: 0
+  isSubidaIzq: 0
+  isSubidaDer: 1
 --- !u!1 &498752083
 GameObject:
   m_ObjectHideFlags: 0
