@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 0
@@ -228,6 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 0}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 1
@@ -6049,7 +6051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6196256894257221836, guid: 68eec70a728d38d48b9c33a0c2278237, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6196256894257221836, guid: 68eec70a728d38d48b9c33a0c2278237, type: 3}
       propertyPath: m_SortingLayerID
@@ -6825,6 +6827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   paArriba: 0
   paAsbajo: 1
   entradaObjetoAbajo: 0
@@ -8064,6 +8067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780a6d26994832a45875c8828834fd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   isTriggerArriba: 0
   entrada: {fileID: 1269089226}
   salida: {fileID: 1572594687}
@@ -8514,6 +8518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   paArriba: 0
   paAsbajo: 1
   entradaObjetoAbajo: 0
@@ -8899,6 +8904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 0
@@ -10901,6 +10907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 0
@@ -11168,6 +11175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 0}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 0
@@ -11440,6 +11448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   paArriba: 0
   paAsbajo: 1
   entradaObjetoAbajo: 0
@@ -11668,6 +11677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 0}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 0
@@ -11743,6 +11753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 1
@@ -11833,6 +11844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   paArriba: 0
   paAsbajo: 1
   entradaObjetoAbajo: 0
@@ -11927,6 +11939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780a6d26994832a45875c8828834fd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 0}
   isTriggerArriba: 1
   entrada: {fileID: 0}
   salida: {fileID: 0}
@@ -12160,6 +12173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 0}
   paArriba: 0
   paAsbajo: 1
   entradaObjetoAbajo: 0
@@ -12435,6 +12449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 1
@@ -12573,6 +12588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780a6d26994832a45875c8828834fd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   isTriggerArriba: 1
   entrada: {fileID: 0}
   salida: {fileID: 0}
@@ -12835,6 +12851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 0
@@ -13182,6 +13199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 0
@@ -13328,6 +13346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 1
@@ -13403,6 +13422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 0
@@ -13722,6 +13742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 0
@@ -14053,6 +14074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 1
@@ -14408,6 +14430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ba61cc1e0dfd74b92e527ed42f5f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 367119408}
   paArriba: 0
   paAsbajo: 0
   entradaObjetoAbajo: 0
@@ -14958,6 +14981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780a6d26994832a45875c8828834fd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTransparencia: {fileID: 0}
   isTriggerArriba: 0
   entrada: {fileID: 52959868}
   salida: {fileID: 1264934977}
