@@ -14,6 +14,7 @@ public class Bridge : MonoBehaviour
             collision.transform.position = gameObject.transform.position;
             collision.gameObject.layer = 3;
             collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            collision.gameObject.GetComponent<Objeto>().enabled = false;
             if (bridge == 1) game.active1 = true;
             if (bridge == 2) game.active2 = true;
             if (bridge == 3) game.active3 = true;
