@@ -270,10 +270,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00063824654, y: -0.0012996197}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -284,7 +284,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.9}
+  m_Size: {x: 0.92808485, y: 0.9335923}
   m_EdgeRadius: 0
 --- !u!114 &243964124344860019
 MonoBehaviour:
@@ -324,7 +324,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &6124924703246312911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,7 +337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8320ce61b6c07c942955a580d5e963c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisGameObjects: {fileID: 243964124344860017}
   player: {fileID: 0}
   distanceRayCollision: 1
   obstacules:
