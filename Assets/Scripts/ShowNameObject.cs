@@ -20,6 +20,9 @@ public class ShowNameObject : MonoBehaviour
             thisObj.GetComponent<SpriteRenderer>().color = Color.gray;
         }
         else
+        {
+
+        }    
             return;
     }
 
@@ -31,6 +34,9 @@ public class ShowNameObject : MonoBehaviour
             thisObj.GetComponent<SpriteRenderer>().color = Color.white;
         }
         else
+        {
+
+        }
             return;
     }
 }

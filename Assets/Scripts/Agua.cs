@@ -9,6 +9,17 @@ public class Agua : MonoBehaviour
         Destroy(gameObject, 4);
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Vaso"))
+        {
+            other.GetComponent<Vaso>().cantidadAgua++;
+            Destroy(gameObject);
+            other.GetComponent<Vaso>().ActualizarLista();
+        }
+        else
+            return;
+    }
     void Update()
     {
 

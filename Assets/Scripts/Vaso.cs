@@ -18,21 +18,23 @@ public class Vaso : MonoBehaviour
     public int maxMercurio = 0;
     public int maxCarbono = 0;
 
+    public ChangeColorVaso changeColorVaso;
     public List<Sprite> spritesContorno;
     public List<Sprite> spriteElementoActual;
 
+    public TransparenciaSegundoNivel MesaTransparencia;
     private void Awake()
     {
         intance = this;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Agua"))
-        {
-            cantidadAgua++;
-            Destroy(other.gameObject);
-            ActualizarLista();
-        }
+        //if (other.CompareTag("Agua"))
+        //{
+        //    cantidadAgua++;
+        //    Destroy(other.gameObject);
+        //    ActualizarLista();
+        //}
 
 
         //if (other.CompareTag("Atomo"))
@@ -181,7 +183,7 @@ public class Vaso : MonoBehaviour
 
     public void ActualizarLista()
     {
-        ChangeColorVaso.intance.CambiarColorDeSprites();
+        changeColorVaso.CambiarColorDeSprites();
         if (cantidadAgua >= 15)
         {
             //GetComponent<SpriteRenderer>().sprite = spriteElementoActual[1];
