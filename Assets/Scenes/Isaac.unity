@@ -1217,6 +1217,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f5eea925249fef4787557a064931cef, type: 3}
+--- !u!114 &1968956463 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3736492269032828254, guid: 1d1a29818c2493044b533b2615266653, type: 3}
+  m_PrefabInstance: {fileID: 1309396461}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a588c70f52f961b478a1501979d84a1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2039398050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,6 +1327,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b317f7c870dc3ab488541c181768d7df, type: 3}
   - {fileID: 21300000, guid: 038d122432bb1b04bb51b49f56d7afd5, type: 3}
   - {fileID: 21300000, guid: fcd7260f3fcd24e4e89bac28e7f7f4ea, type: 3}
+  vaso: {fileID: 1968956463}
   soloAgua: 0
 --- !u!4 &111478811131047441
 Transform:
