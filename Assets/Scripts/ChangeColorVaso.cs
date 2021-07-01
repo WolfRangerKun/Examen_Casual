@@ -1,130 +1,511 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ChangeColorVaso : MonoBehaviour
 {
+    public static ChangeColorVaso intance;
     public List<Sprite> spritesLevelWater;
+    public Vaso vaso;
     Sprite actualSprite;
-    public bool soloAgua = true;   
+    public bool soloAgua = true;
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Vaso.intance.ActualizarLista();
-        }
-
-        CambiarColorDeSprites();
-
-        //if (Vaso.intance.contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
-        //{
-
-        //    Debug.Log("Tirate");
-        //    // poner que el vaso se pueda tomar  y  desplegar winning del gameManager
-        //}
-        //else if(Vaso.intance.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO)
-        //{
-
-        //}
-        //else if(Vaso.intance.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
-        //{
-
-        //}
     }
 
-    void CambiarColorDeSprites()
+    public void CambiarColorDeSprites()
     {
-        if (Vaso.intance.cantidadAgua < 5)//Condicional de cantidad de Agua
+        if (vaso.cantidadAgua < 5)//Condicional de cantidad de Agua
         {
-            GetComponent<SpriteRenderer>().sprite = spritesLevelWater[0];//Sprite a Poner
-            if (Vaso.intance.cantidadAgua == 0 && Vaso.intance.contenido.Count == 0)//Segunda limitante
-            {
-                
-                GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
-            }
-            else
-            {
-                if (Vaso.intance.cantidadAgua > 0 && Vaso.intance.contenido.Count == 0)
-                    GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
-                else
-                {
-                    if(Vaso.intance.contenido.Count != 0)
-                    {
-                        if (Vaso.intance.contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
-                        {
-                            Debug.LogError("ColorCarbono");
-                            if (Vaso.intance.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO)
-                            {
-                                //Color Con el segundo
-                            }
-                            else if (Vaso.intance.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
-                            {
-                                //Color con el Tercer
-                            }
-                            else
-                                GetComponent<SpriteRenderer>().color = new Color(0.75f, 1, 1, 1);
-                            //Color De Baso Con el Primer Elemnto
-                        }
-                        else if (Vaso.intance.contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO)
-                        {
-                            Debug.LogError("ColorOxigeno");
-                            if (Vaso.intance.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO)
-                            {
-                                //Color Con el segundo
-                            }
-                            else if (Vaso.intance.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
-                            {
-                                //Color con el Tercer
-                            }
-                            else
-                                GetComponent<SpriteRenderer>().color = new Color(0.75f, 1, 1, 1);
-                            //Color De Baso Con el Primer Elemnto
-                        }
-                        else if (Vaso.intance.contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
-                        {
-                            Debug.LogError("ColorMercurio");
-                            if (Vaso.intance.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO)
-                            {
-                                //Color Con el segundo
-                            }
-                            else if (Vaso.intance.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
-                            {
-                                //Color con el Tercer
-                            }
-                            else
-                                GetComponent<SpriteRenderer>().color = new Color(0.75f, 1, 1, 1);
-                            //Color De Baso Con el Primer Elemnto
-                        }
-                    }
-                   
-                }
-               
-            }
+            Switch(1);
         }
-        //else if (Vaso.intance.cantidadAgua >= 5 && Vaso.intance.cantidadAgua < 10)
-        //{
-        //   GetComponent<SpriteRenderer>().sprite = spritesLevelWater[0];
-        //    GetComponent<SpriteRenderer>().color = new Color(0.75f, 1, 1, 1);
-        //}
-        //else if (Vaso.intance.cantidadAgua >= 10 && Vaso.intance.cantidadAgua < 15)
-        //{
-        //    GetComponent<SpriteRenderer>().sprite = spritesLevelWater[1];
-        //    GetComponent<SpriteRenderer>().color = new Color(0.5f, 1, 1, 1);
-        //}
-        //else if (Vaso.intance.cantidadAgua >= 15)
-        //{
-        //    GetComponent<SpriteRenderer>().sprite = spritesLevelWater[2];
-        //    GetComponent<SpriteRenderer>().color = new Color(0, 1, 1, 1);
-        //}
+        else if (vaso.cantidadAgua >= 5 && vaso.cantidadAgua < 10)
+        {
+            Switch(2);
+        }
+        else if (vaso.cantidadAgua >= 10 && vaso.cantidadAgua < 15)
+        {
+            Switch(3);
+        }
+        else if (vaso.cantidadAgua >= 15)
+        {
+            Switch(3);
+        }
     }
 
-    void Switch(float x)
+    void Switch(int x)
     {
         switch (x)
         {
-            case 0.1f:
+            case 1:
+                GetComponent<SpriteRenderer>().sprite = spritesLevelWater[0];//Sprite a Poner
 
+                if (vaso.cantidadAgua == 0 && vaso.contenido.Count == 0)//Segunda limitante
+                {
+                    GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+                }
+                else
+                {
+                    if (vaso.cantidadAgua > 0 && vaso.contenido.Count == 0)
+                    {
+
+                        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1); // Color
+
+                    }
+                    else
+                    {
+                        if (vaso.contenido.Count != 0)
+                        {
+                            if (vaso.contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
+                            {
+                                if (vaso.cantidadAgua == 0)
+                                {
+                                    if (vaso.contenido.Count == 1)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoSolo");
+                                        //Color De Baso Con el Primer Elemnto
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoOxigenoSolo");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 2)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoSolo");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioSolo");
+                                        //Color con el Tercer
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioSolo");
+                                        //Color con el Tercer
+                                    }
+
+                                }
+                                else
+                                {
+                                    if (vaso.cantidadAgua != 0)
+                                    {
+                                        if (vaso.contenido.Count == 1)
+                                        {
+                                            Debug.LogWarning("ColorCarbonoSoloConAgua");
+                                            //Color De Baso Con el Primer Elemnto
+                                        }
+                                        else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
+                                        {
+
+                                            Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                            //Color Con el segundo
+                                        }
+                                        else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 2)
+                                        {
+
+                                            Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                            //Color Con el segundo
+                                        }
+                                        else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
+                                        {
+                                            Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                            //Color con el Tercer
+                                        }
+                                        else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
+                                        {
+                                            Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                            //Color con el Tercer
+                                        }
+                                    }
+                                }
+                            }
+                            else if (vaso.contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO)
+                            {
+                                if (vaso.cantidadAgua == 0)
+                                {
+                                    if (vaso.contenido.Count == 1)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoSolo");
+                                        //Color De Baso Con el Primer Elemnto
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 2)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoOxigenoSolo");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 2)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoOxigenoSolo");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioSolo");
+                                        //Color con el Tercer
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioSolo");
+                                        //Color con el Tercer
+                                    }
+
+                                }
+                                else
+                                {
+                                    if (vaso.cantidadAgua != 0)
+                                    {
+                                        if (vaso.contenido.Count == 1)
+                                        {
+                                            Debug.LogWarning("ColorCarbonoSoloConAgua");
+                                            //Color De Baso Con el Primer Elemnto
+                                        }
+                                        else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 2)
+                                        {
+
+                                            Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                            //Color Con el segundo
+                                        }
+                                        else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 2)
+                                        {
+
+                                            Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                            //Color Con el segundo
+                                        }
+                                        else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
+                                        {
+                                            Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                            //Color con el Tercer
+                                        }
+                                        else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 3)
+                                        {
+                                            Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                            //Color con el Tercer
+                                        }
+                                    }
+                                }
+                            }
+                            else if (vaso.contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
+                            {
+                                if (vaso.cantidadAgua == 0)
+                                {
+                                    if (vaso.contenido.Count == 1)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoSolo");
+                                        //Color De Baso Con el Primer Elemnto
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 2)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoOxigenoSolo");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoOxigenoSolo");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioSolo");
+                                        //Color con el Tercer
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioSolo");
+                                        //Color con el Tercer
+                                    }
+
+                                }
+                                else
+                                {
+                                    if (vaso.cantidadAgua != 0)
+                                    {
+                                        if (vaso.contenido.Count == 1)
+                                        {
+                                            Debug.LogWarning("ColorCarbonoSoloConAgua");
+                                            //Color De Baso Con el Primer Elemnto
+                                        }
+                                        else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 2)
+                                        {
+
+                                            Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                            //Color Con el segundo
+                                        }
+                                        else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
+                                        {
+
+                                            Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                            //Color Con el segundo
+                                        }
+                                        else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
+                                        {
+                                            Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                            //Color con el Tercer
+                                        }
+                                        else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 3)
+                                        {
+                                            Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                            //Color con el Tercer
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                break;
+            case 2:
+                GetComponent<SpriteRenderer>().sprite = spritesLevelWater[1];//Sprite a Poner
+                if (vaso.cantidadAgua == 5 && vaso.contenido.Count == 0)//Segunda limitante
+                {
+                    GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+                }
+                else
+                {
+                    if (vaso.cantidadAgua > 5 && vaso.contenido.Count == 0)
+                        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                    else
+                    {
+                        if (vaso.contenido.Count != 0)
+                        {
+                            if (vaso.contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
+                            {
+
+                                if (vaso.cantidadAgua >= 5 && vaso.cantidadAgua < 10)
+                                {
+                                    if (vaso.contenido.Count == 1)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoSoloConAgua");
+                                        //Color De Baso Con el Primer Elemnto
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 2)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        //Color con el Tercer
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        //Color con el Tercer
+                                    }
+                                }
+
+                            }
+                            else if (vaso.contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO)
+                            {
+
+                                if (vaso.cantidadAgua >= 5 && vaso.cantidadAgua < 10)
+                                {
+                                    if (vaso.contenido.Count == 1)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoSoloConAgua");
+                                        //Color De Baso Con el Primer Elemnto
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 2)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 2)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        //Color con el Tercer
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        //Color con el Tercer
+                                    }
+                                }
+
+                            }
+                            else if (vaso.contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
+                            {
+
+                                if (vaso.cantidadAgua >= 5 && vaso.cantidadAgua < 10)
+                                {
+                                    if (vaso.contenido.Count == 1)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoSoloConAgua");
+                                        //Color De Baso Con el Primer Elemnto
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 2)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        //Color con el Tercer
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        //Color con el Tercer
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+                break;
+            case 3:
+                GetComponent<SpriteRenderer>().sprite = spritesLevelWater[2];//Sprite a Poner
+                if (vaso.cantidadAgua == 10 && vaso.contenido.Count == 0)//Segunda limitante
+                {
+                    GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+                }
+                else
+                {
+                    if (vaso.cantidadAgua > 10 && vaso.contenido.Count == 0)
+                        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                    else
+                    {
+                        if (vaso.contenido.Count != 0)
+                        {
+                            if (vaso.contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
+                            {
+
+                                if (vaso.cantidadAgua >= 10 && vaso.cantidadAgua < 15)
+                                {
+                                    if (vaso.contenido.Count == 1)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoSoloConAgua");
+                                        //Color De Baso Con el Primer Elemnto
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 2)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        //Color con el Tercer
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        //Color con el Tercer
+                                    }
+                                }
+
+                            }
+                            else if (vaso.contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO)
+                            {
+
+                                if (vaso.cantidadAgua >= 10 && vaso.cantidadAgua < 15)
+                                {
+                                    if (vaso.contenido.Count == 1)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoSoloConAgua");
+                                        //Color De Baso Con el Primer Elemnto
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 2)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 2)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        //Color con el Tercer
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        //Color con el Tercer
+                                    }
+                                }
+
+                            }
+                            else if (vaso.contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
+                            {
+
+                                if (vaso.cantidadAgua >= 10 && vaso.cantidadAgua < 15)
+                                {
+                                    if (vaso.contenido.Count == 1)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoSoloConAgua");
+                                        //Color De Baso Con el Primer Elemnto
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 2)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
+                                    {
+
+                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        //Color Con el segundo
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        //Color con el Tercer
+                                    }
+                                    else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 3)
+                                    {
+                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        //Color con el Tercer
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
                 break;
         }
     }

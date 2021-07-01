@@ -181,6 +181,7 @@ public class Vaso : MonoBehaviour
 
     public void ActualizarLista()
     {
+        ChangeColorVaso.intance.CambiarColorDeSprites();
         if (cantidadAgua >= 15)
         {
             //GetComponent<SpriteRenderer>().sprite = spriteElementoActual[1];
