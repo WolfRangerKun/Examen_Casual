@@ -58,15 +58,15 @@ public class Vaso : MonoBehaviour
                         TransparenciaSegundoNivel.intanse.maxOxigeno = 0;
                     }
                 }
-                for (int i = 0; i < contenido.Count; i++)
+                
+            }
+            for (int i = 0; i < contenido.Count; i++)
+            {
+                if (contenido[i].gameObject.name == "Oxigeno")
                 {
-                    if (contenido[i].gameObject.name == "Oxigeno")
-                    {
-                        return;
-                    }
+                    return;
                 }
             }
-           
             contenido.Add(other.gameObject);
             other.gameObject.SetActive(false);
             ActualizarLista();
@@ -92,15 +92,16 @@ public class Vaso : MonoBehaviour
                         TransparenciaSegundoNivel.intanse.maxMercurio = 0;
                     }
                 }
-                for (int i = 0; i < contenido.Count; i++)
+               
+            }
+            for (int i = 0; i < contenido.Count; i++)
+            {
+                if (contenido[i].gameObject.name == "Mercurio")
                 {
-                    if (contenido[i].gameObject.name == "Mercurio")
-                    {
-                        return;
-                    }
+                    return;
                 }
             }
-           
+
             contenido.Add(other.gameObject);
             other.gameObject.SetActive(false);
             ActualizarLista();
@@ -127,15 +128,15 @@ public class Vaso : MonoBehaviour
                         TransparenciaSegundoNivel.intanse.maxCarbono = 0;
                     }
                 }
-                for (int i = 0; i < contenido.Count; i++)
+                
+            }
+            for (int i = 0; i < contenido.Count; i++)
+            {
+                if (contenido[i].gameObject.name == "Carbono")
                 {
-                    if (contenido[i].gameObject.name == "Carbono")
-                    {
-                        return;
-                    }
+                    return;
                 }
             }
-            
             contenido.Add(other.gameObject);
             other.gameObject.SetActive(false);
             ActualizarLista();
@@ -178,11 +179,11 @@ public class Vaso : MonoBehaviour
     }
 
 
-    void ActualizarLista()
+    public void ActualizarLista()
     {
         if (cantidadAgua >= 15)
         {
-            GetComponent<SpriteRenderer>().sprite = spriteElementoActual[1];
+            //GetComponent<SpriteRenderer>().sprite = spriteElementoActual[1];
         }
         else
         {
@@ -257,9 +258,7 @@ public class Vaso : MonoBehaviour
                     {
                         if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
                         {
-                            contenido.Remove(contenido[0]);
-                            contenido.Remove(contenido[0]);
-                            contenido.Remove(contenido[0]);
+                           
                             crearAmoxicilina = 100;
                             Debug.Log("Tirate");
                             // poner que el vaso se pueda tomar  y  desplegar winning del gameManager
@@ -279,9 +278,7 @@ public class Vaso : MonoBehaviour
                     {
                         if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
                         {
-                            contenido.Remove(contenido[0]);
-                            contenido.Remove(contenido[0]);
-                            contenido.Remove(contenido[0]);
+                           
                             crearAmoxicilina = 100;
                             Debug.Log("Tirate");
                         }
@@ -302,9 +299,7 @@ public class Vaso : MonoBehaviour
                         {
                             if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
                             {
-                                contenido.Remove(contenido[0]);
-                                contenido.Remove(contenido[0]);
-                                contenido.Remove(contenido[0]);
+                               
                                 crearAmoxicilina = 100;
                                 Debug.LogError("Tirate");
                             }
@@ -327,7 +322,7 @@ public class Vaso : MonoBehaviour
                         //{
                         if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
                         {
-                            contenido.Remove(contenido[0]);
+                            
                             crearAmoxicilina = 100;
                             Debug.Log("Tirate");
                         }
