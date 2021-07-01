@@ -5,7 +5,7 @@ using UnityEngine;
 public class TextoTutorial : MonoBehaviour
 {
     public List<string> dialogues;
-
+    public bool derecha;
     public void OnTriggerStay2D(Collider2D other)
     {
 
