@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class ChangeColorVaso : MonoBehaviour
 {
+    public static ChangeColorVaso intance;
     public List<Sprite> spritesLevelWater;
     public Vaso vaso;
     Sprite actualSprite;
@@ -10,10 +11,9 @@ public class ChangeColorVaso : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CambiarColorDeSprites();
     }
 
-    void CambiarColorDeSprites()
+    public void CambiarColorDeSprites()
     {
         if (vaso.cantidadAgua < 5)//Condicional de cantidad de Agua
         {
@@ -39,6 +39,7 @@ public class ChangeColorVaso : MonoBehaviour
         {
             case 1:
                 GetComponent<SpriteRenderer>().sprite = spritesLevelWater[0];//Sprite a Poner
+
                 if (vaso.cantidadAgua == 0 && vaso.contenido.Count == 0)//Segunda limitante
                 {
                     GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
@@ -46,7 +47,11 @@ public class ChangeColorVaso : MonoBehaviour
                 else
                 {
                     if (vaso.cantidadAgua > 0 && vaso.contenido.Count == 0)
-                        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                    {
+
+                        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1); // Color
+
+                    }
                     else
                     {
                         if (vaso.contenido.Count != 0)
@@ -57,6 +62,7 @@ public class ChangeColorVaso : MonoBehaviour
                                 {
                                     if (vaso.contenido.Count == 1)
                                     {
+
                                         Debug.LogWarning("ColorCarbonoSolo");
                                         //Color De Baso Con el Primer Elemnto
                                     }
@@ -68,7 +74,6 @@ public class ChangeColorVaso : MonoBehaviour
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 2)
                                     {
-
                                         Debug.LogWarning("ColorCarbonoOxigenoSolo");
                                         //Color Con el segundo
                                     }
