@@ -49,7 +49,7 @@ public class ChangeColorVaso : MonoBehaviour
                     if (vaso.cantidadAgua > 0 && vaso.contenido.Count == 0)
                     {
 
-                        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1); // Color
+                        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1); // Color agua Sola
 
                     }
                     else
@@ -64,7 +64,7 @@ public class ChangeColorVaso : MonoBehaviour
                                     {
 
                                         Debug.LogWarning("ColorCarbonoSolo");
-                                        //Color De Baso Con el Primer Elemnto
+                                        //Color De vaso Con el Primer Elemnto
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
                                     {
@@ -265,12 +265,12 @@ public class ChangeColorVaso : MonoBehaviour
                 GetComponent<SpriteRenderer>().sprite = spritesLevelWater[1];//Sprite a Poner
                 if (vaso.cantidadAgua == 5 && vaso.contenido.Count == 0)//Segunda limitante
                 {
-                    GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0);
+                    GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);//Color agua
                 }
                 else
                 {
                     if (vaso.cantidadAgua > 5 && vaso.contenido.Count == 0)
-                        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+                        GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);//Color agua
                     else
                     {
                         if (vaso.contenido.Count != 0)
