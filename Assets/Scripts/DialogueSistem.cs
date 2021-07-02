@@ -16,6 +16,8 @@ public class DialogueSistem : MonoBehaviour
     public TextMeshProUGUI textoDialogo1, textoDialogo2;
     public List<RectTransform> panelDialogo;
     public List<RectTransform> guiaPanel;
+    public RectTransform premisa;
+    private Vector2 originalPositionPremisa;
     private Vector2 originalPos1, originalPos2;
 
     private void Awake()
@@ -23,6 +25,7 @@ public class DialogueSistem : MonoBehaviour
         instance = this;
         originalPos1 = panelDialogo[0].position;
         originalPos2 = panelDialogo[1].position;
+        originalPositionPremisa = premisa.position;
     }
 
     public void ShowDialogue(string dialogo)

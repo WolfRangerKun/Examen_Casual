@@ -8,9 +8,11 @@ public class TextoTutorial : MonoBehaviour
     public bool derecha;
     public int time;
     private DialogueSistem dialogeSistem;
+    public GameObject premisa;
     private void Start()
     {
         dialogeSistem = FindObjectOfType<DialogueSistem>();
+        Destroy(premisa, 4);
     }
     private void Update()
     {
