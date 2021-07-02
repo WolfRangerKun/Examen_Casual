@@ -70,9 +70,7 @@ public class ChangeColorVaso : MonoBehaviour
                 {
                     if (vaso.cantidadAgua > 0 && vaso.contenido.Count == 0)
                     {
-
                         GetComponent<SpriteRenderer>().color = colorAgua;  // Color agua Sola
-
                     }
                     else
                     {

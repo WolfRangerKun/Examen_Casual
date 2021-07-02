@@ -1790,7 +1790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameRunning: 1
-  tiempo: 120
+  tiempo: 10
   botonWin: 0
   botonLose: 0
   boton: 0
@@ -1803,6 +1803,7 @@ MonoBehaviour:
   videosWinLose:
   - {fileID: 32900000, guid: 0a3ed11af64281d4d9e4b12f45527335, type: 3}
   - {fileID: 32900000, guid: a893d88da147b7c4b86453548c9c8692, type: 3}
+  tutorial: 0
 --- !u!4 &546657591
 Transform:
   m_ObjectHideFlags: 0

@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviour
     }
     public IEnumerator WINNING()
     {
+        txtTimer.gameObject.SetActive(false);
         canPause = false;
         rawVideo.SetActive(true);
         reproductor.clip = videosWinLose[0];
@@ -111,6 +112,7 @@ public class GameManager : MonoBehaviour
     }
     public IEnumerator Lose()
     {
+        txtTimer.gameObject.SetActive(false);
         ChangeScene.intance.musicaNivel.volume = 0;
         canPause = false;
         rawVideo.SetActive(true);
