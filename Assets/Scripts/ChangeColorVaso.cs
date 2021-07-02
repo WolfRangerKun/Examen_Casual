@@ -7,7 +7,6 @@ public class ChangeColorVaso : MonoBehaviour
     public List<Sprite> spritesLevelWater;
     public Vaso vaso;
     Sprite actualSprite;
-    public bool soloAgua = true;
     // Update is called once per frame
     void Update()
     {
@@ -42,12 +41,15 @@ public class ChangeColorVaso : MonoBehaviour
     {
         Color colorAgua = new Color(0, 0.3421257f, 1, 0.5882353f);
         Color colorCarbonoAgua = new Color(1, 0, 0, 0.5882353f); //Rojo
-        Color colorOxigenoAgua = new Color(0, 0, 1, 0.5882353f); // Azul
-        Color colorMercurioAgua = new Color(0, 1, 0, 0.5882353f); //  Amarillo
+        Color colorOxigenoAgua = new Color(0.372549f, 0.8039216f, 0.8941177f, 0.5882353f); // Azul
+        Color colorMercurioAgua = new Color(1, 1, 0, 0.5882353f); //  Amarillo
         Color colorCarbonoMercurio = new Color(1, 0.5019608f, 0, 0.5882353f); //Naranja
         Color colorCarbonoOxigeno = new Color(0.5019608f, 0, 1, 0.5882353f); // Violeta
         Color colorOxigenoMercurio = new Color(0, 1, 0, 0.5882353f); //Verde
-        
+        //Orden
+       
+
+
         switch (x)
         {
             case 1:
@@ -76,18 +78,16 @@ public class ChangeColorVaso : MonoBehaviour
                                     if (vaso.contenido.Count == 1)
                                     {
                                         GetComponent<SpriteRenderer>().color = colorCarbonoAgua;
-                                        Debug.LogWarning("ColorCarbonoSolo");
                                         //Color De vaso Con el Primer Elemnto
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
                                     {
-
-                                        Debug.LogWarning("ColorCarbonoOxigenoSolo");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoOxigeno;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 2)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoSolo");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoMercurio;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
@@ -108,20 +108,18 @@ public class ChangeColorVaso : MonoBehaviour
                                     {
                                         if (vaso.contenido.Count == 1)
                                         {
-                                            Debug.LogWarning("ColorCarbonoSoloConAgua");
                                             GetComponent<SpriteRenderer>().color = colorCarbonoAgua;
                                             //Color De Baso Con el Primer Elemnto
                                         }
                                         else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
                                         {
-
-                                            Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                            GetComponent<SpriteRenderer>().color = colorCarbonoOxigeno;
                                             //Color Con el segundo
                                         }
                                         else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 2)
                                         {
 
-                                            Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                            GetComponent<SpriteRenderer>().color = colorCarbonoMercurio;
                                             //Color Con el segundo
                                         }
                                         else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
@@ -143,20 +141,17 @@ public class ChangeColorVaso : MonoBehaviour
                                 {
                                     if (vaso.contenido.Count == 1)
                                     {
-                                        GetComponent<SpriteRenderer>().color = new Color(0, 0, 1, 0.5882353f);
-                                        Debug.LogWarning("ColorCarbonoSolo");
+                                        GetComponent<SpriteRenderer>().color = colorOxigenoAgua;
                                         //Color De Baso Con el Primer Elemnto
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 2)
                                     {
-
-                                        Debug.LogWarning("ColorCarbonoOxigenoSolo");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoOxigeno;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 2)
                                     {
-
-                                        Debug.LogWarning("ColorCarbonoOxigenoSolo");
+                                        GetComponent<SpriteRenderer>().color = colorOxigenoMercurio;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
@@ -177,19 +172,17 @@ public class ChangeColorVaso : MonoBehaviour
                                     {
                                         if (vaso.contenido.Count == 1)
                                         {
-                                            Debug.LogWarning("ColorCarbonoSoloConAgua");
+                                            GetComponent<SpriteRenderer>().color = colorOxigenoAgua;
                                             //Color De Baso Con el Primer Elemnto
                                         }
                                         else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 2)
                                         {
-
-                                            Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                            GetComponent<SpriteRenderer>().color = colorCarbonoOxigeno;
                                             //Color Con el segundo
                                         }
                                         else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 2)
                                         {
-
-                                            Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                            GetComponent<SpriteRenderer>().color = colorOxigenoMercurio;
                                             //Color Con el segundo
                                         }
                                         else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
@@ -211,20 +204,17 @@ public class ChangeColorVaso : MonoBehaviour
                                 {
                                     if (vaso.contenido.Count == 1)
                                     {
-                                        Debug.LogWarning("ColorCarbonoSolo");
-                                        GetComponent<SpriteRenderer>().color = new Color(0, 1, 0, 0.5882353f);
+                                        GetComponent<SpriteRenderer>().color = colorMercurioAgua;
                                         //Color De Baso Con el Primer Elemnto
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 2)
                                     {
-
-                                        Debug.LogWarning("ColorCarbonoOxigenoSolo");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoMercurio;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
                                     {
-
-                                        Debug.LogWarning("ColorCarbonoOxigenoSolo");
+                                        GetComponent<SpriteRenderer>().color = colorOxigenoMercurio;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
@@ -245,19 +235,17 @@ public class ChangeColorVaso : MonoBehaviour
                                     {
                                         if (vaso.contenido.Count == 1)
                                         {
-                                            Debug.LogWarning("ColorCarbonoSoloConAgua");
+                                            GetComponent<SpriteRenderer>().color = colorMercurioAgua;
                                             //Color De Baso Con el Primer Elemnto
                                         }
                                         else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 2)
                                         {
-
-                                            Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                            GetComponent<SpriteRenderer>().color = colorCarbonoMercurio;
                                             //Color Con el segundo
                                         }
                                         else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
                                         {
-
-                                            Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                            GetComponent<SpriteRenderer>().color = colorOxigenoMercurio;
                                             //Color Con el segundo
                                         }
                                         else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
@@ -299,19 +287,16 @@ public class ChangeColorVaso : MonoBehaviour
                                     if (vaso.contenido.Count == 1)
                                     {
                                         GetComponent<SpriteRenderer>().color = colorCarbonoAgua;
-                                        Debug.LogWarning("ColorCarbonoSoloConAgua");
                                         //Color De Baso Con el Primer Elemnto
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
                                     {
-
-                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoOxigeno;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 2)
                                     {
-
-                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoMercurio;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
@@ -334,20 +319,17 @@ public class ChangeColorVaso : MonoBehaviour
                                 {
                                     if (vaso.contenido.Count == 1)
                                     {
-                                        Debug.LogWarning("ColorCarbonoSoloConAgua");
-                                        GetComponent<SpriteRenderer>().color = new Color(0, 0, 1, 0.5882353f);
+                                        GetComponent<SpriteRenderer>().color = colorOxigenoAgua;
                                         //Color De Baso Con el Primer Elemnto
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 2)
                                     {
-
-                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoOxigeno;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 2)
                                     {
-
-                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorOxigenoMercurio;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
@@ -370,20 +352,17 @@ public class ChangeColorVaso : MonoBehaviour
                                 {
                                     if (vaso.contenido.Count == 1)
                                     {
-                                        Debug.LogWarning("ColorCarbonoSoloConAgua");
-                                        GetComponent<SpriteRenderer>().color = new Color(0, 1, 0, 0.5882353f);
+                                        GetComponent<SpriteRenderer>().color = colorMercurioAgua;
                                         //Color De Baso Con el Primer Elemnto
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 2)
                                     {
-
-                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoMercurio;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
                                     {
-
-                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorOxigenoMercurio;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
@@ -425,19 +404,16 @@ public class ChangeColorVaso : MonoBehaviour
                                     if (vaso.contenido.Count == 1)
                                     {
                                         GetComponent<SpriteRenderer>().color = colorCarbonoAgua;
-                                        Debug.LogWarning("ColorCarbonoSoloConAgua");
                                         //Color De Baso Con el Primer Elemnto
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
                                     {
-
-                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoOxigeno;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 2)
                                     {
-
-                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoMercurio;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
@@ -460,20 +436,17 @@ public class ChangeColorVaso : MonoBehaviour
                                 {
                                     if (vaso.contenido.Count == 1)
                                     {
-                                        Debug.LogWarning("ColorCarbonoSoloConAgua");
-                                        GetComponent<SpriteRenderer>().color = new Color(0, 0, 1, 0.5882353f);
+                                        GetComponent<SpriteRenderer>().color = colorOxigenoAgua;
                                         //Color De Baso Con el Primer Elemnto
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 2)
                                     {
-
-                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoOxigeno;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 2)
                                     {
-
-                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorOxigenoMercurio;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
@@ -496,20 +469,17 @@ public class ChangeColorVaso : MonoBehaviour
                                 {
                                     if (vaso.contenido.Count == 1)
                                     {
-                                        Debug.LogWarning("ColorCarbonoSoloConAgua");
-                                        GetComponent<SpriteRenderer>().color = new Color(0, 1, 0, 0.5882353f);
+                                        GetComponent<SpriteRenderer>().color = colorMercurioAgua;
                                         //Color De Baso Con el Primer Elemnto
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 2)
                                     {
-
-                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoMercurio;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
                                     {
-
-                                        Debug.LogWarning("ColorCarbonoOxigenoSoloConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorOxigenoMercurio;
                                         //Color Con el segundo
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
