@@ -16,7 +16,7 @@ public class DialogueSistem : MonoBehaviour
     public TextMeshProUGUI textoDialogo1, textoDialogo2;
     public List<RectTransform> panelDialogo;
     public List<RectTransform> guiaPanel;
-    public RectTransform premisa;
+    public RectTransform premisa, guiaPremisa;
     private Vector2 originalPositionPremisa;
     private Vector2 originalPos1, originalPos2;
 
@@ -26,6 +26,7 @@ public class DialogueSistem : MonoBehaviour
         originalPos1 = panelDialogo[0].position;
         originalPos2 = panelDialogo[1].position;
         originalPositionPremisa = premisa.position;
+        StartCoroutine(Premisa());
     }
 
     public void ShowDialogue(string dialogo)
@@ -46,5 +47,13 @@ public class DialogueSistem : MonoBehaviour
     {
         panelDialogo[0].DOMove(originalPos1, .5f);
         panelDialogo[1].DOMove(originalPos2, .5f);
+    }
+
+    IEnumerator Premisa()
+    {
+        yield return new WaitForSeconds(0.5f);
+        premisa.DOMove(guiaPremisa.position, .5f);
+        yield return new WaitForSeconds(4f);
+        premisa.DOMove(originalPositionPremisa, .5f);
     }
 }
