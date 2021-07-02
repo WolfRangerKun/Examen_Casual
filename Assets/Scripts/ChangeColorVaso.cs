@@ -47,8 +47,14 @@ public class ChangeColorVaso : MonoBehaviour
         Color colorCarbonoOxigeno = new Color(0.5019608f, 0, 1, 0.5882353f); // Violeta
         Color colorOxigenoMercurio = new Color(0, 1, 0, 0.5882353f); //Verde
         //Orden
-        Color colorMercurioCarbonoOxigeno = new Color(0, 1, 0, 0.5882353f); //AmarilloVerdoso
-        //Color colorCarbonoMercurioOxigeno = new Color()
+        Color colorMercurioCarbonoOxigeno = new Color(0.4666667f, 0.7921569f, 0.08627451f, 0.5882353f); //AmarilloVerdoso
+        Color colorMercurioOxigenoCarbono = new Color(0.4823529f, 0.2705882f, 0, 0.5882353f); //Cafe
+
+        Color colorCarbonoMercurioOxigeno = new Color(0.7921569f, 0.08627451f, 0.3921569f, 0.5882353f); //RojoViolaceo;
+        Color colorCarbonoOxigenoMercurio = new Color(1, 0.7019608f, 0.6627451f, 0.5882353f); //EntreRojoyPiel
+
+        Color colorOxigenoCarbonoMercurio = new Color(0, 0, 0.3098039f, 0.7843137f); //AzulMarino
+        Color colorOxigenoMercurioCarbono = new Color(0.4784314f, 0.5176471f, 0.2784314f, 0.7843137f); //VerdePalta
 
 
         switch (x)
@@ -93,12 +99,12 @@ public class ChangeColorVaso : MonoBehaviour
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioSolo");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoOxigenoMercurio;
                                         //Color con el Tercer
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioSolo");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoMercurioOxigeno;
                                         //Color con el Tercer
                                     }
 
@@ -125,12 +131,12 @@ public class ChangeColorVaso : MonoBehaviour
                                         }
                                         else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
                                         {
-                                            Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                            GetComponent<SpriteRenderer>().color = colorCarbonoOxigenoMercurio;
                                             //Color con el Tercer
                                         }
                                         else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
                                         {
-                                            Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                            GetComponent<SpriteRenderer>().color = colorCarbonoMercurioOxigeno;
                                             //Color con el Tercer
                                         }
                                     }
@@ -157,12 +163,12 @@ public class ChangeColorVaso : MonoBehaviour
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioSolo");
+                                        GetComponent<SpriteRenderer>().color = colorOxigenoCarbonoMercurio;
                                         //Color con el Tercer
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioSolo");
+                                        GetComponent<SpriteRenderer>().color = colorOxigenoMercurioCarbono;
                                         //Color con el Tercer
                                     }
 
@@ -188,12 +194,12 @@ public class ChangeColorVaso : MonoBehaviour
                                         }
                                         else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
                                         {
-                                            Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                            GetComponent<SpriteRenderer>().color = colorOxigenoCarbonoMercurio;
                                             //Color con el Tercer
                                         }
                                         else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 3)
                                         {
-                                            Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                            GetComponent<SpriteRenderer>().color = colorOxigenoMercurioCarbono;
                                             //Color con el Tercer
                                         }
                                     }
@@ -220,12 +226,12 @@ public class ChangeColorVaso : MonoBehaviour
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioSolo");
+                                        GetComponent<SpriteRenderer>().color = colorMercurioCarbonoOxigeno;
                                         //Color con el Tercer
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioSolo");
+                                        GetComponent<SpriteRenderer>().color = colorMercurioOxigenoCarbono;
                                         //Color con el Tercer
                                     }
 
@@ -251,12 +257,12 @@ public class ChangeColorVaso : MonoBehaviour
                                         }
                                         else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
                                         {
-                                            Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                            GetComponent<SpriteRenderer>().color = colorMercurioCarbonoOxigeno;
                                             //Color con el Tercer
                                         }
                                         else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 3)
                                         {
-                                            Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                            GetComponent<SpriteRenderer>().color = colorMercurioOxigenoCarbono;
                                             //Color con el Tercer
                                         }
                                     }
@@ -302,12 +308,12 @@ public class ChangeColorVaso : MonoBehaviour
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoOxigenoMercurio;
                                         //Color con el Tercer
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoMercurioOxigeno;
                                         //Color con el Tercer
                                     }
                                 }
@@ -335,12 +341,12 @@ public class ChangeColorVaso : MonoBehaviour
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorOxigenoCarbonoMercurio;
                                         //Color con el Tercer
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorOxigenoMercurioCarbono;
                                         //Color con el Tercer
                                     }
                                 }
@@ -368,12 +374,12 @@ public class ChangeColorVaso : MonoBehaviour
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorMercurioCarbonoOxigeno;
                                         //Color con el Tercer
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorMercurioOxigenoCarbono;
                                         //Color con el Tercer
                                     }
                                 }
@@ -419,12 +425,12 @@ public class ChangeColorVaso : MonoBehaviour
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoOxigenoMercurio;
                                         //Color con el Tercer
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorCarbonoMercurioOxigeno;
                                         //Color con el Tercer
                                     }
                                 }
@@ -452,12 +458,12 @@ public class ChangeColorVaso : MonoBehaviour
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorOxigenoCarbonoMercurio;
                                         //Color con el Tercer
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorOxigenoMercurioCarbono;
                                         //Color con el Tercer
                                     }
                                 }
@@ -485,12 +491,12 @@ public class ChangeColorVaso : MonoBehaviour
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorMercurioCarbonoOxigeno;
                                         //Color con el Tercer
                                     }
                                     else if (vaso.contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && vaso.contenido.Count == 3)
                                     {
-                                        Debug.LogWarning("ColorCarbonoOxigenoMercurioConAgua");
+                                        GetComponent<SpriteRenderer>().color = colorMercurioOxigenoCarbono;
                                         //Color con el Tercer
                                     }
                                 }

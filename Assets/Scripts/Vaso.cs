@@ -325,7 +325,7 @@ public class Vaso : MonoBehaviour
                         //{
                         if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
                         {
-                            
+                            // PONER UN COLLIDER SET ACTIVE PA LA TECLA y empieza el win o lose
                             crearAmoxicilina = 100;
                             Debug.Log("Tirate");
                         }
