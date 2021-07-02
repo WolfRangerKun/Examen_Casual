@@ -6,7 +6,7 @@ public class Agua : MonoBehaviour
 {
     void Start()
     {
-        Destroy(gameObject, 4);
+        Destroy(gameObject, 1.5f);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
