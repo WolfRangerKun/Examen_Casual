@@ -47,7 +47,8 @@ public class ChangeColorVaso : MonoBehaviour
         Color colorCarbonoOxigeno = new Color(0.5019608f, 0, 1, 0.5882353f); // Violeta
         Color colorOxigenoMercurio = new Color(0, 1, 0, 0.5882353f); //Verde
         //Orden
-       
+        Color colorMercurioCarbonoOxigeno = new Color(0, 1, 0, 0.5882353f); //AmarilloVerdoso
+        //Color colorCarbonoMercurioOxigeno = new Color()
 
 
         switch (x)

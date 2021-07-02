@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Video;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
     public static GameManager instance;
     public bool gameRunning;
-    int tiempo = 120;
+    public int tiempo = 120;
     public bool botonWin, botonLose, boton;
     public TMP_Text txtTimer;
-    public GameObject screenPause, screenDead, screenWin;
+    public GameObject screenPause, screenDead, screenWin, rawVideo;
+    public VideoPlayer reproductor;
+    public List<VideoClip> videosWinLose;
     bool canPause = true;
+    bool run = true;
     private void Awake()
     {
         instance = this;
@@ -27,16 +31,18 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         Cursor.visible = false;
-        if (tiempo <= 0)
+        if (tiempo <= 0 && run)
         {
-            AudioSource[] audios = FindObjectsOfType<AudioSource>();
-            foreach (AudioSource a in audios)
-            {
-                a.volume = .5f;
-            }
-            canPause = false;
-            botonLose = true;
-            screenDead.SetActive(true);
+            StartCoroutine(Lose());
+            run = false;
+            //AudioSource[] audios = FindObjectsOfType<AudioSource>();
+            //foreach (AudioSource a in audios)
+            //{
+            //    a.volume = .5f;
+            //}
+            //canPause = false;
+            //botonLose = true;
+            //screenDead.SetActive(true);
         }
         if (Input.GetKeyDown(KeyCode.Escape) && canPause)
         {
@@ -86,17 +92,27 @@ public class GameManager : MonoBehaviour
     {
         return gameRunning;
     }
-    IEnumerator WINNING()
+    public IEnumerator WINNING()
     {
         canPause = false;
-        Debug.Log("oli");
+        rawVideo.SetActive(true);
+        reproductor.clip = videosWinLose[0];
+        reproductor.Play();
+        yield return new WaitForSeconds(6);
         botonWin = true;
         screenWin.SetActive(true);
-        AudioSource[] audios = FindObjectsOfType<AudioSource>();
-        foreach (AudioSource a in audios)
-        {
-            a.volume = .5f;
-        }
-        yield return new WaitForSeconds(.1f);
+       
+    }
+    public IEnumerator Lose()
+    {
+        ChangeScene.intance.musicaNivel.volume = 0;
+        canPause = false;
+        rawVideo.SetActive(true);
+        reproductor.clip = videosWinLose[0];
+        reproductor.Play();
+        yield return new WaitForSeconds(6);
+        botonLose = true;
+        screenDead.SetActive(true);
+
     }
 }
