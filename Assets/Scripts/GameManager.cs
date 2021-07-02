@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public List<VideoClip> videosWinLose;
     bool canPause = true;
     bool run = true;
+    public bool tutorial;
     private void Awake()
     {
         instance = this;
@@ -56,8 +57,13 @@ public class GameManager : MonoBehaviour
         {
             txtTimer.text = "Tiempo: " + tiempo.ToString();
             yield return new WaitForSeconds(1);
-            tiempo--;
+            if (tutorial)
+                if(DialogueSistem.finishPremise)
+                tiempo--;
+            if(!tutorial)
+                tiempo--;
         }
+
     }
 
     public void ChangedGameRunningState()

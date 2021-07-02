@@ -19,6 +19,7 @@ public class DialogueSistem : MonoBehaviour
     public RectTransform premisa, guiaPremisa;
     private Vector2 originalPositionPremisa;
     private Vector2 originalPos1, originalPos2;
+    public static bool finishPremise; 
 
     private void Awake()
     {
@@ -55,5 +56,6 @@ public class DialogueSistem : MonoBehaviour
         premisa.DOMove(guiaPremisa.position, .5f);
         yield return new WaitForSeconds(4f);
         premisa.DOMove(originalPositionPremisa, .5f);
+        finishPremise = true;
     }
 }
