@@ -5674,6 +5674,7 @@ MonoBehaviour:
   dialogues:
   - la conchadetuahermana
   derecha: 0
+  time: 0
 --- !u!58 &914764589
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9255,6 +9256,7 @@ MonoBehaviour:
   dialogues:
   - Tu vieja la caliente
   derecha: 0
+  time: 2
 --- !u!58 &1835756040
 CircleCollider2D:
   m_ObjectHideFlags: 0
