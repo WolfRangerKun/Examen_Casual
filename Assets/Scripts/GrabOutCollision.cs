@@ -11,8 +11,10 @@ public class GrabOutCollision : MonoBehaviour
     public GameObject thisObject;
     bool colUp, colDown, colLeft, colRight;
     bool canGrab;
+    public AudioSource dragSound;
     private void Awake()
     {
+        dragSound = GetComponent<AudioSource>();
         player = FindObjectOfType<PlayerMovement>();
         thisObject = transform.parent.parent.parent.gameObject;
     }
@@ -74,6 +76,7 @@ public class GrabOutCollision : MonoBehaviour
 
     IEnumerator ColUp()
     {
+        dragSound.Play();
         player.canMove = false;
         player.transform.position += new Vector3(0f, player.distanceMovement, 0f);
         player.targetPosition += new Vector3(0f, player.distanceMovement, 0f);
@@ -83,6 +86,7 @@ public class GrabOutCollision : MonoBehaviour
 
     IEnumerator ColDown()
     {
+        dragSound.Play();
         player.canMove = false;
         player.transform.position -= new Vector3(0f, player.distanceMovement, 0f);
         player.targetPosition -= new Vector3(0f, player.distanceMovement, 0f);
@@ -92,6 +96,7 @@ public class GrabOutCollision : MonoBehaviour
 
     IEnumerator ColLeft()
     {
+        dragSound.Play();
         player.canMove = false;
         player.transform.position -= new Vector3(player.distanceMovement, 0f, 0f);
         player.targetPosition -= new Vector3(player.distanceMovement, 0f, 0f);
@@ -101,6 +106,7 @@ public class GrabOutCollision : MonoBehaviour
 
     IEnumerator ColRight()
     {
+        dragSound.Play();
         player.canMove = false;
         player.transform.position += new Vector3(player.distanceMovement, 0f, 0f);
         player.targetPosition += new Vector3(player.distanceMovement, 0f, 0f);

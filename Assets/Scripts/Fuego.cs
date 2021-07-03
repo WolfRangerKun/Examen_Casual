@@ -92,6 +92,8 @@ public class Fuego : MonoBehaviour
 
     IEnumerator ChoqueUp()
     {
+        player.hitSounds.clip = player.objectSounds[2];
+        player.hitSounds.Play();
         player.distanceMovement = 0;
         player.targetPosition.y += pushDireccion;
         yield return new WaitForSeconds(.2f);
@@ -100,6 +102,8 @@ public class Fuego : MonoBehaviour
 
     IEnumerator ChoqueDown()
     {
+        player.hitSounds.clip = player.objectSounds[2];
+        player.hitSounds.Play();
         player.distanceMovement = 0;
         player.targetPosition.y -= pushDireccion;
         yield return new WaitForSeconds(.2f);
@@ -108,6 +112,8 @@ public class Fuego : MonoBehaviour
 
     IEnumerator ChoqueLeft()
     {
+        player.hitSounds.clip = player.objectSounds[2];
+        player.hitSounds.Play();
         player.distanceMovement = 0;
         player.targetPosition.x -= pushDireccion;
         yield return new WaitForSeconds(.2f);
@@ -116,6 +122,8 @@ public class Fuego : MonoBehaviour
 
     IEnumerator ChoqueRight()
     {
+        player.hitSounds.clip = player.objectSounds[2];
+        player.hitSounds.Play();
         player.distanceMovement = 0;
         player.targetPosition.x += pushDireccion;
         yield return new WaitForSeconds(.2f);
