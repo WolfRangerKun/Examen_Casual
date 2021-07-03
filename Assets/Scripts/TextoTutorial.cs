@@ -6,7 +6,7 @@ public class TextoTutorial : MonoBehaviour
 {
     public List<string> dialogues;
     public bool derecha;
-    public int time;
+    public float time;
     private DialogueSistem dialogeSistem;
     private void Start()
     {
