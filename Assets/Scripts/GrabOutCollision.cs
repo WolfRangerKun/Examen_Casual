@@ -14,7 +14,6 @@ public class GrabOutCollision : MonoBehaviour
     public AudioSource dragSound;
     private void Awake()
     {
-        dragSound = GetComponent<AudioSource>();
         player = FindObjectOfType<PlayerMovement>();
         thisObject = transform.parent.parent.parent.gameObject;
     }

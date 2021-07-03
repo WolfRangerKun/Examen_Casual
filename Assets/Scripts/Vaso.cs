@@ -21,7 +21,7 @@ public class Vaso : MonoBehaviour
     public ChangeColorVaso changeColorVaso;
     public List<Sprite> spritesContorno;
     public List<Sprite> spriteElementoActual;
-
+    public AudioSource getQuimicSound;
     public TransparenciaSegundoNivel mesaTransparencia;
     private void Awake()
     {
@@ -71,6 +71,7 @@ public class Vaso : MonoBehaviour
             }
             contenido.Add(other.gameObject);
             other.gameObject.SetActive(false);
+            getQuimicSound.Play();
             ActualizarLista();
         }
 
@@ -106,6 +107,7 @@ public class Vaso : MonoBehaviour
 
             contenido.Add(other.gameObject);
             other.gameObject.SetActive(false);
+            getQuimicSound.Play();
             ActualizarLista();
         }
 
@@ -141,6 +143,7 @@ public class Vaso : MonoBehaviour
             }
             contenido.Add(other.gameObject);
             other.gameObject.SetActive(false);
+            getQuimicSound.Play();
             ActualizarLista();
         }
 
