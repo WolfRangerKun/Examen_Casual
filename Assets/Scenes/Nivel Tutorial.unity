@@ -1610,6 +1610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 245448838}
   - component: {fileID: 245448837}
+  - component: {fileID: 245448839}
   m_Layer: 0
   m_Name: AyudaManager
   m_TagString: Untagged
@@ -1632,6 +1633,7 @@ MonoBehaviour:
   panelDirection: 1
   textoDialogo1: {fileID: 612207209}
   textoDialogo2: {fileID: 1108696751}
+  textoDialogoPremisa: {fileID: 2127830940}
   panelDialogo:
   - {fileID: 747518460}
   - {fileID: 225883648}
@@ -1654,6 +1656,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &245448839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245448836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf24e5b7c99ea574fb0d83c99d7e8dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - hola
+  - 'tu vieja '
+  - 'tu mama '
+  - y tu hermana, me las culie
+  textoPremisaNumers: 0
 --- !u!1 &256259043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,7 +2115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -370}
+  m_AnchoredPosition: {x: 0, y: -852}
   m_SizeDelta: {x: -700, y: -350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &291749514
@@ -5877,7 +5897,6 @@ MonoBehaviour:
   - la conchadetuahermana
   derecha: 0
   time: 1
-  premisa: {fileID: 0}
 --- !u!58 &914764589
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9666,7 +9685,6 @@ MonoBehaviour:
   - Tu vieja la caliente
   derecha: 0
   time: 2
-  premisa: {fileID: 0}
 --- !u!58 &1835756040
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -17472,8 +17490,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

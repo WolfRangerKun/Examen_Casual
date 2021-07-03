@@ -14,13 +14,13 @@ public class DialogueSistem : MonoBehaviour
     public PanelDirection panelDirection;
     public static DialogueSistem instance;
     public TextMeshProUGUI textoDialogo1, textoDialogo2;
+    public TextMeshProUGUI textoDialogoPremisa;
     public List<RectTransform> panelDialogo;
     public List<RectTransform> guiaPanel;
     public RectTransform premisa, guiaPremisa;
     private Vector2 originalPositionPremisa;
     private Vector2 originalPos1, originalPos2;
-    public static bool finishPremise; 
-
+    public static bool finishPremise;
     private void Awake()
     {
         instance = this;
@@ -29,7 +29,6 @@ public class DialogueSistem : MonoBehaviour
         originalPositionPremisa = premisa.position;
         StartCoroutine(Premisa());
     }
-
     public void ShowDialogue(string dialogo)
     {
         if(panelDirection == PanelDirection.DERECHA)
@@ -44,18 +43,20 @@ public class DialogueSistem : MonoBehaviour
         }
         
     }
+    public void ShowDialogueTutorial(string dialogoTutorial)
+    {
+        textoDialogoPremisa.text = dialogoTutorial;
+    }
     public void HideDialogue()
     {
         panelDialogo[0].DOMove(originalPos1, .5f);
         panelDialogo[1].DOMove(originalPos2, .5f);
+        premisa.DOMove(originalPositionPremisa, .5f);
     }
 
     IEnumerator Premisa()
     {
         yield return new WaitForSeconds(0.5f);
         premisa.DOMove(guiaPremisa.position, .5f);
-        yield return new WaitForSeconds(4f);
-        premisa.DOMove(originalPositionPremisa, .5f);
-        finishPremise = true;
     }
 }
