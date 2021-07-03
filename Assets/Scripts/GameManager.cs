@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Video;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public bool gameRunning;
     public int tiempo = 120;
+    public Slider tiempoSlider;
     public bool botonWin, botonLose, boton;
     public TMP_Text txtTimer;
     public GameObject screenPause, screenDead, screenWin, rawVideo;
@@ -28,6 +30,9 @@ public class GameManager : MonoBehaviour
         StartCoroutine(Tiempo());
         gameRunning = true;
         Time.timeScale = 1f;
+        tiempoSlider.maxValue = tiempo;
+        tiempoSlider.value = tiempo;
+
     }
 
     void Update()
@@ -50,13 +55,14 @@ public class GameManager : MonoBehaviour
         {
             ChangedGameRunningState();
         }
+        tiempoSlider.value = tiempo;
     }
 
     IEnumerator Tiempo()
     {
         while (tiempo > 0)
         {
-            txtTimer.text = "Tiempo: " + tiempo.ToString();
+            txtTimer.text = "Tiempo " + tiempo.ToString();
             yield return new WaitForSeconds(1);
             if (tutorial)
                 if(DialogueSistem.finishPremise || DialogueSistem1.finishPremise)
