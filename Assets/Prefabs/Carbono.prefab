@@ -640,6 +640,7 @@ MonoBehaviour:
   collisionLeft: 1
   collisionRight: 0
   thisObject: {fileID: 0}
+  dragSound: {fileID: 0}
 --- !u!61 &1242621203259181719
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -886,6 +887,7 @@ MonoBehaviour:
   collisionLeft: 0
   collisionRight: 0
   thisObject: {fileID: 0}
+  dragSound: {fileID: 0}
 --- !u!61 &6498820757279608858
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -938,7 +940,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5062721544543211658}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.475, y: 0, z: -1}
+  m_LocalPosition: {x: 0.4695, y: 0, z: -1}
   m_LocalScale: {x: 0.7, y: 0.69, z: 1}
   m_Children:
   - {fileID: 251503168579699526}
@@ -1009,7 +1011,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5703988319263971681}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.4757, z: -1}
+  m_LocalPosition: {x: 0, y: -0.4695, z: -1}
   m_LocalScale: {x: 0.7, y: 0.69, z: 1}
   m_Children:
   - {fileID: 3113613358939182438}
@@ -1080,7 +1082,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5789632187148571046}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.475, z: -1}
+  m_LocalPosition: {x: 0, y: 0.4695, z: -1}
   m_LocalScale: {x: 0.7, y: 0.69, z: 1}
   m_Children:
   - {fileID: 6851940479822555373}
@@ -1251,7 +1253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5860430546107549664}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.475, y: 0, z: -1}
+  m_LocalPosition: {x: -0.4695, y: 0, z: -1}
   m_LocalScale: {x: 0.7, y: 0.69, z: 1}
   m_Children:
   - {fileID: 3655220337734145047}
@@ -1516,6 +1518,7 @@ MonoBehaviour:
   collisionLeft: 0
   collisionRight: 1
   thisObject: {fileID: 0}
+  dragSound: {fileID: 0}
 --- !u!61 &1305220513513833952
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1826,6 +1829,7 @@ MonoBehaviour:
   collisionLeft: 0
   collisionRight: 0
   thisObject: {fileID: 0}
+  dragSound: {fileID: 0}
 --- !u!61 &159968252821040079
 BoxCollider2D:
   m_ObjectHideFlags: 0

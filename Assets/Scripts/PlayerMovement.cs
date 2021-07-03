@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using System.Collections.Generic;
 
 public enum Direction
 {
@@ -24,6 +26,11 @@ public class PlayerMovement : MonoBehaviour
     public int pushDistance = 1;
     public bool canMove = true;
     public int life = 2;
+    public AudioSource playerWalk, hitSounds;
+    public List<AudioClip> objectSounds;
+    //0 playerWalk
+    //1 vidrio
+    //2 hitPared;
     private void Awake()
     {
         instace = this;
@@ -34,9 +41,10 @@ public class PlayerMovement : MonoBehaviour
         targetPosition = transform.position;
         direction = Direction.down;
     }
-
+    bool playSound;
     void Update()
     {
+        
         if (canMove)
         {
             Debug.DrawRay(rayCast2.position, rayCast.right * distanceRay);
@@ -49,7 +57,11 @@ public class PlayerMovement : MonoBehaviour
             RaycastHit2D hit4 = Physics2D.Raycast(rayCast4.position, -rayCast.up, distanceRay, move);
             Vector2 axisDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
             anim.SetInteger("Direction", (int)direction);
-            if (axisDirection != Vector2.zero && targetPosition == transform.position)
+            if (axisDirection == Vector2.zero && targetPosition == transform.position)
+            {
+                playSound = true;
+            }
+                if (axisDirection != Vector2.zero && targetPosition == transform.position)
             {
                 if (Mathf.Abs(axisDirection.x) > Mathf.Abs(axisDirection.y))
                 {
@@ -60,20 +72,61 @@ public class PlayerMovement : MonoBehaviour
                         {
                             if(hit2.collider.gameObject.GetComponent<Objeto>() && hit2.collider.gameObject.GetComponent<Objeto>().inWall2 == false)
                                 hit2.transform.position = new Vector2(hit2.transform.position.x + pushDistance, hit2.transform.position.y);
-                            if(hit2.collider.gameObject.GetComponent<Atomo>())
+                            
+
+                            if (hit2.collider.gameObject.GetComponent<Atomo>() && hit2.collider.gameObject.GetComponent<Objeto>().inWall2 == false)
+                            {
                                 hit2.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit2.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
-                            if(hit2.collider.gameObject.GetComponent<Vaso>() && hit2.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
+                                hitSounds.clip = objectSounds[1];
+                                hitSounds.Play();
+                            }
+                            if (hit2.collider.gameObject.GetComponent<Vaso>() && hit2.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15 && hit2.collider.gameObject.GetComponent<Objeto>().inWall2 == false)
+                            {
                                 hit2.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit2.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(1));
+                                hitSounds.clip = objectSounds[1];
+                                hitSounds.Play();
+                            }
                             else
-                                if (hit2.collider.gameObject.GetComponent<Vaso>())
+                                if (hit2.collider.gameObject.GetComponent<Vaso>() && hit2.collider.gameObject.GetComponent<Objeto>().inWall2 == false)
+                            {
                                 hit2.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit2.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
-                            if (hit2.collider.gameObject.GetComponent<OnCollisionChangeSprite>())
+                                hitSounds.clip = objectSounds[1];
+                                hitSounds.Play();
+                            }
+                            if (hit2.collider.gameObject.GetComponent<OnCollisionChangeSprite>() && hit2.collider.gameObject.GetComponent<Objeto>().inWall2 == false)
                             {
                                 hit2.collider.gameObject.GetComponent<OnCollisionChangeSprite>().StartCoroutine(hit2.collider.gameObject.GetComponent<OnCollisionChangeSprite>().CambiarSpriteVaso(0));
+                                hitSounds.clip = objectSounds[1];
+                                hitSounds.Play();
                             }
                         }
                         if (!CheckCollision)
+                        {
                             targetPosition += new Vector3(distanceMovement, 0f, 0f);
+                            if(direction == Direction.right)
+                            {
+                                if (hit2.collider)
+                                {
+
+                                }
+                                else
+                                {
+                                    playerWalk.clip = objectSounds[0];
+                                    playerWalk.Play();
+                                }
+                            }
+                            
+                        }
+                        else if (CheckCollision)
+                        {
+                            if (playSound)
+                            {
+                                hitSounds.clip = objectSounds[2];
+                                hitSounds.Play();
+                                playSound = false;
+                            }
+                            
+                        }
                     }
                     else
                     {
@@ -82,20 +135,58 @@ public class PlayerMovement : MonoBehaviour
                         {
                             if (hit.collider.gameObject.GetComponent<Objeto>() && hit.collider.gameObject.GetComponent<Objeto>().inWall == false)
                                 hit.transform.position = new Vector2(hit.transform.position.x - pushDistance, hit.transform.position.y);
-                            if (hit.collider.gameObject.GetComponent<Atomo>())
+                            
+                            if (hit.collider.gameObject.GetComponent<Atomo>() && hit.collider.gameObject.GetComponent<Objeto>().inWall == false)
+                            {
                                 hit.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
-                            if (hit.collider.gameObject.GetComponent<Vaso>() && hit.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
+                                hitSounds.clip = objectSounds[1];
+                                hitSounds.Play();
+                            }
+                            if (hit.collider.gameObject.GetComponent<Vaso>() && hit.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15 && hit.collider.gameObject.GetComponent<Objeto>().inWall == false)
+                            {
                                 hit.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(1));
+                                hitSounds.clip = objectSounds[1];
+                                hitSounds.Play();
+                            }
                             else
-                                if (hit.collider.gameObject.GetComponent<Vaso>())
+                                if (hit.collider.gameObject.GetComponent<Vaso>() && hit.collider.gameObject.GetComponent<Objeto>().inWall == false)
+                            {
                                 hit.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
-                            if (hit.collider.gameObject.GetComponent<OnCollisionChangeSprite>())
+                                hitSounds.clip = objectSounds[1];
+                                hitSounds.Play();
+                            }
+                            if (hit.collider.gameObject.GetComponent<OnCollisionChangeSprite>() && hit.collider.gameObject.GetComponent<Objeto>().inWall == false)
                             {
                                 hit.collider.gameObject.GetComponent<OnCollisionChangeSprite>().StartCoroutine(hit.collider.gameObject.GetComponent<OnCollisionChangeSprite>().CambiarSpriteVaso(0));
+                                hitSounds.clip = objectSounds[1];
+                                hitSounds.Play();
                             }
                         }
                         if (!CheckCollision)
+                        {
                             targetPosition -= new Vector3(distanceMovement, 0f, 0f);
+                            if (direction == Direction.left)
+                            {
+                                if (hit.collider)
+                                {
+
+                                }
+                                else
+                                {
+                                    playerWalk.clip = objectSounds[0];
+                                    playerWalk.Play();
+                                }
+                            }
+                        }
+                        else if (CheckCollision)
+                        {
+                            if (playSound)
+                            {
+                                hitSounds.clip = objectSounds[2];
+                                hitSounds.Play();
+                                playSound = false;
+                            }
+                        }
                     }
                 }
                 else
@@ -107,20 +198,58 @@ public class PlayerMovement : MonoBehaviour
                         {
                             if (hit3.collider.gameObject.GetComponent<Objeto>() && hit3.collider.gameObject.GetComponent<Objeto>().inWall3 == false)
                                 hit3.transform.position = new Vector2(hit3.transform.position.x, hit3.transform.position.y + pushDistance);
-                            if (hit3.collider.gameObject.GetComponent<Atomo>())
+                            
+                            if (hit3.collider.gameObject.GetComponent<Atomo>() && hit3.collider.gameObject.GetComponent<Objeto>().inWall3 == false)
+                            {
                                 hit3.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit3.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
-                            if (hit3.collider.gameObject.GetComponent<Vaso>() && hit3.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
+                                hitSounds.clip = objectSounds[1];
+                                hitSounds.Play();
+                            }
+                            if (hit3.collider.gameObject.GetComponent<Vaso>() && hit3.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15 && hit3.collider.gameObject.GetComponent<Objeto>().inWall3 == false)
+                            {
                                 hit3.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit3.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(1));
+                                hitSounds.clip = objectSounds[1];
+                                hitSounds.Play();
+                            }
                             else
-                                if (hit3.collider.gameObject.GetComponent<Vaso>())
+                                if (hit3.collider.gameObject.GetComponent<Vaso>() && hit3.collider.gameObject.GetComponent<Objeto>().inWall3 == false)
+                            {
                                 hit3.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit3.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
-                            if (hit3.collider.gameObject.GetComponent<OnCollisionChangeSprite>())
+                                hitSounds.clip = objectSounds[1];
+                                hitSounds.Play();
+                            }
+                            if (hit3.collider.gameObject.GetComponent<OnCollisionChangeSprite>() && hit3.collider.gameObject.GetComponent<Objeto>().inWall3 == false)
                             {
                                 hit3.collider.gameObject.GetComponent<OnCollisionChangeSprite>().StartCoroutine(hit3.collider.gameObject.GetComponent<OnCollisionChangeSprite>().CambiarSpriteVaso(0));
+                                hitSounds.clip = objectSounds[1];
+                                hitSounds.Play();
                             }
                         }
                         if (!CheckCollision)
+                        {
                             targetPosition += new Vector3(0f, distanceMovement, 0f);
+                            if (direction == Direction.up)
+                            {
+                                if (hit3.collider)
+                                {
+
+                                }
+                                else
+                                {
+                                    playerWalk.clip = objectSounds[0];
+                                    playerWalk.Play();
+                                }
+                            }
+                        }
+                        else if (CheckCollision)
+                        {
+                            if (playSound)
+                            {
+                                hitSounds.clip = objectSounds[2];
+                                hitSounds.Play();
+                                playSound = false;
+                            }
+                        }
                     }
                     else
                     {
@@ -129,20 +258,58 @@ public class PlayerMovement : MonoBehaviour
                         {
                             if (hit4.collider.gameObject.GetComponent<Objeto>() && hit4.collider.gameObject.GetComponent<Objeto>().inWall4 == false)
                                 hit4.transform.position = new Vector2(hit4.transform.position.x, hit4.transform.position.y - pushDistance);
-                            if (hit4.collider.gameObject.GetComponent<Atomo>())
+                           
+                            if (hit4.collider.gameObject.GetComponent<Atomo>() && hit4.collider.gameObject.GetComponent<Objeto>().inWall4 == false)
+                            {
                                 hit4.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit4.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
-                            if (hit4.collider.gameObject.GetComponent<Vaso>() && hit4.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15)
+                                hitSounds.clip = objectSounds[1];
+                                hitSounds.Play();
+                            }
+                            if (hit4.collider.gameObject.GetComponent<Vaso>() && hit4.collider.gameObject.GetComponent<Vaso>().cantidadAgua >= 15 && hit4.collider.gameObject.GetComponent<Objeto>().inWall4 == false)
+                            {
                                 hit4.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit4.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(1));
+                                hitSounds.clip = objectSounds[1];
+                                hitSounds.Play();
+                            }
                             else
-                                if (hit4.collider.gameObject.GetComponent<Vaso>())
+                                if (hit4.collider.gameObject.GetComponent<Vaso>() && hit4.collider.gameObject.GetComponent<Objeto>().inWall4 == false)
+                            {
                                 hit4.collider.gameObject.GetComponent<Vaso>().StartCoroutine(hit4.collider.gameObject.GetComponent<Vaso>().CambiarSpriteMovimiento(0));
-                            if (hit4.collider.gameObject.GetComponent<OnCollisionChangeSprite>())
+                                hitSounds.clip = objectSounds[1];
+                                hitSounds.Play();
+                            }
+                            if (hit4.collider.gameObject.GetComponent<OnCollisionChangeSprite>() && hit4.collider.gameObject.GetComponent<Objeto>().inWall4 == false)
                             {
                                 hit4.collider.gameObject.GetComponent<OnCollisionChangeSprite>().StartCoroutine(hit4.collider.gameObject.GetComponent<OnCollisionChangeSprite>().CambiarSpriteVaso(0));
+                                hitSounds.clip = objectSounds[1];
+                                hitSounds.Play();
                             }
                         }
                         if (!CheckCollision)
+                        {
                             targetPosition -= new Vector3(0f, distanceMovement, 0f);
+                            if (direction == Direction.down)
+                            {
+                                if (hit4.collider)
+                                {
+
+                                }
+                                else
+                                {
+                                    playerWalk.clip = objectSounds[0];
+                                    playerWalk.Play();
+                                }
+                            }
+                        }
+                        else if (CheckCollision)
+                        {
+                            if (playSound)
+                            {
+                                hitSounds.clip = objectSounds[2];
+                                hitSounds.Play();
+                                playSound = false;
+                            }
+                        }
                     }
                 }
             }

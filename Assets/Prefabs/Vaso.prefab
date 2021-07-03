@@ -51,6 +51,7 @@ MonoBehaviour:
   collisionLeft: 1
   collisionRight: 0
   thisObject: {fileID: 0}
+  dragSound: {fileID: 0}
 --- !u!61 &39370340
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -329,6 +330,7 @@ MonoBehaviour:
   collisionLeft: 0
   collisionRight: 0
   thisObject: {fileID: 0}
+  dragSound: {fileID: 0}
 --- !u!61 &331391075
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -977,6 +979,7 @@ MonoBehaviour:
   collisionLeft: 0
   collisionRight: 0
   thisObject: {fileID: 0}
+  dragSound: {fileID: 0}
 --- !u!61 &818083762
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1054,6 +1057,7 @@ MonoBehaviour:
   collisionLeft: 0
   collisionRight: 1
   thisObject: {fileID: 0}
+  dragSound: {fileID: 0}
 --- !u!61 &1923650714
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1180,7 +1184,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 038d122432bb1b04bb51b49f56d7afd5, type: 3}
   - {fileID: 21300000, guid: fcd7260f3fcd24e4e89bac28e7f7f4ea, type: 3}
   vaso: {fileID: 3736492269032828254}
-  soloAgua: 0
 --- !u!1 &2104621269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,6 +1556,7 @@ MonoBehaviour:
   spriteElementoActual:
   - {fileID: 21300000, guid: c96ffdeb3e674cc479a734228d736424, type: 3}
   - {fileID: 21300000, guid: 419a3023b14a12c41b991ab200cc7d38, type: 3}
+  mesaTransparencia: {fileID: 0}
 --- !u!212 &3736492269032828252
 SpriteRenderer:
   m_ObjectHideFlags: 0
