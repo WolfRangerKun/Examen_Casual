@@ -29,9 +29,12 @@ public class Objeto : MonoBehaviour
 
         if (hit.collider)
         {
-            if(hit.collider.tag == "Vaso")
+            if (gameObject.tag == "Atomo")
             {
+                if (hit.collider.tag == "Vaso")
+                {
 
+                }
             }
             else
             {
@@ -48,9 +51,12 @@ public class Objeto : MonoBehaviour
         }
         if (hit2.collider)
         {
-            if (hit2.collider.tag == "Vaso")
+            if (gameObject.tag == "Atomo")
             {
+                if (hit2.collider.tag == "Vaso")
+                {
 
+                }
             }
             else
             {
@@ -67,9 +73,12 @@ public class Objeto : MonoBehaviour
         }
         if (hit3.collider)
         {
-            if (hit3.collider.tag == "Vaso")
+            if (gameObject.tag == "Atomo")
             {
+                if (hit3.collider.tag == "Vaso")
+                {
 
+                }
             }
             else
             {
@@ -86,9 +95,12 @@ public class Objeto : MonoBehaviour
         }
         if (hit4.collider)
         {
-            if(hit4.collider.tag == "Vaso")
+            if (gameObject.tag == "Atomo")
             {
+                if (hit4.collider.tag == "Vaso")
+                {
 
+                }
             }
             else
             {
