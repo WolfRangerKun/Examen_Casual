@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
             txtTimer.text = "Tiempo: " + tiempo.ToString();
             yield return new WaitForSeconds(1);
             if (tutorial)
-                if(DialogueSistem.finishPremise)
+                if(DialogueSistem.finishPremise || DialogueSistem1.finishPremise)
                 tiempo--;
             if(!tutorial)
                 tiempo--;
