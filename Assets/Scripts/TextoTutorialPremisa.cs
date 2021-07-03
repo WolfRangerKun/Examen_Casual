@@ -7,9 +7,16 @@ public class TextoTutorialPremisa : MonoBehaviour
     public List<string> dialogues;
     public int textoPremisaNumers;
     private DialogueSistem dialogeSistem;
+    public PlayerMovement playerMovement;
+    private void Awake()
+    {
+        playerMovement = FindObjectOfType<PlayerMovement>();
+        playerMovement.canMove = false;
+    }
     private void Start()
     {
         dialogeSistem = FindObjectOfType<DialogueSistem>();
+        
     }
 
     // Update is called once per frame
@@ -28,6 +35,7 @@ public class TextoTutorialPremisa : MonoBehaviour
             DialogueSistem.instance.HideDialogue();
             DialogueSistem.finishPremise = true;
             textoPremisaNumers = 5;
+            playerMovement.canMove = true;
         }
 
         

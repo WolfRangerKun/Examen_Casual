@@ -1754,6 +1754,7 @@ MonoBehaviour:
   - Como consejo debes preparar la mezcla en un baso precipotado para luego lanzarte
     en ella y curarte
   textoPremisaNumers: 0
+  playerMovement: {fileID: 0}
 --- !u!1001 &250740252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2115,6 +2116,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!4 &263068037 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5806945853501283579, guid: 1885c1809a4b5ea4f9084c4744fcf318, type: 3}
+  m_PrefabInstance: {fileID: 263068031}
+  m_PrefabAsset: {fileID: 0}
 --- !u!213 &263754034
 Sprite:
   m_ObjectHideFlags: 0
@@ -2415,7 +2421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7625785519842750466, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7625785519842750466, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4860,6 +4866,71 @@ MonoBehaviour:
   pushDireccion: 1
   isSubidaIzq: 0
   isSubidaDer: 1
+--- !u!1 &497843893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 497843894}
+  - component: {fileID: 497843896}
+  - component: {fileID: 497843895}
+  m_Layer: 6
+  m_Name: Texto
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &497843894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497843893}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.238, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 308938758}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &497843895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497843893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc2359237f02f44799afe861454b280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - 'Esto es un bridges , el cual te puede ayudar a subir a lugares mas altos, muevelo
+    paara dejarlo en el lugar correspondiente, lugares para dejar bridges (imagen) '
+  derecha: 1
+  time: 1
+--- !u!58 &497843896
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497843893}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.007214427, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.9761442
 --- !u!1 &498752083
 GameObject:
   m_ObjectHideFlags: 0
@@ -5152,6 +5223,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592316038}
   m_CullTransparentMesh: 1
+--- !u!1 &592984430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 592984431}
+  - component: {fileID: 592984433}
+  - component: {fileID: 592984432}
+  m_Layer: 0
+  m_Name: Tutorial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &592984431
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592984430}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 263068037}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &592984432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592984430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc2359237f02f44799afe861454b280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - para activar el boton del agua solo debes pasar por encima de el , y se paga
+    de la misma manera
+  derecha: 0
+  time: 1
+--- !u!58 &592984433
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592984430}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.050894976, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.0961978
 --- !u!1 &612207207
 GameObject:
   m_ObjectHideFlags: 0
@@ -5420,6 +5556,77 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612845815}
   m_CullTransparentMesh: 1
+--- !u!4 &698868120 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5192414602773323993, guid: 9bda648e10b4ae64e9decaa5a789c90a, type: 3}
+  m_PrefabInstance: {fileID: 7465726245764118103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &718226973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 718226974}
+  - component: {fileID: 718226976}
+  - component: {fileID: 718226975}
+  m_Layer: 6
+  m_Name: Tutorial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &718226974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718226973}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1402830493}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &718226975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718226973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc2359237f02f44799afe861454b280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - En este Vaso precipatado debes hacer la mezcla con los quimicos , pero primero
+    debes llenar el vaso con agua para hacer la mezcla, para eso colocalo debajo
+    del grifo y activalo apretando el boton
+  derecha: 1
+  time: 1
+--- !u!58 &718226976
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718226973}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.034339964, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.80971235
 --- !u!1 &734398674
 GameObject:
   m_ObjectHideFlags: 0
@@ -5768,6 +5975,10 @@ PrefabInstance:
     - target: {fileID: 3664631981314787658, guid: 7f5eea925249fef4787557a064931cef, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5196535831312452152, guid: 7f5eea925249fef4787557a064931cef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f5eea925249fef4787557a064931cef, type: 3}
@@ -7372,7 +7583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.2525, y: 1}
-  m_AnchoredPosition: {x: -0.5, y: 0.05255127}
+  m_AnchoredPosition: {x: -0.5499878, y: 0.052459717}
   m_SizeDelta: {x: 140.90662, y: 1338.9443}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1315810980
@@ -7486,6 +7697,11 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
+--- !u!4 &1402830493 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3736492269032828253, guid: 1d1a29818c2493044b533b2615266653, type: 3}
+  m_PrefabInstance: {fileID: 1194134945}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1459818720
 GameObject:
   m_ObjectHideFlags: 0
@@ -8726,7 +8942,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635380777}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1f259de0e11c96944b2685a34ef87aec, type: 3}
@@ -9393,6 +9609,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690100005}
   m_CullTransparentMesh: 1
+--- !u!1 &1717624515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1717624516}
+  - component: {fileID: 1717624518}
+  - component: {fileID: 1717624517}
+  m_Layer: 6
+  m_Name: Tutorial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1717624516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717624515}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 698868120}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1717624517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717624515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc2359237f02f44799afe861454b280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - los qumicos son los ingrediente para crear la mescla equisten 3 tipos de quimicos
+    los cuales debes ir hechando en la mescla en un orden especifico para que funcione,
+    asique ten cuidadeo y descubre el orden correcto.
+  derecha: 0
+  time: 0
+--- !u!58 &1717624518
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717624515}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.008107305, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.7405213
 --- !u!1 &1763377190
 GameObject:
   m_ObjectHideFlags: 0
@@ -9770,7 +10052,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.50119, y: -4.96, z: 1}
   m_LocalScale: {x: 0.74457, y: 0.74457, z: 0.74457}
-  m_Children: []
+  m_Children:
+  - {fileID: 2138017768}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9979,7 +10262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - Tu vieja la caliente
+  - Este tipo de elementos no se pueden tomar ya que no son nesecarios para la mescla
+    pero cuidado con ellos pueden obtruir tu paso por el nivel y retrasarte
   derecha: 0
   time: 1
 --- !u!70 &1835756040
@@ -9995,8 +10279,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Offset: {x: 0, y: 0.07461928}
+  m_Size: {x: 0.5, y: 0.58171165}
   m_Direction: 0
 --- !u!1 &1891412340
 GameObject:
@@ -11820,7 +12104,7 @@ PrefabInstance:
     - target: {fileID: 1901836951487689963, guid: 68eec70a728d38d48b9c33a0c2278237, type: 3}
       propertyPath: m_TileAssetArray.Array.data[1].m_Data
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 834d7623080b9ef468e9afd1fcf32d24, type: 2}
     - target: {fileID: 1901836951487689963, guid: 68eec70a728d38d48b9c33a0c2278237, type: 3}
       propertyPath: m_TileAssetArray.Array.data[2].m_Data
       value: 
@@ -12043,19 +12327,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1901836951487689963, guid: 68eec70a728d38d48b9c33a0c2278237, type: 3}
       propertyPath: m_TileColorArray.Array.data[9].m_Data.a
-      value: 2.8496945e-28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1901836951487689963, guid: 68eec70a728d38d48b9c33a0c2278237, type: 3}
       propertyPath: m_TileColorArray.Array.data[9].m_Data.b
-      value: 2.8496945e-28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1901836951487689963, guid: 68eec70a728d38d48b9c33a0c2278237, type: 3}
       propertyPath: m_TileColorArray.Array.data[9].m_Data.g
-      value: 2.8496945e-28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1901836951487689963, guid: 68eec70a728d38d48b9c33a0c2278237, type: 3}
       propertyPath: m_TileColorArray.Array.data[9].m_Data.r
-      value: 2.8496945e-28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1901836951487689963, guid: 68eec70a728d38d48b9c33a0c2278237, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[10].m_Data
@@ -17841,6 +18125,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127830938}
   m_CullTransparentMesh: 1
+--- !u!1 &2138017767
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2138017768}
+  - component: {fileID: 2138017770}
+  - component: {fileID: 2138017769}
+  m_Layer: 0
+  m_Name: tutorial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2138017768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138017767}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1804692518}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2138017769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138017767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc2359237f02f44799afe861454b280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues:
+  - 'las reglas al igual que los bridges te permiten subir a estructuras mas altas '
+  derecha: 0
+  time: 1
+--- !u!70 &2138017770
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138017767}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0073103886, y: -0.054827914}
+  m_Size: {x: 0.9093806, y: 2.220832}
+  m_Direction: 0
 --- !u!1 &2138425675
 GameObject:
   m_ObjectHideFlags: 0

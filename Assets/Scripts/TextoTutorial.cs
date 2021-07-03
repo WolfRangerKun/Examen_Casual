@@ -34,6 +34,7 @@ public class TextoTutorial : MonoBehaviour
                 dialogeSistem.panelDirection = DialogueSistem.PanelDirection.IZQUIERDA;
                 DialogueSistem.instance.ShowDialogue(dialogues[0]);
                 StartCoroutine(TimingStop());
+                
             }
         }
     }
@@ -42,6 +43,7 @@ public class TextoTutorial : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             DialogueSistem.instance.HideDialogue();
+            gameObject.SetActive(false);
         }
     }
 

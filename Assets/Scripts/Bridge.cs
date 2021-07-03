@@ -6,6 +6,7 @@ public class Bridge : MonoBehaviour
 {
     public BridgeManager game;
     public static bool brig;
+    public bool lateral;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bridges"))
@@ -17,9 +18,13 @@ public class Bridge : MonoBehaviour
             collision.gameObject.GetComponent<Objeto>().enabled = false;
             brig = true;
             collision.transform.position = gameObject.transform.position;
-            collision.gameObject.layer = 3;
             collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             collision.gameObject.GetComponentInChildren<SpriteRenderer>().sortingOrder = 2;
+            if (lateral)
+            {
+                collision.gameObject.GetComponent<Objeto>().contacts[4].SetActive(false);
+            }
+            collision.gameObject.layer = 3;
             collision.gameObject.layer = 0;
             gameObject.SetActive(false);
         }
