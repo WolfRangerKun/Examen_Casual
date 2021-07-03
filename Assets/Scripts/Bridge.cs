@@ -7,10 +7,12 @@ public class Bridge : MonoBehaviour
     public BridgeManager game;
     public static bool brig;
     public bool lateral;
+    public AudioSource sonidoCheck;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bridges"))
         {
+            sonidoCheck.Play();
             collision.gameObject.GetComponent<Objeto>().contacts[0].SetActive(false);
             collision.gameObject.GetComponent<Objeto>().contacts[1].SetActive(false);
             collision.gameObject.GetComponent<Objeto>().contacts[2].SetActive(false);

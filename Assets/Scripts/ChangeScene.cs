@@ -64,7 +64,7 @@ public class ChangeScene : MonoBehaviour
         //
         //SetactiveFalse
         //
-        musicaNivel.volume = .05f;
+        GameManager.instance.FadeOut(musicaNivel, 5);
         fondoPantallaDeCarga.SetActive(true);
 
         while (!Operation.isDone)

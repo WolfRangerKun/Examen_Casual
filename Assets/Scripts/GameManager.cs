@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public static IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
+    public  IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
     {
         float startVolume = audioSource.volume;
 

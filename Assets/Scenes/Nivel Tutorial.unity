@@ -1965,6 +1965,10 @@ PrefabInstance:
       propertyPath: buttomSound
       value: 
       objectReference: {fileID: 263068033}
+    - target: {fileID: 5806945853501283578, guid: 1885c1809a4b5ea4f9084c4744fcf318, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5806945853501283579, guid: 1885c1809a4b5ea4f9084c4744fcf318, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -5890,7 +5894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3664631980277491360, guid: 7f5eea925249fef4787557a064931cef, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3664631980277491361, guid: 7f5eea925249fef4787557a064931cef, type: 3}
       propertyPath: m_RootOrder
@@ -7583,7 +7587,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.2525, y: 1}
-  m_AnchoredPosition: {x: -0.5499878, y: 0.052459717}
+  m_AnchoredPosition: {x: -0.5500488, y: 0.052490234}
   m_SizeDelta: {x: 140.90662, y: 1338.9443}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1315810980
@@ -8942,7 +8946,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635380777}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1f259de0e11c96944b2685a34ef87aec, type: 3}
@@ -16814,7 +16818,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2004230254221800330, guid: e7c4601949b22624a93ca4c990351c2a, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2004230254751125466, guid: e7c4601949b22624a93ca4c990351c2a, type: 3}
       propertyPath: m_RootOrder
@@ -16866,11 +16870,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2004230254955347060, guid: e7c4601949b22624a93ca4c990351c2a, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2004230255261849712, guid: e7c4601949b22624a93ca4c990351c2a, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7c4601949b22624a93ca4c990351c2a, type: 3}
