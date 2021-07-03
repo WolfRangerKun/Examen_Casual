@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
         Cursor.visible = false;
         if (tiempo <= 0 && run)
         {
-            StartCoroutine(WINNING());
+            StartCoroutine(Lose());
             run = false;
             //AudioSource[] audios = FindObjectsOfType<AudioSource>();
             //foreach (AudioSource a in audios)
