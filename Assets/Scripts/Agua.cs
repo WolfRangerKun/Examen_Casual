@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Agua : MonoBehaviour
 {
+     AudioSource sonidoAgua;
     void Start()
     {
+        sonidoAgua = GetComponent<AudioSource>();
         Destroy(gameObject, 1.5f);
     }
 
@@ -13,8 +15,9 @@ public class Agua : MonoBehaviour
     {
         if (other.CompareTag("Vaso"))
         {
+            sonidoAgua.Play();
             other.GetComponent<Vaso>().cantidadAgua++;
-            Destroy(gameObject);
+            Destroy(gameObject, 0.1f);
             other.GetComponent<Vaso>().ActualizarLista();
         }
         else
