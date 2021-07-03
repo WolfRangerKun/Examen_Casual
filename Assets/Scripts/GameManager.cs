@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        reproductor.clip = null;
         StartCoroutine(Tiempo());
         gameRunning = true;
         Time.timeScale = 1f;
@@ -34,7 +35,7 @@ public class GameManager : MonoBehaviour
         Cursor.visible = false;
         if (tiempo <= 0 && run)
         {
-            StartCoroutine(Lose());
+            StartCoroutine(WINNING());
             run = false;
             //AudioSource[] audios = FindObjectsOfType<AudioSource>();
             //foreach (AudioSource a in audios)
@@ -75,22 +76,24 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1f;
             screenPause.SetActive(false);
             boton = false;
-            AudioSource[] audios = FindObjectsOfType<AudioSource>();
-            foreach (AudioSource a in audios)
-            {
-                a.Play();
-            }
+            //AudioSource[] audios = FindObjectsOfType<AudioSource>();
+            //foreach (AudioSource a in audios)
+            //{
+            //    a.Play();
+            //}
+            ChangeScene.intance.musicaNivel.Play();
         }
         else
         {
             Time.timeScale = 0f;
             screenPause.SetActive(true);
             boton = true;
-            AudioSource[] audios = FindObjectsOfType<AudioSource>();
-            foreach (AudioSource a in audios)
-            {
-                a.Pause();
-            }
+            //AudioSource[] audios = FindObjectsOfType<AudioSource>();
+            //foreach (AudioSource a in audios)
+            //{
+            //    a.Pause();
+            //}
+            ChangeScene.intance.musicaNivel.Pause();
         }
     }
 
@@ -102,10 +105,12 @@ public class GameManager : MonoBehaviour
     {
         txtTimer.gameObject.SetActive(false);
         canPause = false;
+        StartCoroutine(FadeOut(ChangeScene.intance.musicaNivel, 1));
+        yield return new WaitForSeconds(.5f);
         rawVideo.SetActive(true);
-        reproductor.clip = videosWinLose[0];
+        reproductor.clip = videosWinLose[1];
         reproductor.Play();
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(6.5f);
         botonWin = true;
         screenWin.SetActive(true);
        
@@ -113,14 +118,30 @@ public class GameManager : MonoBehaviour
     public IEnumerator Lose()
     {
         txtTimer.gameObject.SetActive(false);
-        ChangeScene.intance.musicaNivel.volume = 0;
         canPause = false;
+        StartCoroutine(FadeOut(ChangeScene.intance.musicaNivel, 1));
+        yield return new WaitForSeconds(.5f);
         rawVideo.SetActive(true);
         reproductor.clip = videosWinLose[0];
         reproductor.Play();
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(6.5f);
         botonLose = true;
         screenDead.SetActive(true);
 
+    }
+
+    public static IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
+    {
+        float startVolume = audioSource.volume;
+
+        while (audioSource.volume > 0)
+        {
+            audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
+
+            yield return null;
+        }
+
+        audioSource.Stop();
+        audioSource.volume = startVolume;
     }
 }

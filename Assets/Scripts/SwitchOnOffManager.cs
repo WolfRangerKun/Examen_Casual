@@ -5,6 +5,7 @@ using UnityEngine;
 public class SwitchOnOffManager : MonoBehaviour
 {
     public static SwitchOnOffManager intance;
+    public AudioSource buttomSound;
     // Agua
     public bool isButtonAgua;
     public GameObject agua, spawnAgua;
@@ -54,7 +55,7 @@ public class SwitchOnOffManager : MonoBehaviour
     void ActiveAgua()
     {
         aguaGO = !aguaGO;
-
+        buttomSound.Play();
         if (aguaGO)
         {
             StartCoroutine(DispensarAgua());
@@ -71,7 +72,7 @@ public class SwitchOnOffManager : MonoBehaviour
     void ActiveFuego()
     {
         fuegoGO = !fuegoGO;
-
+        buttomSound.Play();
         if (fuegoGO)
         {
             mechero.GetComponent<Animator>().SetBool("On", true);
