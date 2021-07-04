@@ -252,6 +252,7 @@ public class Vaso : MonoBehaviour
     }
     public bool winChoose;
     public bool loseChoose;
+    public GameObject winLoseStuffs, otherStuffs;
     ORDEN_PRODUCTO oRDEN_PRODUCTO;
     void RevisarLista(ORDEN_PRODUCTO orden)
     {
@@ -264,12 +265,15 @@ public class Vaso : MonoBehaviour
                     {
                         if (contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
                         {
-
+                            otherStuffs.SetActive(false);
+                            winLoseStuffs.SetActive(true);
                             winChoose = true;
                             loseChoose = false;
                         }
                         else
                         {
+                            otherStuffs.SetActive(false);
+                            winLoseStuffs.SetActive(true);
                             loseChoose = true;
                             winChoose = false;
                         }
@@ -285,11 +289,15 @@ public class Vaso : MonoBehaviour
                         {
                             if (contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
                             {
+                                otherStuffs.SetActive(false);
+                                winLoseStuffs.SetActive(true);
                                 winChoose = true;
                                 loseChoose = false;
                             }
                             else
                             {
+                                otherStuffs.SetActive(false);
+                                winLoseStuffs.SetActive(true);
                                 loseChoose = true;
                                 winChoose = false;
                             }
@@ -304,12 +312,15 @@ public class Vaso : MonoBehaviour
                     {
                         if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
                         {
-
+                            otherStuffs.SetActive(false);
+                            winLoseStuffs.SetActive(true);
                             winChoose = true;
                             loseChoose = false;
                         }
                         else
                         {
+                            otherStuffs.SetActive(false);
+                            winLoseStuffs.SetActive(true);
                             loseChoose = true;
                             winChoose = false;
                         }
@@ -325,11 +336,15 @@ public class Vaso : MonoBehaviour
                         {
                             if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
                             {
+                                otherStuffs.SetActive(false);
+                                winLoseStuffs.SetActive(true);
                                 winChoose = true;
                                 loseChoose = false;
                             }
                             else
                             {
+                                otherStuffs.SetActive(false);
+                                winLoseStuffs.SetActive(true);
                                 loseChoose = true;
                                 winChoose = false;
                             }

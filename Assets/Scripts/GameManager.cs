@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Video;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,10 +21,14 @@ public class GameManager : MonoBehaviour
     bool canPause = true;
     bool run = true;
     public bool tutorial;
+    Button buton;
+
     private void Awake()
     {
         instance = this;
+
     }
+
     private void Start()
     {
         reproductor.clip = null;
