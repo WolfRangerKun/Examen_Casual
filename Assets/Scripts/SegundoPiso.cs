@@ -42,7 +42,6 @@ public class SegundoPiso : MonoBehaviour
             off[1].layer = 3;
             off[2].layer = 3;
             off[3].layer = 3;
-            stayPiso2 = false;
             if (puente) off[4].layer = 3;
             if (libroRojo)
             {
