@@ -50,7 +50,7 @@ public class SwitchOnOffManager : MonoBehaviour
             }
 
         }
-       
+
     }
     void ActiveAgua()
     {
@@ -68,27 +68,29 @@ public class SwitchOnOffManager : MonoBehaviour
 
         return;
     }
-
+    public bool haveMechero;
     void ActiveFuego()
     {
         fuegoGO = !fuegoGO;
         buttomSound.Play();
         if (fuegoGO)
         {
-            mechero.GetComponent<Animator>().SetBool("On", true);
+            if (haveMechero)
+                mechero.GetComponent<Animator>().SetBool("On", true);
             fuego.SetActive(true);
             buttonFuego.sprite = spriteBotonFuego[1];
         }
         else
         {
-            mechero.GetComponent<Animator>().SetBool("On", false);
+            if (haveMechero)
+                mechero.GetComponent<Animator>().SetBool("On", false);
             fuego.SetActive(false);
             buttonFuego.sprite = spriteBotonFuego[0];
         }
         return;
     }
 
-    IEnumerator DispensarAgua()
+    public IEnumerator DispensarAgua()
     {
         while (aguaGO)
         {

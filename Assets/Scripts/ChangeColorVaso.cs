@@ -404,11 +404,12 @@ public class ChangeColorVaso : MonoBehaviour
                             if (vaso.contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
                             {
 
-                                if (vaso.cantidadAgua >= 10 && vaso.cantidadAgua < 15)
+                                if (vaso.cantidadAgua >= 10 /*&& vaso.cantidadAgua < 15*/)
                                 {
                                     if (vaso.contenido.Count == 1)
                                     {
                                         GetComponent<SpriteRenderer>().color = colorCarbonoAgua;
+                                        Debug.Log("Colorcarbonomano");
                                         //Color De Baso Con el Primer Elemnto
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
@@ -437,7 +438,7 @@ public class ChangeColorVaso : MonoBehaviour
                             else if (vaso.contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO)
                             {
 
-                                if (vaso.cantidadAgua >= 10 && vaso.cantidadAgua < 15)
+                                if (vaso.cantidadAgua >= 10 /*&& vaso.cantidadAgua < 15*/)
                                 {
                                     if (vaso.contenido.Count == 1)
                                     {
@@ -470,7 +471,7 @@ public class ChangeColorVaso : MonoBehaviour
                             else if (vaso.contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
                             {
 
-                                if (vaso.cantidadAgua >= 10 && vaso.cantidadAgua < 15)
+                                if (vaso.cantidadAgua >= 10/* && vaso.cantidadAgua < 15*/)
                                 {
                                     if (vaso.contenido.Count == 1)
                                     {

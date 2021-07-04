@@ -287,6 +287,11 @@ Transform:
   m_Father: {fileID: 1355129797}
   m_RootOrder: 58
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &56369391 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8185425193819317398, guid: 5d0571de724bd4540bc662b8609e1311, type: 3}
+  m_PrefabInstance: {fileID: 811263790}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &85621731
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,9 +1000,17 @@ PrefabInstance:
       value: Boton Fuego
       objectReference: {fileID: 0}
     - target: {fileID: 2433837496992371761, guid: 1443b5ffb2d8f2443b7e3ac21bff8f50, type: 3}
+      propertyPath: fuego
+      value: 
+      objectReference: {fileID: 56369391}
+    - target: {fileID: 2433837496992371761, guid: 1443b5ffb2d8f2443b7e3ac21bff8f50, type: 3}
       propertyPath: buttomSound
       value: 
       objectReference: {fileID: 127267264}
+    - target: {fileID: 2433837496992371761, guid: 1443b5ffb2d8f2443b7e3ac21bff8f50, type: 3}
+      propertyPath: isButtonFuego
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1443b5ffb2d8f2443b7e3ac21bff8f50, type: 3}
 --- !u!1 &127267263 stripped
@@ -15725,6 +15738,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2287470985744447598, guid: 5d0571de724bd4540bc662b8609e1311, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8185425193819317398, guid: 5d0571de724bd4540bc662b8609e1311, type: 3}
       propertyPath: m_Name
       value: Fuego

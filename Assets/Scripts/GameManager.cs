@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject screenPause, screenDead, screenWin, rawVideo;
     public VideoPlayer reproductor;
     public List<VideoClip> videosWinLose;
-    bool canPause = true;
+    public bool canPause = true;
     bool run = true;
     public bool tutorial;
     Button buton;
@@ -87,11 +87,12 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1f;
             screenPause.SetActive(false);
             boton = false;
-            //AudioSource[] audios = FindObjectsOfType<AudioSource>();
-            //foreach (AudioSource a in audios)
-            //{
-            //    a.Play();
-            //}
+            AudioSource[] audios = FindObjectsOfType<AudioSource>();
+            foreach (AudioSource a in audios)
+            {
+                a.volume = 1f;//
+
+            }
             ChangeScene.intance.musicaNivel.Play();
         }
         else
@@ -99,11 +100,11 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0f;
             screenPause.SetActive(true);
             boton = true;
-            //AudioSource[] audios = FindObjectsOfType<AudioSource>();
-            //foreach (AudioSource a in audios)
-            //{
-            //    a.Pause();
-            //}
+            AudioSource[] audios = FindObjectsOfType<AudioSource>();
+            foreach (AudioSource a in audios)
+            {
+                a.volume = .1f;
+            }
             ChangeScene.intance.musicaNivel.Pause();
         }
     }
@@ -114,6 +115,9 @@ public class GameManager : MonoBehaviour
     }
     public IEnumerator WinningChoose()
     {
+        PlayerMovement.instace.canMove = false;//
+        StopCoroutine(Vaso.intance.ContadorFuego());
+        StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
         txtTimer.gameObject.SetActive(false);
         canPause = false;
         StartCoroutine(FadeOut(ChangeScene.intance.musicaNivel, 1));
@@ -128,6 +132,9 @@ public class GameManager : MonoBehaviour
     }
     public IEnumerator LoseChoose()
     {
+        PlayerMovement.instace.canMove = false;
+        StopCoroutine(Vaso.intance.ContadorFuego());
+        StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
         txtTimer.gameObject.SetActive(false);
         canPause = false;
         StartCoroutine(FadeOut(ChangeScene.intance.musicaNivel, 1));
@@ -142,6 +149,9 @@ public class GameManager : MonoBehaviour
     }
     public IEnumerator LoseTimer()
     {
+        PlayerMovement.instace.canMove = false;
+        StopCoroutine(Vaso.intance.ContadorFuego());
+        StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
         txtTimer.gameObject.SetActive(false);
         canPause = false;
         StartCoroutine(FadeOut(ChangeScene.intance.musicaNivel, 1));

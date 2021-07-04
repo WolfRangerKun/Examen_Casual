@@ -1113,8 +1113,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4355727653882683197}
-  m_RootOrder: 5
+  m_Father: {fileID: 3736492269032828253}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2039398052
 SpriteRenderer:
@@ -1155,7 +1155,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: b317f7c870dc3ab488541c181768d7df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
@@ -1644,6 +1644,7 @@ Transform:
   m_LocalPosition: {x: 1.5, y: 1.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2039398051}
   - {fileID: 1741162227873286162}
   - {fileID: 4355727653882683197}
   m_Father: {fileID: 0}
@@ -2038,9 +2039,8 @@ Transform:
   - {fileID: 6159393542151354486}
   - {fileID: 7835967902525167055}
   - {fileID: 6971572154496720749}
-  - {fileID: 2039398051}
   m_Father: {fileID: 3736492269032828253}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5604247545695827152
 GameObject:
@@ -2073,7 +2073,7 @@ Transform:
   - {fileID: 2249967143686396126}
   - {fileID: 4459706426027841953}
   m_Father: {fileID: 3736492269032828253}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2791156978395114694
 BoxCollider2D:

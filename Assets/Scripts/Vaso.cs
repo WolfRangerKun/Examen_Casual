@@ -214,7 +214,7 @@ public class Vaso : MonoBehaviour
 
     }
 
-    IEnumerator ContadorFuego()
+    public IEnumerator ContadorFuego()
     {
         while (gradosCalor <= 50)
         {
