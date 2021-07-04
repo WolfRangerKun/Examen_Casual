@@ -409,7 +409,6 @@ public class ChangeColorVaso : MonoBehaviour
                                     if (vaso.contenido.Count == 1)
                                     {
                                         GetComponent<SpriteRenderer>().color = colorCarbonoAgua;
-                                        Debug.Log("Colorcarbonomano");
                                         //Color De Baso Con el Primer Elemnto
                                     }
                                     else if (vaso.contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && vaso.contenido.Count == 2)
