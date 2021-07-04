@@ -8,7 +8,9 @@ public class SegundoPiso : MonoBehaviour
     public bool stayPiso2;
     public List<GameObject> off;
     public List<GameObject> libro;
-    public bool puente, libroRojo;
+    public GameObject piezaPuente;
+    public GameObject enterDosD;
+    public bool puente, libroRojo, nivel3;
 
     public void Start()
     {
@@ -28,8 +30,16 @@ public class SegundoPiso : MonoBehaviour
             {
                 libro[0].SetActive(false);
                 libro[1].SetActive(true);
+                if (nivel3)
+                {
+                    
+         
+                }
             }
-
+            if (nivel3 && piezaPuente.gameObject.activeSelf == false)
+            {
+                libro[2].SetActive(false);
+            }
             collision.GetComponent<SpriteRenderer>().sortingOrder = 2;
         }
     }
@@ -47,8 +57,21 @@ public class SegundoPiso : MonoBehaviour
             {
                 libro[0].SetActive(true);
                 libro[1].SetActive(false);
+                
             }
+            if (nivel3 && piezaPuente.gameObject.activeSelf == false)
+            {
+                libro[2].SetActive(true);
+            }
+            if (nivel3)
+            {
+                enterDosD.SetActive(true);
+                gameObject.SetActive(false);
+            }
+
             collision.GetComponent<SpriteRenderer>().sortingOrder = 0;
+
+            
         }
        
     }
