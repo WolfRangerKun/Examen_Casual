@@ -1517,7 +1517,7 @@ MonoBehaviour:
     en ella y curarte
   textoPremisaNumers: 0
   fuego: 0
-  playerMovement: {fileID: 0}
+  playerMovement: {fileID: 1783995421}
 --- !u!1001 &250740252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5253,7 +5253,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1402830493}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &718226975
 MonoBehaviour:
@@ -7328,7 +7328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.2525, y: 1}
-  m_AnchoredPosition: {x: -0.5500488, y: 0.052490234}
+  m_AnchoredPosition: {x: 1, y: 0.052490234}
   m_SizeDelta: {x: 140.90662, y: 1338.9443}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1344405791
@@ -9138,6 +9138,7 @@ MonoBehaviour:
   - {fileID: 32900000, guid: a2eac1f42dc586840b95ec000b594009, type: 3}
   - {fileID: 32900000, guid: 26b37b8a764599b478dd7f87d7ce011e, type: 3}
   - {fileID: 32900000, guid: 4f684a6ef921dd14dbeccfa2dd3e7942, type: 3}
+  canPause: 1
   tutorial: 1
 --- !u!4 &1635380779
 Transform:
@@ -10140,7 +10141,7 @@ MonoBehaviour:
     los cuales debes ir hechando en la mescla en un orden especifico para que funcione,
     asique ten cuidadeo y descubre el orden correcto.
   derecha: 0
-  time: 0
+  time: 1
 --- !u!58 &1717624518
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10671,8 +10672,8 @@ MonoBehaviour:
     pero cuidado con ellos pueden obtruir tu paso por el nivel y retrasarte
   derecha: 0
   time: 1
---- !u!70 &1835756040
-CapsuleCollider2D:
+--- !u!58 &1835756040
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10684,9 +10685,9 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.07461928}
-  m_Size: {x: 0.5, y: 0.58171165}
-  m_Direction: 0
+  m_Offset: {x: 0.014687211, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5092519
 --- !u!1 &1838434299
 GameObject:
   m_ObjectHideFlags: 0
