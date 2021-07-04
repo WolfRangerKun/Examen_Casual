@@ -52,6 +52,7 @@ MonoBehaviour:
   collisionRight: 0
   thisObject: {fileID: 0}
   dragSound: {fileID: 504630360}
+  isVaso: 1
 --- !u!61 &39370340
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -331,6 +332,7 @@ MonoBehaviour:
   collisionRight: 0
   thisObject: {fileID: 0}
   dragSound: {fileID: 504630360}
+  isVaso: 1
 --- !u!61 &331391075
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -980,6 +982,7 @@ MonoBehaviour:
   collisionRight: 0
   thisObject: {fileID: 0}
   dragSound: {fileID: 504630360}
+  isVaso: 1
 --- !u!61 &818083762
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1058,6 +1061,7 @@ MonoBehaviour:
   collisionRight: 1
   thisObject: {fileID: 0}
   dragSound: {fileID: 504630360}
+  isVaso: 1
 --- !u!61 &1923650714
 BoxCollider2D:
   m_ObjectHideFlags: 0

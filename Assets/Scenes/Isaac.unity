@@ -1000,8 +1000,11 @@ MonoBehaviour:
   - {fileID: 2542050160968146109}
   - {fileID: 5196535831203823845}
   - {fileID: 5196535831203823845}
+  piezaPuente: {fileID: 0}
+  enterDosD: {fileID: 0}
   puente: 0
   libroRojo: 1
+  nivel3: 0
 --- !u!4 &1419629723
 Transform:
   m_ObjectHideFlags: 0
@@ -2039,8 +2042,11 @@ MonoBehaviour:
   - {fileID: 2542050160968146109}
   - {fileID: 5196535831203823845}
   - {fileID: 1419629720}
+  piezaPuente: {fileID: 0}
+  enterDosD: {fileID: 0}
   puente: 0
   libroRojo: 1
+  nivel3: 0
 --- !u!4 &3664631981166008884
 Transform:
   m_ObjectHideFlags: 0
