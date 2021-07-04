@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
     {
         while (tiempo > 0)
         {
-            txtTimer.text = "Tiempo " + tiempo.ToString();
+            txtTimer.text = tiempo.ToString();
             yield return new WaitForSeconds(1);
             if (tutorial)
                 if(DialogueSistem.finishPremise || DialogueSistem1.finishPremise)
@@ -144,7 +144,7 @@ public class GameManager : MonoBehaviour
         rawVideo.SetActive(true);
         reproductor.clip = videosWinLose[2];
         reproductor.Play();
-        yield return new WaitForSeconds(6.5f);
+        yield return new WaitForSeconds(7f);
         botonLose = true;
         screenDead.SetActive(true);
 
