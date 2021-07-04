@@ -19,7 +19,7 @@ public class TextoTutorialPremisa : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (fuego && textoPremisaNumers == 0)
+        if (fuego)
         {
             DialogueSistem1.instance.ShowDialogueTutorial(dialogues[0]);
             playerMovement.canMove = false;

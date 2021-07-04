@@ -2066,7 +2066,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546657589}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1f259de0e11c96944b2685a34ef87aec, type: 3}
@@ -2162,7 +2162,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546657589}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 32d4b1811dda14a6cb9e059ee8ad17d2, type: 3}
@@ -2780,6 +2780,7 @@ MonoBehaviour:
     funcionara, funciona de igual manera que el agua , asique buena suerte
   textoPremisaNumers: 0
   fuego: 1
+  canPauseTrue: 1
   playerMovement: {fileID: 0}
 --- !u!114 &679833386
 MonoBehaviour:
