@@ -219,4 +219,9 @@ public class GameManager : MonoBehaviour
         audioSource.Stop();
         audioSource.volume = startVolume;
     }
+
+    public IEnumerator VideoPremisa()
+    {
+        yield return new WaitForSeconds(1);
+    }
 }

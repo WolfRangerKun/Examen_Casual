@@ -21,9 +21,11 @@ public class DialogueSistem : MonoBehaviour
     private Vector2 originalPositionPremisa;
     private Vector2 originalPos1, originalPos2;
     public static bool finishPremise;
+    public GameManager gameManager;
     private void Awake()
     {
         instance = this;
+        gameManager = FindObjectOfType<GameManager>();
         originalPos1 = panelDialogo[0].position;
         originalPos2 = panelDialogo[1].position;
         originalPositionPremisa = premisa.position;
@@ -62,6 +64,8 @@ public class DialogueSistem : MonoBehaviour
     IEnumerator Premisa()
     {
         yield return new WaitForSeconds(0.5f);
+        gameManager.VideoPremisa();
+        yield return new WaitForSeconds(10);
         premisa.DOMove(guiaPremisa.position, .5f);
     }
 }
