@@ -3768,7 +3768,7 @@ MonoBehaviour:
   maxBrige1: 0
   maxBrige2: 0
   maxBrige3: 0
-  fireInScene: 0
+  fireInScene: 1
   modo: 0
 --- !u!1 &913394614
 GameObject:
