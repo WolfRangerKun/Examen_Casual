@@ -19,13 +19,12 @@ public class CaidaGeneral : MonoBehaviour
     public void Start()
     {
         player = FindObjectOfType<PlayerMovement>();
-        segundoPiso = FindObjectOfType<SegundoPiso>();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (segundoPiso.stayPiso2)
         {
-            if(other.CompareTag("Player") || other.CompareTag("Atomo") || other.CompareTag("Vaso") || other.CompareTag("Bridges"))
+            
             MovementFall(other);
         }
     }
