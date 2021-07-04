@@ -694,7 +694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 558.6, y: 349.40002}
+  m_AnchoredPosition: {x: 542.9, y: 349.40002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &88782393
@@ -9143,6 +9143,7 @@ MonoBehaviour:
   - {fileID: 32900000, guid: a2eac1f42dc586840b95ec000b594009, type: 3}
   - {fileID: 32900000, guid: 26b37b8a764599b478dd7f87d7ce011e, type: 3}
   - {fileID: 32900000, guid: 4f684a6ef921dd14dbeccfa2dd3e7942, type: 3}
+  - {fileID: 32900000, guid: 2958ed8d15f3afc48abbc03e52e7fff0, type: 3}
   canPause: 1
   tutorial: 1
 --- !u!4 &1635380779
@@ -9183,11 +9184,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635380777}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1f259de0e11c96944b2685a34ef87aec, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
@@ -9279,7 +9280,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635380777}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 32d4b1811dda14a6cb9e059ee8ad17d2, type: 3}

@@ -63,9 +63,10 @@ public class DialogueSistem : MonoBehaviour
 
     IEnumerator Premisa()
     {
-        yield return new WaitForSeconds(0.5f);
-        gameManager.VideoPremisa();
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(0.00001f);//kwea si se borra esta linea el juego no funciona
+        StartCoroutine(gameManager.VideoPremisa());
+        yield return new WaitForSeconds(3.5f);
+        ChangeScene.intance.musicaNivel.Play();
         premisa.DOMove(guiaPremisa.position, .5f);
     }
 }

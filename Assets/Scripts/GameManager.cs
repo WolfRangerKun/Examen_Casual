@@ -222,6 +222,12 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator VideoPremisa()
     {
-        yield return new WaitForSeconds(1);
+        canPause = false;
+        rawVideo.SetActive(true);
+        PlayerMovement.instace.canMove = false;
+        reproductor.clip = videosWinLose[3];
+        reproductor.Play();
+        yield return new WaitForSeconds(3.5f);
+        rawVideo.SetActive(false);
     }
 }
