@@ -2282,6 +2282,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PiezaDePuente
       objectReference: {fileID: 0}
+    - target: {fileID: 6258742552420603916, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
 --- !u!1 &598640879
