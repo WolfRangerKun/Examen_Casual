@@ -12,10 +12,19 @@ public class GrabOutCollision : MonoBehaviour
     bool colUp, colDown, colLeft, colRight;
     bool canGrab;
     public AudioSource dragSound;
+    public bool isVaso;
     private void Awake()
     {
         player = FindObjectOfType<PlayerMovement>();
-        thisObject = transform.parent.parent.parent.gameObject;
+        if (isVaso)
+        {
+            thisObject = transform.parent.parent.parent.parent.gameObject;
+        }
+        else
+        {
+            thisObject = transform.parent.parent.parent.gameObject;
+
+        }
     }
     
     private void OnTriggerStay2D(Collider2D other)
