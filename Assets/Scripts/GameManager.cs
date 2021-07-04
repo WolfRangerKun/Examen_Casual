@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         Cursor.visible = false;
         if (tiempo <= 0 && run)
         {
-            StartCoroutine(Lose());
+            StartCoroutine(LoseTimer());
             run = false;
             //AudioSource[] audios = FindObjectsOfType<AudioSource>();
             //foreach (AudioSource a in audios)
@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
     {
         return gameRunning;
     }
-    public IEnumerator WINNING()
+    public IEnumerator WinningChoose()
     {
         txtTimer.gameObject.SetActive(false);
         canPause = false;
@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour
         screenWin.SetActive(true);
        
     }
-    public IEnumerator Lose()
+    public IEnumerator LoseChoose()
     {
         txtTimer.gameObject.SetActive(false);
         canPause = false;
@@ -129,6 +129,20 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(.5f);
         rawVideo.SetActive(true);
         reproductor.clip = videosWinLose[0];
+        reproductor.Play();
+        yield return new WaitForSeconds(6.5f);
+        botonLose = true;
+        screenDead.SetActive(true);
+
+    }
+    public IEnumerator LoseTimer()
+    {
+        txtTimer.gameObject.SetActive(false);
+        canPause = false;
+        StartCoroutine(FadeOut(ChangeScene.intance.musicaNivel, 1));
+        yield return new WaitForSeconds(.5f);
+        rawVideo.SetActive(true);
+        reproductor.clip = videosWinLose[2];
         reproductor.Play();
         yield return new WaitForSeconds(6.5f);
         botonLose = true;

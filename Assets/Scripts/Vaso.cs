@@ -7,7 +7,6 @@ public class Vaso : MonoBehaviour
     public static Vaso intance;
     public int cantidadAgua = 0;
     public List<GameObject> contenido;
-    public int crearAmoxicilina;
     public int gradosCalor = 0;
     bool tomarVaso;
     public bool haytransparencia = true;
@@ -60,7 +59,7 @@ public class Vaso : MonoBehaviour
                         mesaTransparencia.maxOxigeno = 0;
                     }
                 }
-                
+
             }
             for (int i = 0; i < contenido.Count; i++)
             {
@@ -95,7 +94,7 @@ public class Vaso : MonoBehaviour
                         mesaTransparencia.maxMercurio = 0;
                     }
                 }
-               
+
             }
             for (int i = 0; i < contenido.Count; i++)
             {
@@ -132,7 +131,7 @@ public class Vaso : MonoBehaviour
                         mesaTransparencia.maxCarbono = 0;
                     }
                 }
-                
+
             }
             for (int i = 0; i < contenido.Count; i++)
             {
@@ -251,7 +250,8 @@ public class Vaso : MonoBehaviour
         PRODUCTO3,
         PRODUCTO4
     }
-
+    public bool winChoose;
+    public bool loseChoose;
     ORDEN_PRODUCTO oRDEN_PRODUCTO;
     void RevisarLista(ORDEN_PRODUCTO orden)
     {
@@ -262,17 +262,16 @@ public class Vaso : MonoBehaviour
                 {
                     if (cantidadAgua >= 15)
                     {
-                        if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
+                        if (contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
                         {
-                           
-                            crearAmoxicilina = 100;
-                            Debug.Log("Tirate");
-                            // poner que el vaso se pueda tomar  y  desplegar winning del gameManager
+
+                            winChoose = true;
+                            loseChoose = false;
                         }
                         else
                         {
-                            Debug.Log("Tefolta");
-                            // poner que el vaso se pueda tomar  y  desplegar lose
+                            loseChoose = true;
+                            winChoose = false;
                         }
                     }
                 }
@@ -282,17 +281,19 @@ public class Vaso : MonoBehaviour
                 {
                     if (cantidadAgua >= 15)
                     {
-                        if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
+                        if (gradosCalor >= 120)
                         {
-                           
-                            crearAmoxicilina = 100;
-                            Debug.Log("Tirate");
+                            if (contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
+                            {
+                                winChoose = true;
+                                loseChoose = false;
+                            }
+                            else
+                            {
+                                loseChoose = true;
+                                winChoose = false;
+                            }
                         }
-                        else
-                        {
-                            Debug.Log("Tefolta");
-                        }
-
                     }
                 }
                 break;
@@ -301,21 +302,17 @@ public class Vaso : MonoBehaviour
                 {
                     if (cantidadAgua >= 15)
                     {
-                        if (gradosCalor >= 120)
+                        if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
                         {
-                            if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
-                            {
-                               
-                                crearAmoxicilina = 100;
-                                Debug.LogError("Tirate");
-                            }
-                            else
-                            {
-                                Debug.Log("Tefolta");
-                            }
+
+                            winChoose = true;
+                            loseChoose = false;
                         }
-
-
+                        else
+                        {
+                            loseChoose = true;
+                            winChoose = false;
+                        }
                     }
                 }
                 break;
@@ -324,20 +321,19 @@ public class Vaso : MonoBehaviour
                 {
                     if (cantidadAgua >= 15)
                     {
-                        //if (gradosCalor >= 120)
-                        //{
-                        if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
+                        if (gradosCalor >= 120)
                         {
-                            // PONER UN COLLIDER SET ACTIVE PA LA TECLA y empieza el win o lose
-                            crearAmoxicilina = 100;
-                            Debug.Log("Tirate");
+                            if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
+                            {
+                                winChoose = true;
+                                loseChoose = false;
+                            }
+                            else
+                            {
+                                loseChoose = true;
+                                winChoose = false;
+                            }
                         }
-                        else
-                        {
-                            Debug.Log("Tefolta");
-                        }
-                        //}
-
                     }
                 }
                 break;
