@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   segundoPiso: {fileID: 1377066567}
-  pushDireccion: 3
+  pushDireccion: 1
   direccionCaida: 1
 --- !u!68 &6495962686194290930
 EdgeCollider2D:

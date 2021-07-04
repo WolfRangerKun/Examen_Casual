@@ -2147,22 +2147,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7477734459090765317, guid: a5bf24ed5401970418d7bbcb73995629, type: 3}
-      propertyPath: distanceRayCollision
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7477734459090765319, guid: a5bf24ed5401970418d7bbcb73995629, type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7477734459090765319, guid: a5bf24ed5401970418d7bbcb73995629, type: 3}
-      propertyPath: m_UseFullKinematicContacts
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7477734459090765320, guid: a5bf24ed5401970418d7bbcb73995629, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7477734459090765322, guid: a5bf24ed5401970418d7bbcb73995629, type: 3}
       propertyPath: m_RootOrder
       value: 7
