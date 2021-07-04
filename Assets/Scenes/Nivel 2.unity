@@ -7588,9 +7588,17 @@ PrefabInstance:
       propertyPath: bridge
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3258676706473642221, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
+      propertyPath: sonidoCheck
+      value: 
+      objectReference: {fileID: 850689039}
     - target: {fileID: 3258676706473642222, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
       propertyPath: m_Name
       value: PiezaDePuente (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258742552420603916, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
@@ -10232,9 +10240,17 @@ PrefabInstance:
       propertyPath: game
       value: 
       objectReference: {fileID: 1574260631}
+    - target: {fileID: 3258676706473642221, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
+      propertyPath: sonidoCheck
+      value: 
+      objectReference: {fileID: 850689039}
     - target: {fileID: 3258676706473642222, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
       propertyPath: m_Name
       value: PiezaDePuente
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258742552420603916, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
@@ -12866,6 +12882,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7625785519842750494, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
   m_PrefabInstance: {fileID: 850689037}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &850689039 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5586372431368372768, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
+  m_PrefabInstance: {fileID: 850689037}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &866801537
 GameObject:
   m_ObjectHideFlags: 0
@@ -13863,9 +13884,21 @@ PrefabInstance:
       propertyPath: bridge
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3258676706473642221, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
+      propertyPath: lateral
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258676706473642221, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
+      propertyPath: sonidoCheck
+      value: 
+      objectReference: {fileID: 850689039}
     - target: {fileID: 3258676706473642222, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
       propertyPath: m_Name
       value: PiezaDePuente (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258742552420603916, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
@@ -17039,9 +17072,17 @@ PrefabInstance:
       propertyPath: bridge
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3258676706473642221, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
+      propertyPath: sonidoCheck
+      value: 
+      objectReference: {fileID: 850689039}
     - target: {fileID: 3258676706473642222, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
       propertyPath: m_Name
       value: PiezaDePuente (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258742552420603916, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
@@ -17582,9 +17623,21 @@ PrefabInstance:
       propertyPath: bridge
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3258676706473642221, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
+      propertyPath: lateral
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258676706473642221, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
+      propertyPath: sonidoCheck
+      value: 
+      objectReference: {fileID: 850689039}
     - target: {fileID: 3258676706473642222, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
       propertyPath: m_Name
       value: PiezaDePuente (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258742552420603916, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
@@ -18397,9 +18450,17 @@ PrefabInstance:
       propertyPath: bridge
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3258676706473642221, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
+      propertyPath: sonidoCheck
+      value: 
+      objectReference: {fileID: 850689039}
     - target: {fileID: 3258676706473642222, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
       propertyPath: m_Name
       value: PiezaDePuente (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258742552420603916, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
