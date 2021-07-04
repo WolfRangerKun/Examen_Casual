@@ -21,8 +21,8 @@ public class TextoTutorialPremisa : MonoBehaviour
     {
         if (fuego)
         {
-            DialogueSistem1.instance.ShowDialogueTutorial(dialogues[0]);
             playerMovement.canMove = false;
+            DialogueSistem1.instance.ShowDialogueTutorial(dialogues[0]);
             GameManager.instance.canPause = false;
         }
         else
@@ -68,10 +68,11 @@ public class TextoTutorialPremisa : MonoBehaviour
         }
         if (textoPremisaNumers >= 2 && fuego)
         {
+            playerMovement.canMove = true;
             DialogueSistem1.instance.HideDialogue();
             GameManager.instance.canPause = true;
             DialogueSistem1.finishPremise = true;
-            playerMovement.canMove = true;
+            
         }
         
     }

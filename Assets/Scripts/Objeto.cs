@@ -35,6 +35,11 @@ public class Objeto : MonoBehaviour
                 {
 
                 }
+                else
+                {
+                    inWall = true;// izquierda
+                    contacts[0].SetActive(true); // contrario
+                }
             }
             else
             {
@@ -56,6 +61,11 @@ public class Objeto : MonoBehaviour
                 if (hit2.collider.tag == "Vaso")
                 {
 
+                }
+                else
+                {
+                    inWall2 = true; // derecha 
+                    contacts[1].SetActive(true); // contrario
                 }
             }
             else
@@ -79,6 +89,12 @@ public class Objeto : MonoBehaviour
                 {
 
                 }
+                else
+                {
+                    inWall3 = true;// arriba 
+                    contacts[2].SetActive(true); // contrario
+                }
+
             }
             else
             {
@@ -100,6 +116,11 @@ public class Objeto : MonoBehaviour
                 if (hit4.collider.tag == "Vaso")
                 {
 
+                }
+                else
+                {
+                    inWall4 = true;// abajo
+                    contacts[3].SetActive(true); // contrario
                 }
             }
             else
