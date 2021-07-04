@@ -63,6 +63,7 @@ public class SwitchOnOffManager : MonoBehaviour
         }
         else
         {
+            StopCoroutine(DispensarAgua());
             buttonAgua.sprite = spriteBotonAgua[0];
         }
 

@@ -2026,6 +2026,7 @@ MonoBehaviour:
   - {fileID: 32900000, guid: a2eac1f42dc586840b95ec000b594009, type: 3}
   - {fileID: 32900000, guid: 26b37b8a764599b478dd7f87d7ce011e, type: 3}
   - {fileID: 32900000, guid: 4f684a6ef921dd14dbeccfa2dd3e7942, type: 3}
+  canPause: 1
   tutorial: 1
 --- !u!4 &546657591
 Transform:
@@ -15909,6 +15910,10 @@ PrefabInstance:
       propertyPath: buttomSound
       value: 
       objectReference: {fileID: 1773570864}
+    - target: {fileID: 2433837496992371761, guid: 1443b5ffb2d8f2443b7e3ac21bff8f50, type: 3}
+      propertyPath: haveMechero
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2433837496992371761, guid: 1443b5ffb2d8f2443b7e3ac21bff8f50, type: 3}
       propertyPath: isButtonFuego
       value: 1

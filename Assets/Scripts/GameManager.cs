@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
-
+    bool isOnFire, isOnWater;
     public void ChangedGameRunningState()
     {
         gameRunning = !gameRunning;
@@ -87,11 +87,27 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1f;
             screenPause.SetActive(false);
             boton = false;
-            AudioSource[] audios = FindObjectsOfType<AudioSource>();
-            foreach (AudioSource a in audios)
+            //AudioSource[] audios = FindObjectsOfType<AudioSource>();
+            //foreach (AudioSource a in audios)
+            //{
+            //    a.Play();
+            //}
+            if (isOnFire == false)
             {
-                a.volume = 1f;//
+                SwitchOnOffManager.intance.fuego.SetActive(false);
+            }
+            else if (isOnFire == true)
+            {
+                SwitchOnOffManager.intance.fuego.SetActive(true);
+            }
 
+            if (isOnWater == false)
+            {
+                SwitchOnOffManager.intance.aguaGO = false;
+            }
+            else if (isOnWater == true)
+            {
+                SwitchOnOffManager.intance.aguaGO = true;
             }
             ChangeScene.intance.musicaNivel.Play();
         }
@@ -100,10 +116,31 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0f;
             screenPause.SetActive(true);
             boton = true;
-            AudioSource[] audios = FindObjectsOfType<AudioSource>();
-            foreach (AudioSource a in audios)
+            //AudioSource[] audios = FindObjectsOfType<AudioSource>();
+            //foreach (AudioSource a in audios)
+            //{
+            //    a.Pause();
+            //}
+            if (SwitchOnOffManager.intance.fuegoGO == false)
             {
-                a.volume = .1f;
+                SwitchOnOffManager.intance.fuego.SetActive(false);
+                isOnFire = false;
+            }
+            else if(SwitchOnOffManager.intance.fuegoGO == true)
+            {
+                SwitchOnOffManager.intance.fuego.SetActive(false);
+                isOnFire = true;
+            }
+
+            if (SwitchOnOffManager.intance.aguaGO == false)
+            {
+                SwitchOnOffManager.intance.aguaGO = false;
+                isOnWater = false;
+            }
+            else if (SwitchOnOffManager.intance.aguaGO == true)
+            {
+                SwitchOnOffManager.intance.aguaGO = false;
+                isOnWater = true;
             }
             ChangeScene.intance.musicaNivel.Pause();
         }
@@ -116,7 +153,8 @@ public class GameManager : MonoBehaviour
     public IEnumerator WinningChoose()
     {
         PlayerMovement.instace.canMove = false;//
-        StopCoroutine(Vaso.intance.ContadorFuego());
+        SwitchOnOffManager.intance.fuego.SetActive(false);
+        SwitchOnOffManager.intance.aguaGO = false;
         StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
         txtTimer.gameObject.SetActive(false);
         canPause = false;
@@ -133,7 +171,8 @@ public class GameManager : MonoBehaviour
     public IEnumerator LoseChoose()
     {
         PlayerMovement.instace.canMove = false;
-        StopCoroutine(Vaso.intance.ContadorFuego());
+        SwitchOnOffManager.intance.fuego.SetActive(false);
+        SwitchOnOffManager.intance.aguaGO = false;
         StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
         txtTimer.gameObject.SetActive(false);
         canPause = false;
@@ -150,7 +189,8 @@ public class GameManager : MonoBehaviour
     public IEnumerator LoseTimer()
     {
         PlayerMovement.instace.canMove = false;
-        StopCoroutine(Vaso.intance.ContadorFuego());
+        SwitchOnOffManager.intance.fuego.SetActive(false);
+        SwitchOnOffManager.intance.aguaGO = false;
         StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
         txtTimer.gameObject.SetActive(false);
         canPause = false;
