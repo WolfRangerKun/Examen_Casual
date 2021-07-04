@@ -19,7 +19,7 @@ public class TextoTutorialPremisa : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (fuego)
+        if (fuego && textoPremisaNumers == 0)
         {
             DialogueSistem1.instance.ShowDialogueTutorial(dialogues[0]);
             playerMovement.canMove = false;
@@ -66,11 +66,11 @@ public class TextoTutorialPremisa : MonoBehaviour
             DialogueSistem1.instance.ShowDialogueTutorial(dialogues[1]);
             GameManager.instance.canPause = false;
         }
-        if (textoPremisaNumers == 2 && fuego)
+        if (textoPremisaNumers >= 2 && fuego)
         {
             DialogueSistem1.instance.HideDialogue();
+            GameManager.instance.canPause = true;
             DialogueSistem1.finishPremise = true;
-            textoPremisaNumers = 5;
             playerMovement.canMove = true;
         }
         
