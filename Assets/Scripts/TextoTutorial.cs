@@ -17,20 +17,25 @@ public class TextoTutorial : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             Time.timeScale = 1f;
+            GameManager.instance.canPause = true;
         }
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
+        
         if (other.CompareTag("Player"))
         {
+            GameManager.instance.canPause = false;
             if (derecha)
             {
+                GameManager.instance.canPause = false;
                 dialogeSistem.panelDirection = DialogueSistem.PanelDirection.DERECHA;
                 DialogueSistem.instance.ShowDialogue(dialogues[0]);
                 StartCoroutine(TimingStop());
             }
             else
             {
+                GameManager.instance.canPause = false;
                 dialogeSistem.panelDirection = DialogueSistem.PanelDirection.IZQUIERDA;
                 DialogueSistem.instance.ShowDialogue(dialogues[0]);
                 StartCoroutine(TimingStop());
@@ -43,6 +48,7 @@ public class TextoTutorial : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             DialogueSistem.instance.HideDialogue();
+            GameManager.instance.canPause = true;
             gameObject.SetActive(false);
         }
     }

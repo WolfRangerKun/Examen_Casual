@@ -51,6 +51,11 @@ public class DialogueSistem : MonoBehaviour
     {
         panelDialogo[0].DOMove(originalPos1, .5f);
         panelDialogo[1].DOMove(originalPos2, .5f);
+        
+    }
+
+    public void HideDialoguePremisa()
+    {
         premisa.DOMove(originalPositionPremisa, .5f);
     }
 
