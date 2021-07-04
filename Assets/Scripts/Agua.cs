@@ -8,7 +8,7 @@ public class Agua : MonoBehaviour
     void Start()
     {
         sonidoAgua = GetComponent<AudioSource>();
-        Destroy(gameObject, 1.5f);
+        Destroy(gameObject, .5f);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
