@@ -25,17 +25,16 @@ public class TextoTutorial : MonoBehaviour
         
         if (other.CompareTag("Player"))
         {
+            TextoTutorialPremisa.instance.canPauseTrue = false;
             GameManager.instance.canPause = false;
             if (derecha)
             {
-                GameManager.instance.canPause = false;
                 dialogeSistem.panelDirection = DialogueSistem.PanelDirection.DERECHA;
                 DialogueSistem.instance.ShowDialogue(dialogues[0]);
                 StartCoroutine(TimingStop());
             }
             else
             {
-                GameManager.instance.canPause = false;
                 dialogeSistem.panelDirection = DialogueSistem.PanelDirection.IZQUIERDA;
                 DialogueSistem.instance.ShowDialogue(dialogues[0]);
                 StartCoroutine(TimingStop());
@@ -47,8 +46,8 @@ public class TextoTutorial : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            TextoTutorialPremisa.instance.canPauseTrue = true;
             DialogueSistem.instance.HideDialogue();
-            GameManager.instance.canPause = true;
             gameObject.SetActive(false);
         }
     }

@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class TextoTutorialPremisa : MonoBehaviour
 {
+    public static TextoTutorialPremisa instance;
     public List<string> dialogues;
     public int textoPremisaNumers;
     public bool fuego;
+    public bool canPauseTrue = true;
     public PlayerMovement playerMovement;
     private void Awake()
     {
+        instance = this;
         playerMovement = FindObjectOfType<PlayerMovement>();
         playerMovement.canMove = false;
     }
@@ -48,19 +51,15 @@ public class TextoTutorialPremisa : MonoBehaviour
             DialogueSistem.instance.ShowDialogueTutorial(dialogues[3]);
             GameManager.instance.canPause = false;
         }
-        if (textoPremisaNumers == 4 && !fuego)
+        if (textoPremisaNumers >= 4 && !fuego)
         {
             DialogueSistem.instance.HideDialoguePremisa();
-            GameManager.instance.canPause = true;
-            DialogueSistem.finishPremise = true;
-            if(GameManager.instance.canPause == true)
-            {
-                textoPremisaNumers = 5;
-            }
-        }
-        if(textoPremisaNumers >= 4 && !fuego)
-        {
             playerMovement.canMove = true;
+            DialogueSistem.finishPremise = true;
+        }
+        if(textoPremisaNumers >= 4 && !fuego && canPauseTrue)
+        {
+            GameManager.instance.canPause = true;
         }
         if (textoPremisaNumers == 1 && fuego)
         {
