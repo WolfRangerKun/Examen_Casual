@@ -160,8 +160,8 @@ public class GameManager : MonoBehaviour
         canPause = false;
         StartCoroutine(FadeOut(ChangeScene.intance.musicaNivel, 1));
         yield return new WaitForSeconds(.5f);
-        rawVideo.SetActive(true);
         reproductor.clip = videosWinLose[1];
+        rawVideo.SetActive(true);
         reproductor.Play();
         yield return new WaitForSeconds(6.5f);
         botonWin = true;
@@ -178,8 +178,8 @@ public class GameManager : MonoBehaviour
         canPause = false;
         StartCoroutine(FadeOut(ChangeScene.intance.musicaNivel, 1));
         yield return new WaitForSeconds(.5f);
-        rawVideo.SetActive(true);
         reproductor.clip = videosWinLose[0];
+        rawVideo.SetActive(true);
         reproductor.Play();
         yield return new WaitForSeconds(6.5f);
         botonLose = true;
@@ -196,8 +196,8 @@ public class GameManager : MonoBehaviour
         canPause = false;
         StartCoroutine(FadeOut(ChangeScene.intance.musicaNivel, 1));
         yield return new WaitForSeconds(.5f);
-        rawVideo.SetActive(true);
         reproductor.clip = videosWinLose[2];
+        rawVideo.SetActive(true);
         reproductor.Play();
         yield return new WaitForSeconds(7f);
         botonLose = true;
