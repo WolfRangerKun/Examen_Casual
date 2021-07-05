@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bridge : MonoBehaviour
 {
     public BridgeManager game;
-    public bool lateral;
+    public bool lateral, Derecha;
     public AudioSource sonidoCheck;
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -19,7 +19,20 @@ public class Bridge : MonoBehaviour
                 collision.gameObject.GetComponent<Objeto>().contacts[1].SetActive(false);
                 collision.gameObject.GetComponent<Objeto>().contacts[2].SetActive(false);
                 collision.gameObject.GetComponent<Objeto>().contacts[3].SetActive(false);
-                collision.gameObject.GetComponent<Objeto>().contacts[4].SetActive(true);
+                if (Derecha)
+                {
+                    collision.gameObject.GetComponent<Objeto>().contacts[4].GetComponent<SubidaAniamcion>().isSubidaDer = true;
+                    collision.gameObject.GetComponent<Objeto>().contacts[4].SetActive(true);
+                }
+
+
+                if (!Derecha) 
+                {
+                    collision.gameObject.GetComponent<Objeto>().contacts[5].GetComponent<SubidaAniamcion>().isSubidaIzq = true;
+                    collision.gameObject.GetComponent<Objeto>().contacts[5].SetActive(true);
+                }
+                
+                    
             }
             else
             {

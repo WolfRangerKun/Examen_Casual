@@ -210,8 +210,11 @@ MonoBehaviour:
   stayPiso2: 0
   off: []
   libro: []
+  piezaPuente: {fileID: 0}
+  enterDosD: {fileID: 0}
   puente: 0
   libroRojo: 0
+  nivel3: 0
 --- !u!61 &188958504
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -936,6 +939,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3258676706473642221, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
+      propertyPath: Derecha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258676706473642221, guid: 1a8dc64ac3afe5d4e9c3445fda2d9be6, type: 3}
       propertyPath: lateral
       value: 1
       objectReference: {fileID: 0}
@@ -1163,11 +1170,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &932127836 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 466020947, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
-  m_PrefabInstance: {fileID: 943677344}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &943677344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1175,14 +1177,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4053731742869796526, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
-      propertyPath: contacts.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4053731742869796526, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
-      propertyPath: contacts.Array.data[4]
-      value: 
-      objectReference: {fileID: 932127836}
     - target: {fileID: 7625785519842750466, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1932,6 +1926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LibroNivel
       objectReference: {fileID: 0}
+    - target: {fileID: 3664631980277491391, guid: 7f5eea925249fef4787557a064931cef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f5eea925249fef4787557a064931cef, type: 3}
 --- !u!82 &1590459579 stripped
@@ -2229,6 +2227,18 @@ PrefabInstance:
     - target: {fileID: 7477734459090765315, guid: a5bf24ed5401970418d7bbcb73995629, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477734459090765321, guid: a5bf24ed5401970418d7bbcb73995629, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477734459090765321, guid: a5bf24ed5401970418d7bbcb73995629, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7477734459090765321, guid: a5bf24ed5401970418d7bbcb73995629, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7477734459090765322, guid: a5bf24ed5401970418d7bbcb73995629, type: 3}
       propertyPath: m_RootOrder

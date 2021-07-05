@@ -48,8 +48,6 @@ public class SubidaAniamcion : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q) && canGoUp)
         {
-            anim.SetBool("Salto", true);
-            //StartCoroutine(animationSubida());
             StartCoroutine(AnimacionSubida());
             StartCoroutine(limit.Tming());
             canGoUp = false;
@@ -66,6 +64,7 @@ public class SubidaAniamcion : MonoBehaviour
     {
         if (isSubidaDer)
         {
+            anim.SetBool("Salto", true);
             player.canMove = false;
             GetComponent<BoxCollider2D>().isTrigger = false;
             Debug.Log("paarriba");
@@ -88,6 +87,10 @@ public class SubidaAniamcion : MonoBehaviour
 
         if (isSubidaIzq)
         {
+            anim.transform.Rotate(0, 180, 0);
+            //player.GetComponent<SpriteRenderer>().flipX = false;
+            anim.SetBool("Salto", true);
+            
             player.canMove = false;
             GetComponent<BoxCollider2D>().isTrigger = false;
             Debug.Log("paarriba");
@@ -98,6 +101,7 @@ public class SubidaAniamcion : MonoBehaviour
             player.targetPosition += new Vector3(0, player.distanceMovement, 0);
 
             Debug.Log("PaIzq");
+            anim.transform.Rotate(0, 180, 0);
             //player.gameObject.transform.DORotate((playerObj.transform.position + new Vector3(0, 0, 0)), 1f);
             player.gameObject.transform.DOMove(player.targetPosition + new Vector3(1, 0, 0), 1f);
             yield return new WaitForSeconds(1f);
@@ -105,12 +109,6 @@ public class SubidaAniamcion : MonoBehaviour
             GetComponent<BoxCollider2D>().isTrigger = true;
             player.canMove = true;
             Debug.Log("chao");
-
         }
-    }
-    IEnumerator animationSubida()
-    {
-        yield return new WaitForSeconds(2f);
-        anim.SetBool("Salto", false);
     }
 }
