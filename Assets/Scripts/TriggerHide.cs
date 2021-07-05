@@ -27,10 +27,12 @@ public class TriggerHide : MonoBehaviour
                     CollisionEntrySecondFlor.intanse.triggerArriba.SetActive(false);
                     CollisionEntrySecondFlor.intanse.triggerAbajo.SetActive(true);
                 }
+                other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
             }
 
             if (!isTriggerArriba)
             {
+                other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
                 StartCoroutine(TiempoSetActivesExit());
             }
         }
@@ -42,8 +44,16 @@ public class TriggerHide : MonoBehaviour
         if (other.CompareTag("Player") && !isTriggerArriba)
         {
             /*TransparenciaSegundoNivel.intanse*/
+            other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
             thisTransparencia.modo = TransparenciaSegundoNivel.MODO.HIDE;
             StartCoroutine(TiempoSetActivesEntry());
+        }
+        else
+        {
+            if(other.CompareTag("Player") && isTriggerArriba)
+            {
+                other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
+            }
         }
     }
 
