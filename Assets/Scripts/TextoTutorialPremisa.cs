@@ -68,11 +68,13 @@ public class TextoTutorialPremisa : MonoBehaviour
         if (textoPremisaNumers == 1 && fuego)
         {
             DialogueSistem1.instance.ShowDialogueTutorial(dialogues[1]);
+            vasoPrecipitado.gameObject.SetActive(true);
             GameManager.instance.canPause = false;
         }
         if (textoPremisaNumers >= 2 && fuego)
         {
             playerMovement.canMove = true;
+            
             DialogueSistem1.instance.HideDialogue();
             GameManager.instance.canPause = true;
             DialogueSistem1.finishPremise = true;
