@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TextoTutorialPremisa : MonoBehaviour
 {
     public static TextoTutorialPremisa instance;
     public List<string> dialogues;
+    public Image vasoPrecipitado;
     public int textoPremisaNumers;
     public bool fuego;
     public bool canPauseTrue = true;
@@ -49,6 +51,7 @@ public class TextoTutorialPremisa : MonoBehaviour
         if (textoPremisaNumers == 3 && !fuego)
         {
             DialogueSistem.instance.ShowDialogueTutorial(dialogues[3]);
+            vasoPrecipitado.gameObject.SetActive(true);
             GameManager.instance.canPause = false;
         }
         if (textoPremisaNumers >= 4 && !fuego)
@@ -56,6 +59,7 @@ public class TextoTutorialPremisa : MonoBehaviour
             DialogueSistem.instance.HideDialoguePremisa();
             playerMovement.canMove = true;
             DialogueSistem.finishPremise = true;
+            
         }
         if(textoPremisaNumers >= 4 && !fuego && canPauseTrue)
         {
