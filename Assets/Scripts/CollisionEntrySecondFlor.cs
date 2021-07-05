@@ -14,15 +14,12 @@ public class CollisionEntrySecondFlor : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        foreach(ContactPoint2D hitPos in other.contacts)
-        {
-            if(hitPos.normal.x < 0 && other.gameObject.CompareTag("Player"))
+            if(other.gameObject.CompareTag("Player"))
             {
                 triggerAbajo.SetActive(false);
                 triggerArriba.SetActive(true);
                 other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 4;
             }
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
