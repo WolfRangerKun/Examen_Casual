@@ -21,6 +21,7 @@ public class DialogueSistem : MonoBehaviour
     private Vector2 originalPositionPremisa;
     private Vector2 originalPos1, originalPos2;
     public static bool finishPremise;
+    public bool hideDialogo;
     public GameManager gameManager;
     private void Awake()
     {
@@ -53,7 +54,7 @@ public class DialogueSistem : MonoBehaviour
     {
         panelDialogo[0].DOMove(originalPos1, .5f);
         panelDialogo[1].DOMove(originalPos2, .5f);
-        
+        hideDialogo = true;
     }
 
     public void HideDialoguePremisa()
