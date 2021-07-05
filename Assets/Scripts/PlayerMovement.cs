@@ -1,7 +1,5 @@
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 public enum Direction
 {
@@ -44,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
     bool playSound;
     void Update()
     {
-        
+
         if (canMove)
         {
             Debug.DrawRay(rayCast2.position, rayCast.right * distanceRay);
@@ -61,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 playSound = true;
             }
-                if (axisDirection != Vector2.zero && targetPosition == transform.position)
+            if (axisDirection != Vector2.zero && targetPosition == transform.position)
             {
                 if (Mathf.Abs(axisDirection.x) > Mathf.Abs(axisDirection.y))
                 {
@@ -70,9 +68,9 @@ public class PlayerMovement : MonoBehaviour
                         direction = Direction.right;
                         if (hit2.collider && direction == Direction.right)
                         {
-                            if(hit2.collider.gameObject.GetComponent<Objeto>() && hit2.collider.gameObject.GetComponent<Objeto>().inWall2 == false)
+                            if (hit2.collider.gameObject.GetComponent<Objeto>() && hit2.collider.gameObject.GetComponent<Objeto>().inWall2 == false)
                                 hit2.transform.position = new Vector2(hit2.transform.position.x + pushDistance, hit2.transform.position.y);
-                            
+
 
                             if (hit2.collider.gameObject.GetComponent<Atomo>() && hit2.collider.gameObject.GetComponent<Objeto>().inWall2 == false)
                             {
@@ -103,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
                         if (!CheckCollision)
                         {
                             targetPosition += new Vector3(distanceMovement, 0f, 0f);
-                            if(direction == Direction.right)
+                            if (direction == Direction.right)
                             {
                                 if (hit2.collider)
                                 {
@@ -115,7 +113,6 @@ public class PlayerMovement : MonoBehaviour
                                     playerWalk.Play();
                                 }
                             }
-                            
                         }
                         else if (CheckCollision)
                         {
@@ -125,7 +122,6 @@ public class PlayerMovement : MonoBehaviour
                                 hitSounds.Play();
                                 playSound = false;
                             }
-                            
                         }
                     }
                     else
@@ -135,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
                         {
                             if (hit.collider.gameObject.GetComponent<Objeto>() && hit.collider.gameObject.GetComponent<Objeto>().inWall == false)
                                 hit.transform.position = new Vector2(hit.transform.position.x - pushDistance, hit.transform.position.y);
-                            
+
                             if (hit.collider.gameObject.GetComponent<Atomo>() && hit.collider.gameObject.GetComponent<Objeto>().inWall == false)
                             {
                                 hit.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
@@ -198,7 +194,7 @@ public class PlayerMovement : MonoBehaviour
                         {
                             if (hit3.collider.gameObject.GetComponent<Objeto>() && hit3.collider.gameObject.GetComponent<Objeto>().inWall3 == false)
                                 hit3.transform.position = new Vector2(hit3.transform.position.x, hit3.transform.position.y + pushDistance);
-                            
+
                             if (hit3.collider.gameObject.GetComponent<Atomo>() && hit3.collider.gameObject.GetComponent<Objeto>().inWall3 == false)
                             {
                                 hit3.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit3.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
@@ -258,7 +254,7 @@ public class PlayerMovement : MonoBehaviour
                         {
                             if (hit4.collider.gameObject.GetComponent<Objeto>() && hit4.collider.gameObject.GetComponent<Objeto>().inWall4 == false)
                                 hit4.transform.position = new Vector2(hit4.transform.position.x, hit4.transform.position.y - pushDistance);
-                           
+
                             if (hit4.collider.gameObject.GetComponent<Atomo>() && hit4.collider.gameObject.GetComponent<Objeto>().inWall4 == false)
                             {
                                 hit4.collider.gameObject.GetComponent<Atomo>().StartCoroutine(hit4.collider.gameObject.GetComponent<Atomo>().CambiarSpriteMovimiento());
@@ -317,7 +313,7 @@ public class PlayerMovement : MonoBehaviour
 
             //
         }
-        
+
     }
 
     public bool CheckCollision
