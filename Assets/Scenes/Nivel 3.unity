@@ -2052,6 +2052,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1343069672}
     m_Modifications:
+    - target: {fileID: 1705714573967062210, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4053731742869796526, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
       propertyPath: primerPiso
       value: 1
@@ -13870,6 +13874,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589366682}
   m_CullTransparentMesh: 1
+--- !u!1 &589619493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 589619494}
+  - component: {fileID: 589619496}
+  - component: {fileID: 589619495}
+  m_Layer: 0
+  m_Name: Colision Entry Player (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &589619494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589619493}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.29, y: -0.342, z: 0.5}
+  m_LocalScale: {x: 0.097979926, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2060689554}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!61 &589619495
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589619493}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.21363337, y: -0.15233742}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.31162456, y: 0.40693054}
+  m_EdgeRadius: 0
+--- !u!114 &589619496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589619493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a19cc9ddf78c84987cd1a763176af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerAbajo: {fileID: 1615553698}
+  triggerArriba: {fileID: 707262161}
 --- !u!1 &592744751
 GameObject:
   m_ObjectHideFlags: 0
@@ -14973,7 +15049,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15500689, y: 0.90816486}
+  m_Offset: {x: 0.15500689, y: 1.2789803}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -14984,7 +15060,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.973792, y: 2.04679}
+  m_Size: {x: 8.973792, y: 2.7884207}
   m_EdgeRadius: 0
 --- !u!1 &707858538
 GameObject:
@@ -15145,6 +15221,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1343069672}
     m_Modifications:
+    - target: {fileID: 1705714573967062210, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7625785519842750466, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -24306,7 +24386,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.21363337, y: -0.15233742}
@@ -33917,6 +33997,7 @@ Transform:
   - {fileID: 1615553699}
   - {fileID: 707262162}
   - {fileID: 1087821489}
+  - {fileID: 589619494}
   m_Father: {fileID: 2012583517}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34674,6 +34755,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1343069672}
     m_Modifications:
+    - target: {fileID: 1705714573967062210, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7625785519842750466, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
       propertyPath: m_RootOrder
       value: 0
