@@ -1598,6 +1598,7 @@ GameObject:
   - component: {fileID: 245448837}
   - component: {fileID: 245448839}
   - component: {fileID: 245448840}
+  - component: {fileID: 245448841}
   m_Layer: 0
   m_Name: AyudaManager
   m_TagString: Untagged
@@ -1690,6 +1691,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &245448841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245448836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9bc00cd4c9e71c4c8d80185d7ea2766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 3
+  segundoPiso: {fileID: 271534745}
+  limitBridges: {fileID: 1864631307}
+  dspsDeSubir: 0
 --- !u!1001 &250740252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2572,7 +2589,7 @@ PrefabInstance:
     - target: {fileID: 466020950, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
       propertyPath: limit
       value: 
-      objectReference: {fileID: 1864631308}
+      objectReference: {fileID: 245448841}
     - target: {fileID: 497843893, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -12891,7 +12908,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1864631310}
   - component: {fileID: 1864631309}
-  - component: {fileID: 1864631308}
   m_Layer: 3
   m_Name: LimitLibroConBridges (1)
   m_TagString: Untagged
@@ -12899,20 +12915,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1864631308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1864631307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9bc00cd4c9e71c4c8d80185d7ea2766, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time: 5
-  segundoPiso: {fileID: 271534745}
 --- !u!61 &1864631309
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13010,6 +13012,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 0
   segundoPiso: {fileID: 271534745}
+  limitBridges: {fileID: 0}
+  dspsDeSubir: 0
 --- !u!114 &1904443057
 MonoBehaviour:
   m_ObjectHideFlags: 0
