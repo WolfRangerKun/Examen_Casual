@@ -20,12 +20,12 @@ public class TextoTutorial : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             GameManager.instance.canPause = true;
-            DialogueSistem.finishPremise = true;
+            //DialogueSistem.finishPremise = true;
             DialogueSistem.instance.HideDialogue();
-            //if (Time.timeScale == 0f)
-            //{
-            //    Time.timeScale = 1f;
-            //}
+            if (Time.timeScale == 0f)
+            {
+                Time.timeScale = 1f;
+            }
 
         }
     }
@@ -40,16 +40,16 @@ public class TextoTutorial : MonoBehaviour
             {
                 dialogeSistem.panelDirection = DialogueSistem.PanelDirection.DERECHA;
                 DialogueSistem.instance.ShowDialogue(dialogues[0]);
-                DialogueSistem.finishPremise = false;
-                //StartCoroutine(TimingStop());
+                //DialogueSistem.finishPremise = false;
+                StartCoroutine(TimingStop());
                 if (image) objetoTutorial.gameObject.SetActive(true);
             }
             else
             {
                 dialogeSistem.panelDirection = DialogueSistem.PanelDirection.IZQUIERDA;
                 DialogueSistem.instance.ShowDialogue(dialogues[0]);
-                DialogueSistem.finishPremise = false;
-                //StartCoroutine(TimingStop());
+                //DialogueSistem.finishPremise = false;
+                StartCoroutine(TimingStop());
                 if (image) objetoTutorial.gameObject.SetActive(true);
             }
         }
@@ -60,6 +60,7 @@ public class TextoTutorial : MonoBehaviour
         {
             TextoTutorialPremisa.instance.canPauseTrue = true;
             if (image) objetoTutorial.gameObject.SetActive(false);
+            Time.timeScale = 1f;
             DialogueSistem.instance.HideDialogue();
             gameObject.SetActive(false);
         }

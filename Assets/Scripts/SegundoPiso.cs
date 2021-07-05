@@ -28,8 +28,8 @@ public class SegundoPiso : MonoBehaviour
             if (puente) off[4].layer = 0;
             if (libroRojo)
             {
-                libro[0].SetActive(false);
-                libro[1].SetActive(true);
+                libro[0].SetActive(false); // abajo
+                libro[1].SetActive(true); // arriba
                 if (nivel3)
                 {
                     
@@ -52,6 +52,7 @@ public class SegundoPiso : MonoBehaviour
             off[1].layer = 3;
             off[2].layer = 3;
             off[3].layer = 3;
+            stayPiso2 = true;
             if (puente) off[4].layer = 3;
             if (libroRojo)
             {

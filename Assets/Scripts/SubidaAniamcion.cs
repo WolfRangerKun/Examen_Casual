@@ -8,6 +8,7 @@ public class SubidaAniamcion : MonoBehaviour
     public float pushDireccion = 1f;
     PlayerMovement player;
     GameObject playerObj;
+    public BridgeTutorial limit;
     Vector3 upPosition;
     Vector3 leftPosition;
     Vector3 rightPosition;
@@ -47,8 +48,10 @@ public class SubidaAniamcion : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && canGoUp)
         {
             StartCoroutine(AnimacionSubida());
+            StartCoroutine(limit.Tming());
             canGoUp = false;
             goUpText.SetActive(false);
+
         }
     }
 
