@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class TextoTutorial : MonoBehaviour
 {
     public List<string> dialogues;
-    public bool derecha;
-    public float time;
+    public Image objetoTutorial;
+    public bool derecha, image;
+    public float time = 0.7f;
     private DialogueSistem dialogeSistem;
     private void Start()
     {
@@ -16,8 +19,14 @@ public class TextoTutorial : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            Time.timeScale = 1f;
             GameManager.instance.canPause = true;
+            DialogueSistem.finishPremise = true;
+            DialogueSistem.instance.HideDialogue();
+            //if (Time.timeScale == 0f)
+            //{
+            //    Time.timeScale = 1f;
+            //}
+
         }
     }
     public void OnTriggerEnter2D(Collider2D other)
@@ -31,14 +40,17 @@ public class TextoTutorial : MonoBehaviour
             {
                 dialogeSistem.panelDirection = DialogueSistem.PanelDirection.DERECHA;
                 DialogueSistem.instance.ShowDialogue(dialogues[0]);
-                StartCoroutine(TimingStop());
+                DialogueSistem.finishPremise = false;
+                //StartCoroutine(TimingStop());
+                if (image) objetoTutorial.gameObject.SetActive(true);
             }
             else
             {
                 dialogeSistem.panelDirection = DialogueSistem.PanelDirection.IZQUIERDA;
                 DialogueSistem.instance.ShowDialogue(dialogues[0]);
-                StartCoroutine(TimingStop());
-                
+                DialogueSistem.finishPremise = false;
+                //StartCoroutine(TimingStop());
+                if (image) objetoTutorial.gameObject.SetActive(true);
             }
         }
     }
@@ -47,6 +59,7 @@ public class TextoTutorial : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             TextoTutorialPremisa.instance.canPauseTrue = true;
+            if (image) objetoTutorial.gameObject.SetActive(false);
             DialogueSistem.instance.HideDialogue();
             gameObject.SetActive(false);
         }
