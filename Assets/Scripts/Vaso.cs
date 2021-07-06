@@ -261,7 +261,7 @@ public class Vaso : MonoBehaviour
             case ORDEN_PRODUCTO.PRODUCTO1:
                 if (contenido.Count == 3)
                 {
-                    if (cantidadAgua >= 15)
+                    if (cantidadAgua >= 10)
                     {
                         if (contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
                         {
@@ -291,9 +291,9 @@ public class Vaso : MonoBehaviour
             case ORDEN_PRODUCTO.PRODUCTO2:
                 if (contenido.Count == 3)
                 {
-                    if (cantidadAgua >= 15)
+                    if (cantidadAgua >= 10)
                     {
-                        if (gradosCalor >= 120)
+                        if (gradosCalor >= 80)
                         {
                             if (contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
                             {
@@ -324,7 +324,7 @@ public class Vaso : MonoBehaviour
             case ORDEN_PRODUCTO.PRODUCTO3:
                 if (contenido.Count == 3)
                 {
-                    if (cantidadAgua >= 15)
+                    if (cantidadAgua >= 10)
                     {
                         if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
                         {
@@ -354,9 +354,9 @@ public class Vaso : MonoBehaviour
             case ORDEN_PRODUCTO.PRODUCTO4:
                 if (contenido.Count == 1)
                 {
-                    if (cantidadAgua >= 15)
+                    if (cantidadAgua >= 10)
                     {
-                        if (gradosCalor >= 120)
+                        if (gradosCalor >= 80)
                         {
                             if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
                             {
