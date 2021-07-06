@@ -1199,10 +1199,10 @@ MonoBehaviour:
   changeColorVaso: {fileID: 2039398053}
   spritesContorno:
   - {fileID: 21300000, guid: 3fb95adda6f472745acb53f3addee361, type: 3}
-  - {fileID: 21300000, guid: c2921654078754749af92b8b80de467c, type: 3}
+  - {fileID: 21300000, guid: 3fb95adda6f472745acb53f3addee361, type: 3}
   spriteElementoActual:
   - {fileID: 21300000, guid: c96ffdeb3e674cc479a734228d736424, type: 3}
-  - {fileID: 21300000, guid: 419a3023b14a12c41b991ab200cc7d38, type: 3}
+  - {fileID: 21300000, guid: c96ffdeb3e674cc479a734228d736424, type: 3}
   getQuimicSound: {fileID: 7398540185988400262}
   mesaTransparencia: {fileID: 0}
   winChoose: 0
