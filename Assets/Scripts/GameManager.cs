@@ -23,11 +23,13 @@ public class GameManager : MonoBehaviour
     public bool tutorial;
     Button buton;
     public GameObject spawnAgua;
+    PlayerMovement playerMovement;
+    public bool finishlvl;
 
     private void Awake()
     {
         instance = this;
-
+        playerMovement = FindObjectOfType<PlayerMovement>();
     }
 
     private void Start()
@@ -153,7 +155,8 @@ public class GameManager : MonoBehaviour
     }
     public IEnumerator WinningChoose()
     {
-        PlayerMovement.instace.canMove = false;//
+        finishlvl = true;
+        playerMovement.canMove = false;
         SwitchOnOffManager.intance.fuego.SetActive(false);
         spawnAgua.SetActive(false);
         StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
@@ -171,7 +174,8 @@ public class GameManager : MonoBehaviour
     }
     public IEnumerator LoseChoose()
     {
-        PlayerMovement.instace.canMove = false;
+        finishlvl = true;
+        playerMovement.canMove = false;
         SwitchOnOffManager.intance.fuego.SetActive(false);
         spawnAgua.SetActive(false);
         StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
@@ -189,7 +193,8 @@ public class GameManager : MonoBehaviour
     }
     public IEnumerator LoseTimer()
     {
-        PlayerMovement.instace.canMove = false;
+        finishlvl = true;
+        playerMovement.canMove = false;
         SwitchOnOffManager.intance.fuego.SetActive(false);
         spawnAgua.SetActive(false);
         StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
