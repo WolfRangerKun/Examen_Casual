@@ -16410,7 +16410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameRunning: 1
-  tiempo: 100
+  tiempo: 120
   tiempoSlider: {fileID: 2002605261}
   botonWin: 0
   botonLose: 0

@@ -265,6 +265,10 @@ public class Vaso : MonoBehaviour
                     {
                         if (contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
                         {
+                            SwitchOnOffManager.intance.fuego.SetActive(false);
+                            GameManager.instance.spawnAgua.SetActive(false);
+                            StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
+                            GetComponent<SpriteRenderer>().sprite = spritesContorno[0];
                             otherStuffs.SetActive(false);
                             winLoseStuffs.SetActive(true);
                             winChoose = true;
@@ -272,6 +276,10 @@ public class Vaso : MonoBehaviour
                         }
                         else
                         {
+                            SwitchOnOffManager.intance.fuego.SetActive(false);
+                            GameManager.instance.spawnAgua.SetActive(false);
+                            StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
+                            GetComponent<SpriteRenderer>().sprite = spritesContorno[0];
                             otherStuffs.SetActive(false);
                             winLoseStuffs.SetActive(true);
                             loseChoose = true;
@@ -289,6 +297,10 @@ public class Vaso : MonoBehaviour
                         {
                             if (contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
                             {
+                                SwitchOnOffManager.intance.fuego.SetActive(false);
+                                GameManager.instance.spawnAgua.SetActive(false);
+                                StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
+                                GetComponent<SpriteRenderer>().sprite = spritesContorno[0];
                                 otherStuffs.SetActive(false);
                                 winLoseStuffs.SetActive(true);
                                 winChoose = true;
@@ -296,6 +308,10 @@ public class Vaso : MonoBehaviour
                             }
                             else
                             {
+                                SwitchOnOffManager.intance.fuego.SetActive(false);
+                                GameManager.instance.spawnAgua.SetActive(false);
+                                StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
+                                GetComponent<SpriteRenderer>().sprite = spritesContorno[0];
                                 otherStuffs.SetActive(false);
                                 winLoseStuffs.SetActive(true);
                                 loseChoose = true;
@@ -312,6 +328,10 @@ public class Vaso : MonoBehaviour
                     {
                         if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO && contenido[1].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.OXIGENO && contenido[2].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.MERCURIO)
                         {
+                            SwitchOnOffManager.intance.fuego.SetActive(false);
+                            GameManager.instance.spawnAgua.SetActive(false);
+                            StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
+                            GetComponent<SpriteRenderer>().sprite = spritesContorno[0];
                             otherStuffs.SetActive(false);
                             winLoseStuffs.SetActive(true);
                             winChoose = true;
@@ -319,6 +339,10 @@ public class Vaso : MonoBehaviour
                         }
                         else
                         {
+                            SwitchOnOffManager.intance.fuego.SetActive(false);
+                            GameManager.instance.spawnAgua.SetActive(false);
+                            StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
+                            GetComponent<SpriteRenderer>().sprite = spritesContorno[0];
                             otherStuffs.SetActive(false);
                             winLoseStuffs.SetActive(true);
                             loseChoose = true;
@@ -336,6 +360,10 @@ public class Vaso : MonoBehaviour
                         {
                             if (contenido[0].gameObject.GetComponent<Atomo>().tipoAtomo == Atomo.TIPO_ATOMO.CARBONO)
                             {
+                                SwitchOnOffManager.intance.fuego.SetActive(false);
+                                GameManager.instance.spawnAgua.SetActive(false);
+                                StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
+                                GetComponent<SpriteRenderer>().sprite = spritesContorno[0];
                                 otherStuffs.SetActive(false);
                                 winLoseStuffs.SetActive(true);
                                 winChoose = true;
@@ -343,6 +371,10 @@ public class Vaso : MonoBehaviour
                             }
                             else
                             {
+                                SwitchOnOffManager.intance.fuego.SetActive(false);
+                                GameManager.instance.spawnAgua.SetActive(false);
+                                StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
+                                GetComponent<SpriteRenderer>().sprite = spritesContorno[0];
                                 otherStuffs.SetActive(false);
                                 winLoseStuffs.SetActive(true);
                                 loseChoose = true;

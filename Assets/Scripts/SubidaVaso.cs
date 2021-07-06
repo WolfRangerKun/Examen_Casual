@@ -12,7 +12,7 @@ public class SubidaVaso : MonoBehaviour
             {
                 if(/*TransparenciaSegundoNivel.intanse*/thisTransparencia.maxVaso < 1)
                 {
-                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
+                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 4;
                     /*TransparenciaSegundoNivel.intanse*/
                     thisTransparencia.objectosArriba.Add(other.gameObject);
                 }
@@ -21,21 +21,21 @@ public class SubidaVaso : MonoBehaviour
             {
                 if (other.name == "Oxigeno" && /*TransparenciaSegundoNivel.intanse*/thisTransparencia.maxOxigeno < 1)
                 {
-                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
+                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 4;
                     /*TransparenciaSegundoNivel.intanse*/
                     thisTransparencia.objectosArriba.Add(other.gameObject);
                 }
 
                 if (other.name == "Mercurio" && /*TransparenciaSegundoNivel.intanse*/thisTransparencia.maxMercurio < 1)
                 {
-                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
+                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 4;
                     /*TransparenciaSegundoNivel.intanse*/
                     thisTransparencia.objectosArriba.Add(other.gameObject);
                 }
 
                 if (other.name == "Carbono" && /*TransparenciaSegundoNivel.intanse*/thisTransparencia.maxCarbono < 1)
                 {
-                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
+                    other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 4;
                     /*TransparenciaSegundoNivel.intanse*/
                     thisTransparencia.objectosArriba.Add(other.gameObject);
                 }
