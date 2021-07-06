@@ -1335,7 +1335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239219514}
   m_LocalRotation: {x: -0, y: -0, z: 0.000000029802322, w: 1}
-  m_LocalPosition: {x: 5.46, y: -0.6, z: 0}
+  m_LocalPosition: {x: -5.503, y: -0.6, z: 0}
   m_LocalScale: {x: 0.78383964, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 628724173}
@@ -1887,7 +1887,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.32104206, y: -1.7061523}
+  m_Offset: {x: 0.47053003, y: -1.7061523}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1898,7 +1898,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.564896, y: 0.28162026}
+  m_Size: {x: 10.78193, y: 0.28162026}
   m_EdgeRadius: 0
 --- !u!61 &326769593
 BoxCollider2D:
@@ -2896,7 +2896,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.32535458, y: -1.7061523}
+  m_Offset: {x: 0.47234488, y: -1.7061523}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2907,7 +2907,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.556271, y: 0.28162026}
+  m_Size: {x: 10.793883, y: 0.28162026}
   m_EdgeRadius: 0
 --- !u!61 &613036283
 BoxCollider2D:
@@ -5410,7 +5410,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.33397985, y: -1.7061523}
+  m_Offset: {x: -0.005847931, y: -1.7061523}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5421,7 +5421,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.539021, y: 0.28162026}
+  m_Size: {x: 9.882757, y: 0.28162026}
   m_EdgeRadius: 0
 --- !u!61 &1114161332
 BoxCollider2D:
@@ -7678,7 +7678,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313656772}
   m_LocalRotation: {x: -0, y: -0, z: -1, w: 0.0000005066394}
-  m_LocalPosition: {x: 3.5, y: 4, z: -1}
+  m_LocalPosition: {x: -7.5, y: 4, z: -1}
   m_LocalScale: {x: 0.78, y: 0.78, z: 1}
   m_Children:
   - {fileID: 1790221293}
@@ -14795,11 +14795,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6196256894257221836, guid: 68eec70a728d38d48b9c33a0c2278237, type: 3}
       propertyPath: m_SortingLayer
-      value: 0
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6196256894257221836, guid: 68eec70a728d38d48b9c33a0c2278237, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6196256894257221836, guid: 68eec70a728d38d48b9c33a0c2278237, type: 3}
       propertyPath: m_SortingLayerID
-      value: 0
+      value: 719517235
       objectReference: {fileID: 0}
     - target: {fileID: 6196256894257221836, guid: 68eec70a728d38d48b9c33a0c2278237, type: 3}
       propertyPath: m_ChunkCullingBounds.x
@@ -15931,7 +15935,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.58852625, y: 0.5471834}
+  m_Offset: {x: 0.5005543, y: 0.5471834}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -15942,7 +15946,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.919917, y: 3.301512}
+  m_Size: {x: 10.640711, y: 3.301512}
   m_EdgeRadius: 0
 --- !u!114 &1971426235
 MonoBehaviour:
@@ -15974,7 +15978,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 5.0008774, y: 0.6562512}
+  m_Offset: {x: -5.491865, y: 0.6562512}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -15985,7 +15989,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.109375, y: 1.5347238}
+  m_Size: {x: 1.0344739, y: 1.5347238}
   m_EdgeRadius: 0
 --- !u!1 &1981352619
 GameObject:
@@ -16319,7 +16323,7 @@ RectTransform:
   m_GameObject: {fileID: 2008578567}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.612, y: 0.612, z: 0.612}
+  m_LocalScale: {x: 0.4062374, y: 0.44178316, z: 0.4062374}
   m_Children: []
   m_Father: {fileID: 853205869}
   m_RootOrder: 0
@@ -16349,7 +16353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Time
+  m_text: Tiempo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3efe37c73fdff594fb732f4d1a913d19, type: 2}
   m_sharedMaterial: {fileID: -2534165565006386919, guid: 3efe37c73fdff594fb732f4d1a913d19, type: 2}
@@ -16376,10 +16380,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36.7
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -16794,7 +16798,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2004230254221800330, guid: e7c4601949b22624a93ca4c990351c2a, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2004230254751125466, guid: e7c4601949b22624a93ca4c990351c2a, type: 3}
       propertyPath: m_RootOrder
@@ -19617,6 +19621,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 52343473668243785, guid: 1d1a29818c2493044b533b2615266653, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3736492269032828249, guid: 1d1a29818c2493044b533b2615266653, type: 3}
       propertyPath: m_Name
       value: Vaso
@@ -19673,6 +19681,10 @@ PrefabInstance:
       propertyPath: mesaTransparencia
       value: 
       objectReference: {fileID: 899684599}
+    - target: {fileID: 6230414603646359109, guid: 1d1a29818c2493044b533b2615266653, type: 3}
+      propertyPath: _SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d1a29818c2493044b533b2615266653, type: 3}
 --- !u!1001 &5806945854069174916

@@ -591,7 +591,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &9012133800594800970
 MonoBehaviour:
@@ -613,7 +613,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Grab "E"
+  m_text: Agarrar "E"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3efe37c73fdff594fb732f4d1a913d19, type: 2}
   m_sharedMaterial: {fileID: -2534165565006386919, guid: 3efe37c73fdff594fb732f4d1a913d19, type: 2}
@@ -683,7 +683,7 @@ MonoBehaviour:
   m_renderer: {fileID: 3433221067541826307}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 0
+  _SortingOrder: 5
 --- !u!1 &480870192599054803
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,7 +831,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &2822740763413239784
 MonoBehaviour:
@@ -923,7 +923,7 @@ MonoBehaviour:
   m_renderer: {fileID: 8208343027818310687}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 0
+  _SortingOrder: 5
 --- !u!1 &3117543509742241296
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,7 +1000,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &6821045566644765913
 MonoBehaviour:
@@ -1022,7 +1022,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Grab "E"
+  m_text: Agarrar "E"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3efe37c73fdff594fb732f4d1a913d19, type: 2}
   m_sharedMaterial: {fileID: -2534165565006386919, guid: 3efe37c73fdff594fb732f4d1a913d19, type: 2}
@@ -1092,7 +1092,7 @@ MonoBehaviour:
   m_renderer: {fileID: 997083400412868605}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 0
+  _SortingOrder: 5
 --- !u!1 &4511574049418715100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,7 +1624,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &2629392065793711653
 MonoBehaviour:
@@ -1646,7 +1646,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Grab "E"
+  m_text: Agarrar "E"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3efe37c73fdff594fb732f4d1a913d19, type: 2}
   m_sharedMaterial: {fileID: -2534165565006386919, guid: 3efe37c73fdff594fb732f4d1a913d19, type: 2}
@@ -1716,7 +1716,7 @@ MonoBehaviour:
   m_renderer: {fileID: 3207786361353906585}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 0
+  _SortingOrder: 5
 --- !u!1 &7163415065051153778
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,7 +1793,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &991832431679499128
 MonoBehaviour:
@@ -1815,7 +1815,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Grab "E"
+  m_text: Agarrar "E"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3efe37c73fdff594fb732f4d1a913d19, type: 2}
   m_sharedMaterial: {fileID: -2534165565006386919, guid: 3efe37c73fdff594fb732f4d1a913d19, type: 2}
@@ -1885,7 +1885,7 @@ MonoBehaviour:
   m_renderer: {fileID: 5491315124293204771}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 0
+  _SortingOrder: 5
 --- !u!1 &8156322492349525401
 GameObject:
   m_ObjectHideFlags: 0
