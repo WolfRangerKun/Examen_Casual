@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public GameObject spawnAgua;
     PlayerMovement playerMovement;
     public bool finishlvl;
-
+    public AudioSource clockLoop;
     private void Awake()
     {
         instance = this;
@@ -64,12 +64,26 @@ public class GameManager : MonoBehaviour
             ChangedGameRunningState();
         }
         tiempoSlider.value = tiempo;
+
+        
     }
 
     IEnumerator Tiempo()
     {
         while (tiempo > 0)
         {
+            if (tiempo <= 30 && tiempo > 10)
+            {
+                clockLoop.pitch = 1.3f;
+            }
+            else if (tiempo <= 10 && tiempo > 5)
+            {
+                clockLoop.pitch = 1.6f;
+            }
+            else if (tiempo <= 5)
+            {
+                clockLoop.pitch = 1.8f;
+            }
             txtTimer.text = tiempo.ToString();
             yield return new WaitForSeconds(1);
             if (tutorial)
@@ -113,6 +127,7 @@ public class GameManager : MonoBehaviour
                 SwitchOnOffManager.intance.aguaGO = true;
             }
             ChangeScene.intance.musicaNivel.Play();
+            clockLoop.Play();
         }
         else
         {
@@ -146,6 +161,7 @@ public class GameManager : MonoBehaviour
                 isOnWater = true;
             }
             ChangeScene.intance.musicaNivel.Pause();
+            clockLoop.Pause();        
         }
     }
 
@@ -162,6 +178,7 @@ public class GameManager : MonoBehaviour
         StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
         txtTimer.gameObject.SetActive(false);
         canPause = false;
+        clockLoop.volume = 0;
         StartCoroutine(FadeOut(ChangeScene.intance.musicaNivel, 1));
         yield return new WaitForSeconds(.5f);
         reproductor.clip = videosWinLose[1];
@@ -181,6 +198,7 @@ public class GameManager : MonoBehaviour
         StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
         txtTimer.gameObject.SetActive(false);
         canPause = false;
+        clockLoop.volume = 0;
         StartCoroutine(FadeOut(ChangeScene.intance.musicaNivel, 1));
         yield return new WaitForSeconds(.5f);
         reproductor.clip = videosWinLose[0];
@@ -200,6 +218,7 @@ public class GameManager : MonoBehaviour
         StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
         txtTimer.gameObject.SetActive(false);
         canPause = false;
+        clockLoop.volume = 0;
         StartCoroutine(FadeOut(ChangeScene.intance.musicaNivel, 1));
         yield return new WaitForSeconds(.5f);
         reproductor.clip = videosWinLose[2];
