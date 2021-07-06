@@ -4,14 +4,21 @@ using System.Collections.Generic;
 
 public class BridgeTutorial : MonoBehaviour
 {
+    public static BridgeTutorial bridgeTutorial;
     public float time;
     public SegundoPiso segundoPiso;
-    public GameObject limitBridges;
-    public bool dspsDeSubir;
+    public List<GameObject> limitBridges;
+    public bool dspsDeSubir , lvl2;
+    private void Awake()
+    {
+        bridgeTutorial = this;
+    }
     public IEnumerator Tming()
     {
         yield return new WaitForSeconds(0.5f);
-        limitBridges.SetActive(false);
+        limitBridges[0].SetActive(false);
+        if(lvl2)
+        limitBridges[1].SetActive(false);
         yield return new WaitForSeconds(time);
         dspsDeSubir = true;
     }
@@ -28,11 +35,15 @@ public class BridgeTutorial : MonoBehaviour
     {
         if (segundoPiso.libro[1].activeSelf == true)
         {
-            limitBridges.SetActive(false);
+            limitBridges[0].SetActive(false);
+            if(lvl2)
+            limitBridges[1].SetActive(false);
         }
         if (segundoPiso.libro[1].activeSelf == false)
         {
-            limitBridges.SetActive(true);
+            limitBridges[0].SetActive(true);
+            if(lvl2)
+            limitBridges[1].SetActive(true);
             dspsDeSubir = false;
         }
     }
