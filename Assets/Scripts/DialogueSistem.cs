@@ -36,12 +36,12 @@ public class DialogueSistem : MonoBehaviour
     {
         if(panelDirection == PanelDirection.DERECHA)
         {
-            panelDialogo[0].DOMove(guiaPanel[0].position, .5f);
+            panelDialogo[0].DOMove(guiaPanel[0].position, 0.3f);
             textoDialogo1.text = dialogo;
         }
         if(panelDirection == PanelDirection.IZQUIERDA)
         {
-            panelDialogo[1].DOMove(guiaPanel[1].position, .5f);
+            panelDialogo[1].DOMove(guiaPanel[1].position, 0.3f);
             textoDialogo2.text = dialogo;
         }
         
@@ -52,14 +52,14 @@ public class DialogueSistem : MonoBehaviour
     }
     public void HideDialogue()
     {
-        panelDialogo[0].DOMove(originalPos1, .5f);
-        panelDialogo[1].DOMove(originalPos2, .5f);
+        panelDialogo[0].DOMove(originalPos1, 0.3f);
+        panelDialogo[1].DOMove(originalPos2, 0.3f);
         hideDialogo = true;
     }
 
     public void HideDialoguePremisa()
     {
-        premisa.DOMove(originalPositionPremisa, .5f);
+        premisa.DOMove(originalPositionPremisa, 0.3f);
     }
 
     IEnumerator Premisa()
