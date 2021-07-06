@@ -175,6 +175,7 @@ public class GameManager : MonoBehaviour
         playerMovement.canMove = false;
         SwitchOnOffManager.intance.fuego.SetActive(false);
         spawnAgua.SetActive(false);
+        StopCoroutine(GameManager.instance.Tiempo());
         StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
         txtTimer.gameObject.SetActive(false);
         canPause = false;
@@ -194,6 +195,7 @@ public class GameManager : MonoBehaviour
         finishlvl = true;
         playerMovement.canMove = false;
         SwitchOnOffManager.intance.fuego.SetActive(false);
+        StopCoroutine(GameManager.instance.Tiempo());
         spawnAgua.SetActive(false);
         StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
         txtTimer.gameObject.SetActive(false);
@@ -214,6 +216,7 @@ public class GameManager : MonoBehaviour
         finishlvl = true;
         playerMovement.canMove = false;
         SwitchOnOffManager.intance.fuego.SetActive(false);
+        StopCoroutine(GameManager.instance.Tiempo());
         spawnAgua.SetActive(false);
         StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
         txtTimer.gameObject.SetActive(false);

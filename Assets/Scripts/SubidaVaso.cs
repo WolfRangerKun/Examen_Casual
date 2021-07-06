@@ -13,6 +13,7 @@ public class SubidaVaso : MonoBehaviour
                 if(/*TransparenciaSegundoNivel.intanse*/thisTransparencia.maxVaso < 1)
                 {
                     other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 4;
+                    other.gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sortingOrder = 6;
                     /*TransparenciaSegundoNivel.intanse*/
                     thisTransparencia.objectosArriba.Add(other.gameObject);
                 }
@@ -53,6 +54,7 @@ public class SubidaVaso : MonoBehaviour
                 /* TransparenciaSegundoNivel.intanse*/
                 thisTransparencia.objectosArriba.Remove(other.gameObject);
                     other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                other.gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
                 /*TransparenciaSegundoNivel.intanse*/
                 thisTransparencia.maxVaso = 0;
                 
@@ -97,6 +99,7 @@ public class SubidaVaso : MonoBehaviour
                     /* TransparenciaSegundoNivel.intanse*/
                     thisTransparencia.objectosAbajo.Add(other.gameObject);
                     other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                    other.gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
                 }
             }
 
@@ -157,6 +160,7 @@ public class SubidaVaso : MonoBehaviour
                 /* TransparenciaSegundoNivel.intanse*/
                 thisTransparencia.objectosAbajo.Remove(other.gameObject);
                     other.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                other.gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
                 /*TransparenciaSegundoNivel.intanse*/
                 thisTransparencia.maxVaso = 0;
                 
