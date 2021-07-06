@@ -127,6 +127,7 @@ public class Objeto : MonoBehaviour
             {
                 inWall4 = true;// abajo
                 contacts[3].SetActive(true); // contrario
+         
             }
             
         }

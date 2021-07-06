@@ -48,7 +48,7 @@ public class Bridge : MonoBehaviour
             }
             collision.gameObject.GetComponent<Objeto>().enabled = false;
             collision.transform.position = gameObject.transform.position;
-            collision.gameObject.GetComponentInChildren<SpriteRenderer>().sortingOrder = 1;
+            collision.gameObject.GetComponentInChildren<SpriteRenderer>().sortingOrder = 2;
             collision.gameObject.layer = 3;
             gameObject.SetActive(false);
         }

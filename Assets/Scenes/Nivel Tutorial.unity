@@ -1347,7 +1347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7477734459090765321, guid: a5bf24ed5401970418d7bbcb73995629, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7477734459090765322, guid: a5bf24ed5401970418d7bbcb73995629, type: 3}
       propertyPath: m_RootOrder
@@ -2702,6 +2702,14 @@ PrefabInstance:
     - target: {fileID: 497843896, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
       propertyPath: m_Offset.y
       value: -0.14599764
+      objectReference: {fileID: 0}
+    - target: {fileID: 268320203851127446, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1705714573967062210, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4053731742869796526, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
       propertyPath: contacts.Array.size
