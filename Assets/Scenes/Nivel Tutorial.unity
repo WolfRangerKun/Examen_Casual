@@ -2691,6 +2691,18 @@ PrefabInstance:
       value: Esto es un "Frasco" , el cual te puede ayudar a subir a lugares mas
         altos, empujalo para moverlo a las marcas en el suelo y usarlos para subir
       objectReference: {fileID: 0}
+    - target: {fileID: 497843896, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
+      propertyPath: m_Radius
+      value: 1.417626
+      objectReference: {fileID: 0}
+    - target: {fileID: 497843896, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.007214427
+      objectReference: {fileID: 0}
+    - target: {fileID: 497843896, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.14599764
+      objectReference: {fileID: 0}
     - target: {fileID: 4053731742869796526, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
       propertyPath: contacts.Array.size
       value: 5
@@ -8590,8 +8602,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.008643627, y: 0.041516423}
-  m_Size: {x: 2.045825, y: 2.0801308}
+  m_Offset: {x: -0.10159993, y: 0.11524081}
+  m_Size: {x: 2.2317376, y: 2.3791862}
   m_Direction: 0
 --- !u!1 &1277160336
 GameObject:
@@ -10928,9 +10940,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.040815115, y: -0.025051594}
+  m_Offset: {x: -0.08577204, y: -0.21986473}
   serializedVersion: 2
-  m_Radius: 0.9516723
+  m_Radius: 1.1914425
 --- !u!114 &1607112413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12208,9 +12220,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.034339964, y: 0}
+  m_Offset: {x: 0.15293956, y: 0.16026974}
   serializedVersion: 2
-  m_Radius: 0.80971235
+  m_Radius: 1.0885818
 --- !u!1 &1685800409
 GameObject:
   m_ObjectHideFlags: 0
