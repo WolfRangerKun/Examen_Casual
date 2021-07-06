@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     bool run = true;
     public bool tutorial;
     Button buton;
+    public GameObject spawnAgua;
 
     private void Awake()
     {
@@ -154,7 +155,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerMovement.instace.canMove = false;//
         SwitchOnOffManager.intance.fuego.SetActive(false);
-        SwitchOnOffManager.intance.spawnAgua.SetActive(false);
+        spawnAgua.SetActive(false);
         StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
         txtTimer.gameObject.SetActive(false);
         canPause = false;
@@ -172,7 +173,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerMovement.instace.canMove = false;
         SwitchOnOffManager.intance.fuego.SetActive(false);
-        SwitchOnOffManager.intance.spawnAgua.SetActive(false);
+        spawnAgua.SetActive(false);
         StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
         txtTimer.gameObject.SetActive(false);
         canPause = false;
@@ -190,7 +191,7 @@ public class GameManager : MonoBehaviour
     {
         PlayerMovement.instace.canMove = false;
         SwitchOnOffManager.intance.fuego.SetActive(false);
-        SwitchOnOffManager.intance.spawnAgua.SetActive(false);
+        spawnAgua.SetActive(false);
         StopCoroutine(SwitchOnOffManager.intance.DispensarAgua());
         txtTimer.gameObject.SetActive(false);
         canPause = false;
