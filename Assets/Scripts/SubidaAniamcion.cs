@@ -49,6 +49,7 @@ public class SubidaAniamcion : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && canGoUp)
         {
             StartCoroutine(AnimacionSubida());
+            if(GameManager.instance.tutorial == true)
             StartCoroutine(limit.Tming());
             canGoUp = false;
             goUpText.SetActive(false);
