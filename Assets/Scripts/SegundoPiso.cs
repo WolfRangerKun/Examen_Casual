@@ -40,7 +40,7 @@ public class SegundoPiso : MonoBehaviour
             {
                 libro[2].SetActive(false);
             }
-            collision.GetComponent<SpriteRenderer>().sortingOrder = 2;
+            collision.GetComponent<SpriteRenderer>().sortingOrder = 3;
         }
     }
 
