@@ -19862,6 +19862,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3736492269032828254, guid: 1d1a29818c2493044b533b2615266653, type: 3}
+      propertyPath: isNivel1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736492269032828254, guid: 1d1a29818c2493044b533b2615266653, type: 3}
+      propertyPath: isNivel2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3736492269032828254, guid: 1d1a29818c2493044b533b2615266653, type: 3}
       propertyPath: haytransparencia
       value: 1
       objectReference: {fileID: 0}
