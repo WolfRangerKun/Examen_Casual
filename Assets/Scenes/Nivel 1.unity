@@ -3188,8 +3188,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - "Hola!! En este cuarto para preparar el antidoto requiere un paso m\xE1s, el
-    mechero. Este se activa apretando el boton de fuego."
+  - "\xA1\xA1Hola!! En este cuarto para preparar el ant\xEDdoto requiere un paso
+    m\xE1s, el mechero. Este se activa apretando el bot\xF3n de fuego."
   - al tener tanto el agua como los ingredientes dentro del vaso precipitado, coloca
     este sobre el mechero con la llama prendida y no lo muevas, Buena suerte!!
   vasoPrecipitado: {fileID: 1884316940}

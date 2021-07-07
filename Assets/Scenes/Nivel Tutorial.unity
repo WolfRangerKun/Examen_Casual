@@ -502,7 +502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - '                                                           las reglas al igual
-    que los "Frascos" te permiten subir a estructuras mas altas '
+    que los "Frascos" te permiten subir a estructuras mas altas.'
   objetoTutorial: {fileID: 958287946}
   derecha: 1
   image: 1
@@ -1949,15 +1949,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - "\xA1Bienvenido! esto suena triste, pero, esos humanos te han inyectado algo
-    malo.\xA1Hey!, pero no te pongas mal.Te ayudare a crear una forma de curarte."
-  - "Para preparar un ant\xEDdoto, nesecitas 1 vaso precipatado con agua mas 3 quimicos.
-    Los quimicos tiene un orden espec\xEDfico de preparaci\xF3n, y estaria listo"
+    malo.\xA1Hey!, pero no te pongas mal. Te ayudare a crear una forma de curarte."
+  - "Para preparar un ant\xEDdoto, necesitas 1 vaso precipitado con agua mas 3 qu\xEDmicos.
+    Los qu\xEDmicos tiene un orden espec\xEDfico de preparaci\xF3n, y estar\xEDa
+    listo."
   - "Recorre el escenario para encontrar los ingredientes, pero debes apresurarte,
     tienes un tiempo l\xEDmite para lograrlo, antes de que el veneno haga efecto."
   - "El primer paso para preparar la mezcla, es tener un vaso precipitado como el
-    que te muestro, b\xFAscalo en la escena y ac\xE9rcate a el."
+    que te muestro, b\xFAscalo en la escena y ac\xE9rcate a \xE9l."
   - Con estas teclas te podras mover por el mapa e interactuar con los objetos al
-    acercarte
+    acercarte.
   vasoPrecipitado: {fileID: 1475890868}
   teclas1: {fileID: 33992897}
   teclas2: {fileID: 2146494229}
@@ -2992,8 +2993,8 @@ PrefabInstance:
       objectReference: {fileID: 306692579}
     - target: {fileID: 497843895, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
       propertyPath: dialogues.Array.data[0]
-      value: Esto es un "Frasco" , el cual te puede ayudar a subir a lugares mas
-        altos, empujalo para moverlo a las marcas en el suelo y usarlos para subir
+      value: "Esto es un \"Frasco\" , el cual te puede ayudar a subir a lugares m\xE1s
+        altos, emp\xFAjalo para moverlo a las marcas en el suelo y usarlos para subir"
       objectReference: {fileID: 0}
     - target: {fileID: 497843896, guid: db53726e879369441b3652f9e9bd70ac, type: 3}
       propertyPath: m_Radius
@@ -6045,8 +6046,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogues:
-  - El boton de agua se activa y desactiva al caminar encima de el, debes llenar
-    el vaso precipitado casi por completo para crear el antidoto junto a los quimicos
+  - "El bot\xF3n de agua se activa y desactiva al caminar encima de el, debes llenar
+    el vaso precipitado casi por completo para crear el ant\xEDdoto junto a los qu\xEDmicos"
   objetoTutorial: {fileID: 614117142}
   derecha: 0
   image: 1
@@ -6538,8 +6539,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - "En este vaso precipitado debes mezclar los qu\xEDmicos junto a una cantidad
-    de agua. Coloca el vaso debajo del grifo y activalo apretando el bot\xF3n azul.
-    Cuando el antidoto este listo, sera tan pesado que no podras moverlo."
+    de agua. Coloca el vaso debajo del grifo y act\xEDvalo apretando el bot\xF3n
+    azul. Cuando el ant\xEDdoto est\xE9 listo, ser\xE1 tan pesado que no podr\xE1s
+    moverlo."
   objetoTutorial: {fileID: 2028628237}
   derecha: 1
   image: 1
@@ -9208,7 +9210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - '                                                           las reglas al igual
-    que los "Frascos" te permiten subir a estructuras mas altas '
+    que los "Frascos" te permiten subir a estructuras mas altas.'
   objetoTutorial: {fileID: 958287946}
   derecha: 1
   image: 1
@@ -13744,7 +13746,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues:
   - '                                                           las reglas al igual
-    que los "Frascos" te permiten subir a estructuras mas altas '
+    que los "Frascos" te permiten subir a estructuras mas altas.'
   objetoTutorial: {fileID: 958287946}
   derecha: 1
   image: 1
